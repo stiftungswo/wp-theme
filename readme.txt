@@ -102,17 +102,17 @@ Copyright (c) 2018-2020 WordPress.org
 License: GPLv2
 Source: https://wordpress.org/themes/twentynineteen/
 Included as part of the following classes and functions:
-- swo-wptheme_SVG_Icons
-- swo-wptheme_the_theme_svg()
-- swo-wptheme_get_theme_svg()
-- swo-wptheme_nav_menu_social_icons()
+- swowptheme_SVG_Icons
+- swowptheme_the_theme_svg()
+- swowptheme_get_theme_svg()
+- swowptheme_nav_menu_social_icons()
 
 Code from Twenty Seventeen
 Copyright (c) 2016-2020 WordPress.org
 License: GPLv2
 Source: https://wordpress.org/themes/twentyseventeen/
 Included as part of the following classes and functions:
-- swo-wptheme_unique_id()
+- swowptheme_unique_id()
 
 Underscores 
 https://underscores.me/, (C) 2012-2019 Automattic, Inc., [GPLv2 or later](https://www.gnu.org/licenses/gpl-2.0.html)

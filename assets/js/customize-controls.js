@@ -1,4 +1,4 @@
-/* global swo-wpthemeBgColors, swo-wpthemeColor, jQuery, wp, _ */
+/* global swowpthemeBgColors, swowpthemeColor, jQuery, wp, _ */
 /**
  * Customizer enhancements for a better user experience.
  *
@@ -14,36 +14,36 @@
 		wp.customize( 'accent_hue', function( value ) {
 			value.bind( function( to ) {
 				// Update the value for our accessible colors for all areas.
-				Object.keys( swo-wpthemeBgColors ).forEach( function( context ) {
+				Object.keys( swowpthemeBgColors ).forEach( function( context ) {
 					var backgroundColorValue;
-					if ( swo-wpthemeBgColors[ context ].color ) {
-						backgroundColorValue = swo-wpthemeBgColors[ context ].color;
+					if ( swowpthemeBgColors[ context ].color ) {
+						backgroundColorValue = swowpthemeBgColors[ context ].color;
 					} else {
-						backgroundColorValue = wp.customize( swo-wpthemeBgColors[ context ].setting ).get();
+						backgroundColorValue = wp.customize( swowpthemeBgColors[ context ].setting ).get();
 					}
-					swo-wpthemeSetAccessibleColorsValue( context, backgroundColorValue, to );
+					swowpthemeSetAccessibleColorsValue( context, backgroundColorValue, to );
 				} );
 			} );
 		} );
 
 		// Add a listener for background-color changes.
-		Object.keys( swo-wpthemeBgColors ).forEach( function( context ) {
-			wp.customize( swo-wpthemeBgColors[ context ].setting, function( value ) {
+		Object.keys( swowpthemeBgColors ).forEach( function( context ) {
+			wp.customize( swowpthemeBgColors[ context ].setting, function( value ) {
 				value.bind( function( to ) {
 					// Update the value for our accessible colors for this area.
-					swo-wpthemeSetAccessibleColorsValue( context, to, wp.customize( 'accent_hue' ).get(), to );
+					swowpthemeSetAccessibleColorsValue( context, to, wp.customize( 'accent_hue' ).get(), to );
 				} );
 			} );
 		} );
 
 		// Show or hide retina_logo setting on the first load.
-		swo-wpthemeSetRetineLogoVisibility( !! wp.customize( 'custom_logo' )() );
+		swowpthemeSetRetineLogoVisibility( !! wp.customize( 'custom_logo' )() );
 
 		// Add a listener for custom_logo changes.
 		wp.customize( 'custom_logo', function( value ) {
 			value.bind( function( to ) {
 				// Show or hide retina_logo setting on changing custom_logo.
-				swo-wpthemeSetRetineLogoVisibility( !! to );
+				swowpthemeSetRetineLogoVisibility( !! to );
 			} );
 		} );
 	} );
@@ -59,7 +59,7 @@
 	 *
 	 * @return {void}
 	 */
-	function swo-wpthemeSetAccessibleColorsValue( context, backgroundColor, accentHue ) {
+	function swowpthemeSetAccessibleColorsValue( context, backgroundColor, accentHue ) {
 		var value, colors;
 
 		// Get the current value for our accessible colors, and make sure it's an object.
@@ -67,7 +67,7 @@
 		value = ( _.isObject( value ) && ! _.isArray( value ) ) ? value : {};
 
 		// Get accessible colors for the defined background-color and hue.
-		colors = swo-wpthemeColor( backgroundColor, accentHue );
+		colors = swowpthemeColor( backgroundColor, accentHue );
 
 		// Sanity check.
 		if ( colors.getAccentColor() && 'function' === typeof colors.getAccentColor().toCSS ) {
@@ -108,7 +108,7 @@
 	 *
 	 * @return {void}
 	 */
-	function swo-wpthemeSetRetineLogoVisibility( visible ) {
+	function swowpthemeSetRetineLogoVisibility( visible ) {
 		wp.customize.control( 'retina_logo' ).container.toggle( visible );
 	}
 }( jQuery ) );

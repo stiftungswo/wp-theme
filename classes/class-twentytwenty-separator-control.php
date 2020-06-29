@@ -9,11 +9,11 @@
 
 if ( class_exists( 'WP_Customize_Control' ) ) {
 
-	if ( ! class_exists( 'swo-wptheme_Separator_Control' ) ) {
+	if ( ! class_exists( 'swowptheme_Separator_Control' ) ) {
 		/**
 		 * Separator Control.
 		 */
-		class swo-wptheme_Separator_Control extends WP_Customize_Control {
+		class swowptheme_Separator_Control extends WP_Customize_Control {
 			/**
 			 * Render the hr.
 			 */

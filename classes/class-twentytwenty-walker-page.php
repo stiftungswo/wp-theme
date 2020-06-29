@@ -7,12 +7,12 @@
  * @since Twenty Twenty 1.0
  */
 
-if ( ! class_exists( 'swo-wptheme_Walker_Page' ) ) {
+if ( ! class_exists( 'swowptheme_Walker_Page' ) ) {
 	/**
 	 * CUSTOM PAGE WALKER
 	 * A custom walker for pages.
 	 */
-	class swo-wptheme_Walker_Page extends Walker_Page {
+	class swowptheme_Walker_Page extends Walker_Page {
 
 		/**
 		 * Outputs the beginning of the current element in the tree.
@@ -67,7 +67,7 @@ if ( ! class_exists( 'swo-wptheme_Walker_Page' ) ) {
 
 			if ( '' === $page->post_title ) {
 				/* translators: %d: ID of a post. */
-				$page->post_title = sprintf( __( '#%d (no title)', 'swo-wptheme' ), $page->ID );
+				$page->post_title = sprintf( __( '#%d (no title)', 'swowptheme' ), $page->ID );
 			}
 
 			$args['link_before'] = empty( $args['link_before'] ) ? '' : $args['link_before'];
@@ -101,10 +101,10 @@ if ( ! class_exists( 'swo-wptheme_Walker_Page' ) ) {
 				if ( isset( $args['pages_with_children'][ $page->ID ] ) ) {
 
 					$toggle_target_string = '.menu-modal .page-item-' . $page->ID . ' > ul';
-					$toggle_duration      = swo-wptheme_toggle_duration();
+					$toggle_duration      = swowptheme_toggle_duration();
 
 					// Add the sub menu toggle.
-					$args['list_item_after'] .= '<button class="toggle sub-menu-toggle fill-children-current-color" data-toggle-target="' . $toggle_target_string . '" data-toggle-type="slidetoggle" data-toggle-duration="' . absint( $toggle_duration ) . '" aria-expanded="false"><span class="screen-reader-text">' . __( 'Show sub menu', 'swo-wptheme' ) . '</span>' . swo-wptheme_get_theme_svg( 'chevron-down' ) . '</button>';
+					$args['list_item_after'] .= '<button class="toggle sub-menu-toggle fill-children-current-color" data-toggle-target="' . $toggle_target_string . '" data-toggle-type="slidetoggle" data-toggle-duration="' . absint( $toggle_duration ) . '" aria-expanded="false"><span class="screen-reader-text">' . __( 'Show sub menu', 'swowptheme' ) . '</span>' . swowptheme_get_theme_svg( 'chevron-down' ) . '</button>';
 
 				}
 

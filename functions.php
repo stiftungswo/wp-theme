@@ -31,7 +31,7 @@
  * runs before the init hook. The init hook is too late for some features, such
  * as indicating support for post thumbnails.
  */
-function swo-wptheme_theme_support() {
+function swowptheme_theme_support() {
 
 	// Add default posts and comments RSS feed links to head.
 	add_theme_support( 'automatic-feed-links' );
@@ -61,7 +61,7 @@ function swo-wptheme_theme_support() {
 	set_post_thumbnail_size( 1200, 9999 );
 
 	// Add custom image size used in Cover Template.
-	add_image_size( 'swo-wptheme-fullscreen', 1980, 9999 );
+	add_image_size( 'twentytwenty-fullscreen', 1980, 9999 );
 
 	// Custom logo.
 	$logo_width  = 120;
@@ -112,9 +112,9 @@ function swo-wptheme_theme_support() {
 	 * Make theme available for translation.
 	 * Translations can be filed in the /languages/ directory.
 	 * If you're building a theme based on Twenty Twenty, use a find and replace
-	 * to change 'swo-wptheme' to the name of your theme in all the template files.
+	 * to change 'swowptheme' to the name of your theme in all the template files.
 	 */
-	load_theme_textdomain( 'swo-wptheme' );
+	load_theme_textdomain( 'swowptheme' );
 
 	// Add support for full and wide align images.
 	add_theme_support( 'align-wide' );
@@ -129,7 +129,7 @@ function swo-wptheme_theme_support() {
 	 */
 	if ( is_customize_preview() ) {
 		require get_template_directory() . '/inc/starter-content.php';
-		add_theme_support( 'starter-content', swo-wptheme_get_starter_content() );
+		add_theme_support( 'starter-content', swowptheme_get_starter_content() );
 	}
 
 	// Add theme support for selective refresh for widgets.
@@ -139,12 +139,12 @@ function swo-wptheme_theme_support() {
 	 * Adds `async` and `defer` support for scripts registered or enqueued
 	 * by the theme.
 	 */
-	$loader = new swo-wptheme_Script_Loader();
+	$loader = new swowptheme_Script_Loader();
 	add_filter( 'script_loader_tag', array( $loader, 'filter_script_loader_tag' ), 10, 2 );
 
 }
 
-add_action( 'after_setup_theme', 'swo-wptheme_theme_support' );
+add_action( 'after_setup_theme', 'swowptheme_theme_support' );
 
 /**
  * REQUIRED FILES
@@ -153,26 +153,26 @@ add_action( 'after_setup_theme', 'swo-wptheme_theme_support' );
 require get_template_directory() . '/inc/template-tags.php';
 
 // Handle SVG icons.
-require get_template_directory() . '/classes/class-swo-wptheme-svg-icons.php';
+require get_template_directory() . '/classes/class-twentytwenty-svg-icons.php';
 require get_template_directory() . '/inc/svg-icons.php';
 
 // Handle Customizer settings.
-require get_template_directory() . '/classes/class-swo-wptheme-customize.php';
+require get_template_directory() . '/classes/class-twentytwenty-customize.php';
 
 // Require Separator Control class.
-require get_template_directory() . '/classes/class-swo-wptheme-separator-control.php';
+require get_template_directory() . '/classes/class-twentytwenty-separator-control.php';
 
 // Custom comment walker.
-require get_template_directory() . '/classes/class-swo-wptheme-walker-comment.php';
+require get_template_directory() . '/classes/class-twentytwenty-walker-comment.php';
 
 // Custom page walker.
-require get_template_directory() . '/classes/class-swo-wptheme-walker-page.php';
+require get_template_directory() . '/classes/class-twentytwenty-walker-page.php';
 
 // Custom script loader class.
-require get_template_directory() . '/classes/class-swo-wptheme-script-loader.php';
+require get_template_directory() . '/classes/class-twentytwenty-script-loader.php';
 
 // Non-latin language handling.
-require get_template_directory() . '/classes/class-swo-wptheme-non-latin-languages.php';
+require get_template_directory() . '/classes/class-twentytwenty-non-latin-languages.php';
 
 // Custom CSS.
 require get_template_directory() . '/inc/custom-css.php';
@@ -180,27 +180,27 @@ require get_template_directory() . '/inc/custom-css.php';
 /**
  * Register and Enqueue Styles.
  */
-function swo-wptheme_register_styles() {
+function swowptheme_register_styles() {
 
 	$theme_version = wp_get_theme()->get( 'Version' );
 
-	wp_enqueue_style( 'swo-wptheme-style', get_stylesheet_uri(), array(), $theme_version );
-	wp_style_add_data( 'swo-wptheme-style', 'rtl', 'replace' );
+	wp_enqueue_style( 'twentytwenty-style', get_stylesheet_uri(), array(), $theme_version );
+	wp_style_add_data( 'twentytwenty-style', 'rtl', 'replace' );
 
 	// Add output of Customizer settings as inline style.
-	wp_add_inline_style( 'swo-wptheme-style', swo-wptheme_get_customizer_css( 'front-end' ) );
+	wp_add_inline_style( 'twentytwenty-style', swowptheme_get_customizer_css( 'front-end' ) );
 
 	// Add print CSS.
-	wp_enqueue_style( 'swo-wptheme-print-style', get_template_directory_uri() . '/print.css', null, $theme_version, 'print' );
+	wp_enqueue_style( 'twentytwenty-print-style', get_template_directory_uri() . '/print.css', null, $theme_version, 'print' );
 
 }
 
-add_action( 'wp_enqueue_scripts', 'swo-wptheme_register_styles' );
+add_action( 'wp_enqueue_scripts', 'swowptheme_register_styles' );
 
 /**
  * Register and Enqueue Scripts.
  */
-function swo-wptheme_register_scripts() {
+function swowptheme_register_scripts() {
 
 	$theme_version = wp_get_theme()->get( 'Version' );
 
@@ -208,12 +208,12 @@ function swo-wptheme_register_scripts() {
 		wp_enqueue_script( 'comment-reply' );
 	}
 
-	wp_enqueue_script( 'swo-wptheme-js', get_template_directory_uri() . '/assets/js/index.js', array(), $theme_version, false );
-	wp_script_add_data( 'swo-wptheme-js', 'async', true );
+	wp_enqueue_script( 'twentytwenty-js', get_template_directory_uri() . '/assets/js/index.js', array(), $theme_version, false );
+	wp_script_add_data( 'twentytwenty-js', 'async', true );
 
 }
 
-add_action( 'wp_enqueue_scripts', 'swo-wptheme_register_scripts' );
+add_action( 'wp_enqueue_scripts', 'swowptheme_register_scripts' );
 
 /**
  * Fix skip link focus in IE11.
@@ -223,7 +223,7 @@ add_action( 'wp_enqueue_scripts', 'swo-wptheme_register_scripts' );
  *
  * @link https://git.io/vWdr2
  */
-function swo-wptheme_skip_link_focus_fix() {
+function swowptheme_skip_link_focus_fix() {
 	// The following is minified via `terser --compress --mangle -- assets/js/skip-link-focus-fix.js`.
 	?>
 	<script>
@@ -231,7 +231,7 @@ function swo-wptheme_skip_link_focus_fix() {
 	</script>
 	<?php
 }
-add_action( 'wp_print_footer_scripts', 'swo-wptheme_skip_link_focus_fix' );
+add_action( 'wp_print_footer_scripts', 'swowptheme_skip_link_focus_fix' );
 
 /** Enqueue non-latin language styles
  *
@@ -239,33 +239,33 @@ add_action( 'wp_print_footer_scripts', 'swo-wptheme_skip_link_focus_fix' );
  *
  * @return void
  */
-function swo-wptheme_non_latin_languages() {
-	$custom_css = swo-wptheme_Non_Latin_Languages::get_non_latin_css( 'front-end' );
+function swowptheme_non_latin_languages() {
+	$custom_css = swowptheme_Non_Latin_Languages::get_non_latin_css( 'front-end' );
 
 	if ( $custom_css ) {
-		wp_add_inline_style( 'swo-wptheme-style', $custom_css );
+		wp_add_inline_style( 'twentytwenty-style', $custom_css );
 	}
 }
 
-add_action( 'wp_enqueue_scripts', 'swo-wptheme_non_latin_languages' );
+add_action( 'wp_enqueue_scripts', 'swowptheme_non_latin_languages' );
 
 /**
  * Register navigation menus uses wp_nav_menu in five places.
  */
-function swo-wptheme_menus() {
+function swowptheme_menus() {
 
 	$locations = array(
-		'primary'  => __( 'Desktop Horizontal Menu', 'swo-wptheme' ),
-		'expanded' => __( 'Desktop Expanded Menu', 'swo-wptheme' ),
-		'mobile'   => __( 'Mobile Menu', 'swo-wptheme' ),
-		'footer'   => __( 'Footer Menu', 'swo-wptheme' ),
-		'social'   => __( 'Social Menu', 'swo-wptheme' ),
+		'primary'  => __( 'Desktop Horizontal Menu', 'swowptheme' ),
+		'expanded' => __( 'Desktop Expanded Menu', 'swowptheme' ),
+		'mobile'   => __( 'Mobile Menu', 'swowptheme' ),
+		'footer'   => __( 'Footer Menu', 'swowptheme' ),
+		'social'   => __( 'Social Menu', 'swowptheme' ),
 	);
 
 	register_nav_menus( $locations );
 }
 
-add_action( 'init', 'swo-wptheme_menus' );
+add_action( 'init', 'swowptheme_menus' );
 
 /**
  * Get the information about the logo.
@@ -274,7 +274,7 @@ add_action( 'init', 'swo-wptheme_menus' );
  *
  * @return string $html
  */
-function swo-wptheme_get_custom_logo( $html ) {
+function swowptheme_get_custom_logo( $html ) {
 
 	$logo_id = get_theme_mod( 'custom_logo' );
 
@@ -322,7 +322,7 @@ function swo-wptheme_get_custom_logo( $html ) {
 
 }
 
-add_filter( 'get_custom_logo', 'swo-wptheme_get_custom_logo' );
+add_filter( 'get_custom_logo', 'swowptheme_get_custom_logo' );
 
 if ( ! function_exists( 'wp_body_open' ) ) {
 
@@ -337,18 +337,18 @@ if ( ! function_exists( 'wp_body_open' ) ) {
 /**
  * Include a skip to content link at the top of the page so that users can bypass the menu.
  */
-function swo-wptheme_skip_link() {
-	echo '<a class="skip-link screen-reader-text" href="#site-content">' . __( 'Skip to the content', 'swo-wptheme' ) . '</a>';
+function swowptheme_skip_link() {
+	echo '<a class="skip-link screen-reader-text" href="#site-content">' . __( 'Skip to the content', 'swowptheme' ) . '</a>';
 }
 
-add_action( 'wp_body_open', 'swo-wptheme_skip_link', 5 );
+add_action( 'wp_body_open', 'swowptheme_skip_link', 5 );
 
 /**
  * Register widget areas.
  *
  * @link https://developer.wordpress.org/themes/functionality/sidebars/#registering-a-sidebar
  */
-function swo-wptheme_sidebar_registration() {
+function swowptheme_sidebar_registration() {
 
 	// Arguments used in all register_sidebar() calls.
 	$shared_args = array(
@@ -363,9 +363,9 @@ function swo-wptheme_sidebar_registration() {
 		array_merge(
 			$shared_args,
 			array(
-				'name'        => __( 'Footer #1', 'swo-wptheme' ),
+				'name'        => __( 'Footer #1', 'swowptheme' ),
 				'id'          => 'sidebar-1',
-				'description' => __( 'Widgets in this area will be displayed in the first column in the footer.', 'swo-wptheme' ),
+				'description' => __( 'Widgets in this area will be displayed in the first column in the footer.', 'swowptheme' ),
 			)
 		)
 	);
@@ -375,42 +375,42 @@ function swo-wptheme_sidebar_registration() {
 		array_merge(
 			$shared_args,
 			array(
-				'name'        => __( 'Footer #2', 'swo-wptheme' ),
+				'name'        => __( 'Footer #2', 'swowptheme' ),
 				'id'          => 'sidebar-2',
-				'description' => __( 'Widgets in this area will be displayed in the second column in the footer.', 'swo-wptheme' ),
+				'description' => __( 'Widgets in this area will be displayed in the second column in the footer.', 'swowptheme' ),
 			)
 		)
 	);
 
 }
 
-add_action( 'widgets_init', 'swo-wptheme_sidebar_registration' );
+add_action( 'widgets_init', 'swowptheme_sidebar_registration' );
 
 /**
  * Enqueue supplemental block editor styles.
  */
-function swo-wptheme_block_editor_styles() {
+function swowptheme_block_editor_styles() {
 
 	// Enqueue the editor styles.
-	wp_enqueue_style( 'swo-wptheme-block-editor-styles', get_theme_file_uri( '/assets/css/editor-style-block.css' ), array(), wp_get_theme()->get( 'Version' ), 'all' );
-	wp_style_add_data( 'swo-wptheme-block-editor-styles', 'rtl', 'replace' );
+	wp_enqueue_style( 'twentytwenty-block-editor-styles', get_theme_file_uri( '/assets/css/editor-style-block.css' ), array(), wp_get_theme()->get( 'Version' ), 'all' );
+	wp_style_add_data( 'twentytwenty-block-editor-styles', 'rtl', 'replace' );
 
 	// Add inline style from the Customizer.
-	wp_add_inline_style( 'swo-wptheme-block-editor-styles', swo-wptheme_get_customizer_css( 'block-editor' ) );
+	wp_add_inline_style( 'twentytwenty-block-editor-styles', swowptheme_get_customizer_css( 'block-editor' ) );
 
 	// Add inline style for non-latin fonts.
-	wp_add_inline_style( 'swo-wptheme-block-editor-styles', swo-wptheme_Non_Latin_Languages::get_non_latin_css( 'block-editor' ) );
+	wp_add_inline_style( 'twentytwenty-block-editor-styles', swowptheme_Non_Latin_Languages::get_non_latin_css( 'block-editor' ) );
 
 	// Enqueue the editor script.
-	wp_enqueue_script( 'swo-wptheme-block-editor-script', get_theme_file_uri( '/assets/js/editor-script-block.js' ), array( 'wp-blocks', 'wp-dom' ), wp_get_theme()->get( 'Version' ), true );
+	wp_enqueue_script( 'twentytwenty-block-editor-script', get_theme_file_uri( '/assets/js/editor-script-block.js' ), array( 'wp-blocks', 'wp-dom' ), wp_get_theme()->get( 'Version' ), true );
 }
 
-add_action( 'enqueue_block_editor_assets', 'swo-wptheme_block_editor_styles', 1, 1 );
+add_action( 'enqueue_block_editor_assets', 'swowptheme_block_editor_styles', 1, 1 );
 
 /**
  * Enqueue classic editor styles.
  */
-function swo-wptheme_classic_editor_styles() {
+function swowptheme_classic_editor_styles() {
 
 	$classic_editor_styles = array(
 		'/assets/css/editor-style-classic.css',
@@ -420,7 +420,7 @@ function swo-wptheme_classic_editor_styles() {
 
 }
 
-add_action( 'init', 'swo-wptheme_classic_editor_styles' );
+add_action( 'init', 'swowptheme_classic_editor_styles' );
 
 /**
  * Output Customizer settings in the classic editor.
@@ -430,9 +430,9 @@ add_action( 'init', 'swo-wptheme_classic_editor_styles' );
  *
  * @return array $mce_init TinyMCE styles.
  */
-function swo-wptheme_add_classic_editor_customizer_styles( $mce_init ) {
+function swowptheme_add_classic_editor_customizer_styles( $mce_init ) {
 
-	$styles = swo-wptheme_get_customizer_css( 'classic-editor' );
+	$styles = swowptheme_get_customizer_css( 'classic-editor' );
 
 	if ( ! isset( $mce_init['content_style'] ) ) {
 		$mce_init['content_style'] = $styles . ' ';
@@ -444,7 +444,7 @@ function swo-wptheme_add_classic_editor_customizer_styles( $mce_init ) {
 
 }
 
-add_filter( 'tiny_mce_before_init', 'swo-wptheme_add_classic_editor_customizer_styles' );
+add_filter( 'tiny_mce_before_init', 'swowptheme_add_classic_editor_customizer_styles' );
 
 /**
  * Output non-latin font styles in the classic editor.
@@ -454,9 +454,9 @@ add_filter( 'tiny_mce_before_init', 'swo-wptheme_add_classic_editor_customizer_s
  *
  * @return array $mce_init TinyMCE styles.
  */
-function swo-wptheme_add_classic_editor_non_latin_styles( $mce_init ) {
+function swowptheme_add_classic_editor_non_latin_styles( $mce_init ) {
 
-	$styles = swo-wptheme_Non_Latin_Languages::get_non_latin_css( 'classic-editor' );
+	$styles = swowptheme_Non_Latin_Languages::get_non_latin_css( 'classic-editor' );
 
 	// Return if there are no styles to add.
 	if ( ! $styles ) {
@@ -473,35 +473,35 @@ function swo-wptheme_add_classic_editor_non_latin_styles( $mce_init ) {
 
 }
 
-add_filter( 'tiny_mce_before_init', 'swo-wptheme_add_classic_editor_non_latin_styles' );
+add_filter( 'tiny_mce_before_init', 'swowptheme_add_classic_editor_non_latin_styles' );
 
 /**
  * Block Editor Settings.
  * Add custom colors and font sizes to the block editor.
  */
-function swo-wptheme_block_editor_settings() {
+function swowptheme_block_editor_settings() {
 
 	// Block Editor Palette.
 	$editor_color_palette = array(
 		array(
-			'name'  => __( 'Accent Color', 'swo-wptheme' ),
+			'name'  => __( 'Accent Color', 'swowptheme' ),
 			'slug'  => 'accent',
-			'color' => swo-wptheme_get_color_for_area( 'content', 'accent' ),
+			'color' => swowptheme_get_color_for_area( 'content', 'accent' ),
 		),
 		array(
-			'name'  => __( 'Primary', 'swo-wptheme' ),
+			'name'  => __( 'Primary', 'swowptheme' ),
 			'slug'  => 'primary',
-			'color' => swo-wptheme_get_color_for_area( 'content', 'text' ),
+			'color' => swowptheme_get_color_for_area( 'content', 'text' ),
 		),
 		array(
-			'name'  => __( 'Secondary', 'swo-wptheme' ),
+			'name'  => __( 'Secondary', 'swowptheme' ),
 			'slug'  => 'secondary',
-			'color' => swo-wptheme_get_color_for_area( 'content', 'secondary' ),
+			'color' => swowptheme_get_color_for_area( 'content', 'secondary' ),
 		),
 		array(
-			'name'  => __( 'Subtle Background', 'swo-wptheme' ),
+			'name'  => __( 'Subtle Background', 'swowptheme' ),
 			'slug'  => 'subtle-background',
-			'color' => swo-wptheme_get_color_for_area( 'content', 'borders' ),
+			'color' => swowptheme_get_color_for_area( 'content', 'borders' ),
 		),
 	);
 
@@ -512,7 +512,7 @@ function swo-wptheme_block_editor_settings() {
 		$background_color     = $background_color_arr[0]['default-color'];
 	}
 	$editor_color_palette[] = array(
-		'name'  => __( 'Background Color', 'swo-wptheme' ),
+		'name'  => __( 'Background Color', 'swowptheme' ),
 		'slug'  => 'background',
 		'color' => '#' . $background_color,
 	);
@@ -527,26 +527,26 @@ function swo-wptheme_block_editor_settings() {
 		'editor-font-sizes',
 		array(
 			array(
-				'name'      => _x( 'Small', 'Name of the small font size in the block editor', 'swo-wptheme' ),
-				'shortName' => _x( 'S', 'Short name of the small font size in the block editor.', 'swo-wptheme' ),
+				'name'      => _x( 'Small', 'Name of the small font size in the block editor', 'swowptheme' ),
+				'shortName' => _x( 'S', 'Short name of the small font size in the block editor.', 'swowptheme' ),
 				'size'      => 18,
 				'slug'      => 'small',
 			),
 			array(
-				'name'      => _x( 'Regular', 'Name of the regular font size in the block editor', 'swo-wptheme' ),
-				'shortName' => _x( 'M', 'Short name of the regular font size in the block editor.', 'swo-wptheme' ),
+				'name'      => _x( 'Regular', 'Name of the regular font size in the block editor', 'swowptheme' ),
+				'shortName' => _x( 'M', 'Short name of the regular font size in the block editor.', 'swowptheme' ),
 				'size'      => 21,
 				'slug'      => 'normal',
 			),
 			array(
-				'name'      => _x( 'Large', 'Name of the large font size in the block editor', 'swo-wptheme' ),
-				'shortName' => _x( 'L', 'Short name of the large font size in the block editor.', 'swo-wptheme' ),
+				'name'      => _x( 'Large', 'Name of the large font size in the block editor', 'swowptheme' ),
+				'shortName' => _x( 'L', 'Short name of the large font size in the block editor.', 'swowptheme' ),
 				'size'      => 26.25,
 				'slug'      => 'large',
 			),
 			array(
-				'name'      => _x( 'Larger', 'Name of the larger font size in the block editor', 'swo-wptheme' ),
-				'shortName' => _x( 'XL', 'Short name of the larger font size in the block editor.', 'swo-wptheme' ),
+				'name'      => _x( 'Larger', 'Name of the larger font size in the block editor', 'swowptheme' ),
+				'shortName' => _x( 'XL', 'Short name of the larger font size in the block editor.', 'swowptheme' ),
 				'size'      => 32,
 				'slug'      => 'larger',
 			),
@@ -557,13 +557,13 @@ function swo-wptheme_block_editor_settings() {
 
 	// If we have a dark background color then add support for dark editor style.
 	// We can determine if the background color is dark by checking if the text-color is white.
-	if ( '#ffffff' === strtolower( swo-wptheme_get_color_for_area( 'content', 'text' ) ) ) {
+	if ( '#ffffff' === strtolower( swowptheme_get_color_for_area( 'content', 'text' ) ) ) {
 		add_theme_support( 'dark-editor-style' );
 	}
 
 }
 
-add_action( 'after_setup_theme', 'swo-wptheme_block_editor_settings' );
+add_action( 'after_setup_theme', 'swowptheme_block_editor_settings' );
 
 /**
  * Overwrite default more tag with styling and screen reader markup.
@@ -572,11 +572,11 @@ add_action( 'after_setup_theme', 'swo-wptheme_block_editor_settings' );
  *
  * @return string $html
  */
-function swo-wptheme_read_more_tag( $html ) {
+function swowptheme_read_more_tag( $html ) {
 	return preg_replace( '/<a(.*)>(.*)<\/a>/iU', sprintf( '<div class="read-more-button-wrap"><a$1><span class="faux-button">$2</span> <span class="screen-reader-text">"%1$s"</span></a></div>', get_the_title( get_the_ID() ) ), $html );
 }
 
-add_filter( 'the_content_more_link', 'swo-wptheme_read_more_tag' );
+add_filter( 'the_content_more_link', 'swowptheme_read_more_tag' );
 
 /**
  * Enqueues scripts for customizer controls & settings.
@@ -585,21 +585,21 @@ add_filter( 'the_content_more_link', 'swo-wptheme_read_more_tag' );
  *
  * @return void
  */
-function swo-wptheme_customize_controls_enqueue_scripts() {
+function swowptheme_customize_controls_enqueue_scripts() {
 	$theme_version = wp_get_theme()->get( 'Version' );
 
 	// Add main customizer js file.
-	wp_enqueue_script( 'swo-wptheme-customize', get_template_directory_uri() . '/assets/js/customize.js', array( 'jquery' ), $theme_version, false );
+	wp_enqueue_script( 'twentytwenty-customize', get_template_directory_uri() . '/assets/js/customize.js', array( 'jquery' ), $theme_version, false );
 
 	// Add script for color calculations.
-	wp_enqueue_script( 'swo-wptheme-color-calculations', get_template_directory_uri() . '/assets/js/color-calculations.js', array( 'wp-color-picker' ), $theme_version, false );
+	wp_enqueue_script( 'twentytwenty-color-calculations', get_template_directory_uri() . '/assets/js/color-calculations.js', array( 'wp-color-picker' ), $theme_version, false );
 
 	// Add script for controls.
-	wp_enqueue_script( 'swo-wptheme-customize-controls', get_template_directory_uri() . '/assets/js/customize-controls.js', array( 'swo-wptheme-color-calculations', 'customize-controls', 'underscore', 'jquery' ), $theme_version, false );
-	wp_localize_script( 'swo-wptheme-customize-controls', 'swo-wpthemeBgColors', swo-wptheme_get_customizer_color_vars() );
+	wp_enqueue_script( 'twentytwenty-customize-controls', get_template_directory_uri() . '/assets/js/customize-controls.js', array( 'twentytwenty-color-calculations', 'customize-controls', 'underscore', 'jquery' ), $theme_version, false );
+	wp_localize_script( 'twentytwenty-customize-controls', 'swowpthemeBgColors', swowptheme_get_customizer_color_vars() );
 }
 
-add_action( 'customize_controls_enqueue_scripts', 'swo-wptheme_customize_controls_enqueue_scripts' );
+add_action( 'customize_controls_enqueue_scripts', 'swowptheme_customize_controls_enqueue_scripts' );
 
 /**
  * Enqueue scripts for the customizer preview.
@@ -608,24 +608,24 @@ add_action( 'customize_controls_enqueue_scripts', 'swo-wptheme_customize_control
  *
  * @return void
  */
-function swo-wptheme_customize_preview_init() {
+function swowptheme_customize_preview_init() {
 	$theme_version = wp_get_theme()->get( 'Version' );
 
-	wp_enqueue_script( 'swo-wptheme-customize-preview', get_theme_file_uri( '/assets/js/customize-preview.js' ), array( 'customize-preview', 'customize-selective-refresh', 'jquery' ), $theme_version, true );
-	wp_localize_script( 'swo-wptheme-customize-preview', 'swo-wpthemeBgColors', swo-wptheme_get_customizer_color_vars() );
-	wp_localize_script( 'swo-wptheme-customize-preview', 'swo-wpthemePreviewEls', swo-wptheme_get_elements_array() );
+	wp_enqueue_script( 'twentytwenty-customize-preview', get_theme_file_uri( '/assets/js/customize-preview.js' ), array( 'customize-preview', 'customize-selective-refresh', 'jquery' ), $theme_version, true );
+	wp_localize_script( 'twentytwenty-customize-preview', 'swowpthemeBgColors', swowptheme_get_customizer_color_vars() );
+	wp_localize_script( 'twentytwenty-customize-preview', 'swowpthemePreviewEls', swowptheme_get_elements_array() );
 
 	wp_add_inline_script(
-		'swo-wptheme-customize-preview',
+		'twentytwenty-customize-preview',
 		sprintf(
 			'wp.customize.selectiveRefresh.partialConstructor[ %1$s ].prototype.attrs = %2$s;',
 			wp_json_encode( 'cover_opacity' ),
-			wp_json_encode( swo-wptheme_customize_opacity_range() )
+			wp_json_encode( swowptheme_customize_opacity_range() )
 		)
 	);
 }
 
-add_action( 'customize_preview_init', 'swo-wptheme_customize_preview_init' );
+add_action( 'customize_preview_init', 'swowptheme_customize_preview_init' );
 
 /**
  * Get accessible color for an area.
@@ -636,7 +636,7 @@ add_action( 'customize_preview_init', 'swo-wptheme_customize_preview_init' );
  * @param string $context Can be 'text' or 'accent'.
  * @return string Returns a HEX color.
  */
-function swo-wptheme_get_color_for_area( $area = 'content', $context = 'text' ) {
+function swowptheme_get_color_for_area( $area = 'content', $context = 'text' ) {
 
 	// Get the value from the theme-mod.
 	$settings = get_theme_mod(
@@ -673,7 +673,7 @@ function swo-wptheme_get_color_for_area( $area = 'content', $context = 'text' ) 
  *
  * @return array
  */
-function swo-wptheme_get_customizer_color_vars() {
+function swowptheme_get_customizer_color_vars() {
 	$colors = array(
 		'content'       => array(
 			'setting' => 'background_color',
@@ -692,7 +692,7 @@ function swo-wptheme_get_customizer_color_vars() {
  *
  * @return array
  */
-function swo-wptheme_get_elements_array() {
+function swowptheme_get_elements_array() {
 
 	// The array is formatted like this:
 	// [key-in-saved-setting][sub-key-in-setting][css-property] = [elements].
@@ -756,5 +756,5 @@ function swo-wptheme_get_elements_array() {
 	*
 	* @param array Array of elements
 	*/
-	return apply_filters( 'swo-wptheme_get_elements_array', $elements );
+	return apply_filters( 'swowptheme_get_elements_array', $elements );
 }

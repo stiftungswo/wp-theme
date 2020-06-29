@@ -11,11 +11,11 @@
  * @since Twenty Twenty 1.0
  */
 
-if ( ! class_exists( 'swo-wptheme_Script_Loader' ) ) {
+if ( ! class_exists( 'swowptheme_Script_Loader' ) ) {
 	/**
 	 * A class that provides a way to add `async` or `defer` attributes to scripts.
 	 */
-	class swo-wptheme_Script_Loader {
+	class swowptheme_Script_Loader {
 
 		/**
 		 * Adds async/defer attributes to enqueued / registered scripts.

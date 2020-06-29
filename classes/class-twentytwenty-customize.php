@@ -7,11 +7,11 @@
  * @since Twenty Twenty 1.0
  */
 
-if ( ! class_exists( 'swo-wptheme_Customize' ) ) {
+if ( ! class_exists( 'swowptheme_Customize' ) ) {
 	/**
 	 * CUSTOMIZER SETTINGS
 	 */
-	class swo-wptheme_Customize {
+	class swowptheme_Customize {
 
 		/**
 		 * Register customizer options.
@@ -30,7 +30,7 @@ if ( ! class_exists( 'swo-wptheme_Customize' ) ) {
 				'blogname',
 				array(
 					'selector'        => '.site-title a',
-					'render_callback' => 'swo-wptheme_customize_partial_blogname',
+					'render_callback' => 'swowptheme_customize_partial_blogname',
 				)
 			);
 
@@ -38,7 +38,7 @@ if ( ! class_exists( 'swo-wptheme_Customize' ) ) {
 				'blogdescription',
 				array(
 					'selector'        => '.site-description',
-					'render_callback' => 'swo-wptheme_customize_partial_blogdescription',
+					'render_callback' => 'swowptheme_customize_partial_blogdescription',
 				)
 			);
 
@@ -46,7 +46,7 @@ if ( ! class_exists( 'swo-wptheme_Customize' ) ) {
 				'custom_logo',
 				array(
 					'selector'        => '.header-titles [class*=site-]:not(.site-description)',
-					'render_callback' => 'swo-wptheme_customize_partial_site_logo',
+					'render_callback' => 'swowptheme_customize_partial_site_logo',
 				)
 			);
 
@@ -54,7 +54,7 @@ if ( ! class_exists( 'swo-wptheme_Customize' ) ) {
 				'retina_logo',
 				array(
 					'selector'        => '.header-titles [class*=site-]:not(.site-description)',
-					'render_callback' => 'swo-wptheme_customize_partial_site_logo',
+					'render_callback' => 'swowptheme_customize_partial_site_logo',
 				)
 			);
 
@@ -78,8 +78,8 @@ if ( ! class_exists( 'swo-wptheme_Customize' ) ) {
 					'type'        => 'checkbox',
 					'section'     => 'title_tagline',
 					'priority'    => 10,
-					'label'       => __( 'Retina logo', 'swo-wptheme' ),
-					'description' => __( 'Scales the logo to half its uploaded size, making it sharp on high-res screens.', 'swo-wptheme' ),
+					'label'       => __( 'Retina logo', 'swowptheme' ),
+					'description' => __( 'Scales the logo to half its uploaded size, making it sharp on high-res screens.', 'swowptheme' ),
 				)
 			);
 
@@ -98,7 +98,7 @@ if ( ! class_exists( 'swo-wptheme_Customize' ) ) {
 					$wp_customize,
 					'header_footer_background_color',
 					array(
-						'label'   => __( 'Header &amp; Footer Background Color', 'swo-wptheme' ),
+						'label'   => __( 'Header &amp; Footer Background Color', 'swowptheme' ),
 						'section' => 'colors',
 					)
 				)
@@ -120,10 +120,10 @@ if ( ! class_exists( 'swo-wptheme_Customize' ) ) {
 				array(
 					'type'    => 'radio',
 					'section' => 'colors',
-					'label'   => __( 'Primary Color', 'swo-wptheme' ),
+					'label'   => __( 'Primary Color', 'swowptheme' ),
 					'choices' => array(
-						'default' => __( 'Default', 'swo-wptheme' ),
-						'custom'  => __( 'Custom', 'swo-wptheme' ),
+						'default' => __( 'Default', 'swowptheme' ),
+						'custom'  => __( 'Custom', 'swowptheme' ),
 					),
 				)
 			);
@@ -180,7 +180,7 @@ if ( ! class_exists( 'swo-wptheme_Customize' ) ) {
 					array(
 						'section'         => 'colors',
 						'settings'        => 'accent_hue',
-						'description'     => __( 'Apply a custom color for links, buttons, featured images.', 'swo-wptheme' ),
+						'description'     => __( 'Apply a custom color for links, buttons, featured images.', 'swowptheme' ),
 						'mode'            => 'hue',
 						'active_callback' => function() use ( $wp_customize ) {
 							return ( 'custom' === $wp_customize->get_setting( 'accent_hue_active' )->value() );
@@ -199,7 +199,7 @@ if ( ! class_exists( 'swo-wptheme_Customize' ) ) {
 			$wp_customize->add_section(
 				'options',
 				array(
-					'title'      => __( 'Theme Options', 'swo-wptheme' ),
+					'title'      => __( 'Theme Options', 'swowptheme' ),
 					'priority'   => 40,
 					'capability' => 'edit_theme_options',
 				)
@@ -222,7 +222,7 @@ if ( ! class_exists( 'swo-wptheme_Customize' ) ) {
 					'type'     => 'checkbox',
 					'section'  => 'options',
 					'priority' => 10,
-					'label'    => __( 'Show search in header', 'swo-wptheme' ),
+					'label'    => __( 'Show search in header', 'swowptheme' ),
 				)
 			);
 
@@ -243,7 +243,7 @@ if ( ! class_exists( 'swo-wptheme_Customize' ) ) {
 					'type'     => 'checkbox',
 					'section'  => 'options',
 					'priority' => 10,
-					'label'    => __( 'Show author bio', 'swo-wptheme' ),
+					'label'    => __( 'Show author bio', 'swowptheme' ),
 				)
 			);
 
@@ -264,10 +264,10 @@ if ( ! class_exists( 'swo-wptheme_Customize' ) ) {
 					'type'     => 'radio',
 					'section'  => 'options',
 					'priority' => 10,
-					'label'    => __( 'On archive pages, posts show:', 'swo-wptheme' ),
+					'label'    => __( 'On archive pages, posts show:', 'swowptheme' ),
 					'choices'  => array(
-						'full'    => __( 'Full text', 'swo-wptheme' ),
-						'summary' => __( 'Summary', 'swo-wptheme' ),
+						'full'    => __( 'Full text', 'swowptheme' ),
+						'summary' => __( 'Summary', 'swowptheme' ),
 					),
 				)
 			);
@@ -278,9 +278,9 @@ if ( ! class_exists( 'swo-wptheme_Customize' ) ) {
 			$wp_customize->add_section(
 				'cover_template_options',
 				array(
-					'title'       => __( 'Cover Template', 'swo-wptheme' ),
+					'title'       => __( 'Cover Template', 'swowptheme' ),
 					'capability'  => 'edit_theme_options',
-					'description' => __( 'Settings for the "Cover Template" page template. Add a featured image to use as background.', 'swo-wptheme' ),
+					'description' => __( 'Settings for the "Cover Template" page template. Add a featured image to use as background.', 'swowptheme' ),
 					'priority'    => 42,
 				)
 			);
@@ -302,8 +302,8 @@ if ( ! class_exists( 'swo-wptheme_Customize' ) ) {
 				array(
 					'type'        => 'checkbox',
 					'section'     => 'cover_template_options',
-					'label'       => __( 'Fixed Background Image', 'swo-wptheme' ),
-					'description' => __( 'Creates a parallax effect when the visitor scrolls.', 'swo-wptheme' ),
+					'label'       => __( 'Fixed Background Image', 'swowptheme' ),
+					'description' => __( 'Creates a parallax effect when the visitor scrolls.', 'swowptheme' ),
 				)
 			);
 
@@ -325,7 +325,7 @@ if ( ! class_exists( 'swo-wptheme_Customize' ) ) {
 			);
 
 			$wp_customize->add_control(
-				new swo-wptheme_Separator_Control(
+				new swowptheme_Separator_Control(
 					$wp_customize,
 					'cover_template_separator_1',
 					array(
@@ -339,7 +339,7 @@ if ( ! class_exists( 'swo-wptheme_Customize' ) ) {
 			$wp_customize->add_setting(
 				'cover_template_overlay_background_color',
 				array(
-					'default'           => swo-wptheme_get_color_for_area( 'content', 'accent' ),
+					'default'           => swowptheme_get_color_for_area( 'content', 'accent' ),
 					'sanitize_callback' => 'sanitize_hex_color',
 				)
 			);
@@ -349,8 +349,8 @@ if ( ! class_exists( 'swo-wptheme_Customize' ) ) {
 					$wp_customize,
 					'cover_template_overlay_background_color',
 					array(
-						'label'       => __( 'Overlay Background Color', 'swo-wptheme' ),
-						'description' => __( 'The color used for the overlay. Defaults to the accent color.', 'swo-wptheme' ),
+						'label'       => __( 'Overlay Background Color', 'swowptheme' ),
+						'description' => __( 'The color used for the overlay. Defaults to the accent color.', 'swowptheme' ),
 						'section'     => 'cover_template_options',
 					)
 				)
@@ -371,8 +371,8 @@ if ( ! class_exists( 'swo-wptheme_Customize' ) ) {
 					$wp_customize,
 					'cover_template_overlay_text_color',
 					array(
-						'label'       => __( 'Overlay Text Color', 'swo-wptheme' ),
-						'description' => __( 'The color used for the text in the overlay.', 'swo-wptheme' ),
+						'label'       => __( 'Overlay Text Color', 'swowptheme' ),
+						'description' => __( 'The color used for the text in the overlay.', 'swowptheme' ),
 						'section'     => 'cover_template_options',
 					)
 				)
@@ -392,11 +392,11 @@ if ( ! class_exists( 'swo-wptheme_Customize' ) ) {
 			$wp_customize->add_control(
 				'cover_template_overlay_opacity',
 				array(
-					'label'       => __( 'Overlay Opacity', 'swo-wptheme' ),
-					'description' => __( 'Make sure that the contrast is high enough so that the text is readable.', 'swo-wptheme' ),
+					'label'       => __( 'Overlay Opacity', 'swowptheme' ),
+					'description' => __( 'Make sure that the contrast is high enough so that the text is readable.', 'swowptheme' ),
 					'section'     => 'cover_template_options',
 					'type'        => 'range',
-					'input_attrs' => swo-wptheme_customize_opacity_range(),
+					'input_attrs' => swowptheme_customize_opacity_range(),
 				)
 			);
 
@@ -461,39 +461,39 @@ if ( ! class_exists( 'swo-wptheme_Customize' ) ) {
 	}
 
 	// Setup the Theme Customizer settings and controls.
-	add_action( 'customize_register', array( 'swo-wptheme_Customize', 'register' ) );
+	add_action( 'customize_register', array( 'swowptheme_Customize', 'register' ) );
 
 }
 
 /**
  * PARTIAL REFRESH FUNCTIONS
  * */
-if ( ! function_exists( 'swo-wptheme_customize_partial_blogname' ) ) {
+if ( ! function_exists( 'swowptheme_customize_partial_blogname' ) ) {
 	/**
 	 * Render the site title for the selective refresh partial.
 	 */
-	function swo-wptheme_customize_partial_blogname() {
+	function swowptheme_customize_partial_blogname() {
 		bloginfo( 'name' );
 	}
 }
 
-if ( ! function_exists( 'swo-wptheme_customize_partial_blogdescription' ) ) {
+if ( ! function_exists( 'swowptheme_customize_partial_blogdescription' ) ) {
 	/**
 	 * Render the site description for the selective refresh partial.
 	 */
-	function swo-wptheme_customize_partial_blogdescription() {
+	function swowptheme_customize_partial_blogdescription() {
 		bloginfo( 'description' );
 	}
 }
 
-if ( ! function_exists( 'swo-wptheme_customize_partial_site_logo' ) ) {
+if ( ! function_exists( 'swowptheme_customize_partial_site_logo' ) ) {
 	/**
 	 * Render the site logo for the selective refresh partial.
 	 *
 	 * Doing it this way so we don't have issues with `render_callback`'s arguments.
 	 */
-	function swo-wptheme_customize_partial_site_logo() {
-		swo-wptheme_site_logo();
+	function swowptheme_customize_partial_site_logo() {
+		swowptheme_site_logo();
 	}
 }
 
@@ -503,7 +503,7 @@ if ( ! function_exists( 'swo-wptheme_customize_partial_site_logo' ) ) {
  *
  * @return array Array containing attribute names and their values.
  */
-function swo-wptheme_customize_opacity_range() {
+function swowptheme_customize_opacity_range() {
 	/**
 	 * Filter the input attributes for opacity
 	 *
@@ -516,7 +516,7 @@ function swo-wptheme_customize_opacity_range() {
 	 * }
 	 */
 	return apply_filters(
-		'swo-wptheme_customize_opacity_range',
+		'swowptheme_customize_opacity_range',
 		array(
 			'min'  => 0,
 			'max'  => 90,

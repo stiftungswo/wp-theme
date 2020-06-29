@@ -17,14 +17,14 @@
 			<?php
 			get_search_form(
 				array(
-					'label' => __( 'Search for:', 'swo-wptheme' ),
+					'label' => __( 'Search for:', 'swowptheme' ),
 				)
 			);
 			?>
 
 			<button class="toggle search-untoggle close-search-toggle fill-children-current-color" data-toggle-target=".search-modal" data-toggle-body-class="showing-search-modal" data-set-focus=".search-modal .search-field" aria-expanded="false">
-				<span class="screen-reader-text"><?php _e( 'Close search', 'swo-wptheme' ); ?></span>
-				<?php swo-wptheme_the_theme_svg( 'cross' ); ?>
+				<span class="screen-reader-text"><?php _e( 'Close search', 'swowptheme' ); ?></span>
+				<?php swowptheme_the_theme_svg( 'cross' ); ?>
 			</button><!-- .search-toggle -->
 
 		</div><!-- .section-inner -->

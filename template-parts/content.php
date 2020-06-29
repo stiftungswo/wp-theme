@@ -33,7 +33,7 @@
 			if ( is_search() || ! is_singular() && 'summary' === get_theme_mod( 'blog_content', 'full' ) ) {
 				the_excerpt();
 			} else {
-				the_content( __( 'Continue reading', 'swo-wptheme' ) );
+				the_content( __( 'Continue reading', 'swowptheme' ) );
 			}
 			?>
 
@@ -45,7 +45,7 @@
 		<?php
 		wp_link_pages(
 			array(
-				'before'      => '<nav class="post-nav-links bg-light-background" aria-label="' . esc_attr__( 'Page', 'swo-wptheme' ) . '"><span class="label">' . __( 'Pages:', 'swo-wptheme' ) . '</span>',
+				'before'      => '<nav class="post-nav-links bg-light-background" aria-label="' . esc_attr__( 'Page', 'swowptheme' ) . '"><span class="label">' . __( 'Pages:', 'swowptheme' ) . '</span>',
 				'after'       => '</nav>',
 				'link_before' => '<span class="page-number">',
 				'link_after'  => '</span>',
@@ -55,7 +55,7 @@
 		edit_post_link();
 
 		// Single bottom post meta.
-		swo-wptheme_the_post_meta( get_the_ID(), 'single-bottom' );
+		swowptheme_the_post_meta( get_the_ID(), 'single-bottom' );
 
 		if ( post_type_supports( get_post_type( get_the_ID() ), 'author' ) && is_single() ) {
 

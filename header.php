@@ -48,9 +48,9 @@
 						<button class="toggle search-toggle mobile-search-toggle" data-toggle-target=".search-modal" data-toggle-body-class="showing-search-modal" data-set-focus=".search-modal .search-field" aria-expanded="false">
 							<span class="toggle-inner">
 								<span class="toggle-icon">
-									<?php swo-wptheme_the_theme_svg( 'search' ); ?>
+									<?php swowptheme_the_theme_svg( 'search' ); ?>
 								</span>
-								<span class="toggle-text"><?php _e( 'Search', 'swo-wptheme' ); ?></span>
+								<span class="toggle-text"><?php _e( 'Search', 'swowptheme' ); ?></span>
 							</span>
 						</button><!-- .search-toggle -->
 
@@ -60,10 +60,10 @@
 
 						<?php
 							// Site title or logo.
-							swo-wptheme_site_logo();
+							swowptheme_site_logo();
 
 							// Site description.
-							swo-wptheme_site_description();
+							swowptheme_site_description();
 						?>
 
 					</div><!-- .header-titles -->
@@ -71,9 +71,9 @@
 					<button class="toggle nav-toggle mobile-nav-toggle" data-toggle-target=".menu-modal"  data-toggle-body-class="showing-menu-modal" aria-expanded="false" data-set-focus=".close-nav-toggle">
 						<span class="toggle-inner">
 							<span class="toggle-icon">
-								<?php swo-wptheme_the_theme_svg( 'ellipsis' ); ?>
+								<?php swowptheme_the_theme_svg( 'ellipsis' ); ?>
 							</span>
-							<span class="toggle-text"><?php _e( 'Menu', 'swo-wptheme' ); ?></span>
+							<span class="toggle-text"><?php _e( 'Menu', 'swowptheme' ); ?></span>
 						</span>
 					</button><!-- .nav-toggle -->
 
@@ -85,7 +85,7 @@
 					if ( has_nav_menu( 'primary' ) || ! has_nav_menu( 'expanded' ) ) {
 						?>
 
-							<nav class="primary-menu-wrapper" aria-label="<?php esc_attr_e( 'Horizontal', 'swo-wptheme' ); ?>" role="navigation">
+							<nav class="primary-menu-wrapper" aria-label="<?php esc_attr_e( 'Horizontal', 'swowptheme' ); ?>" role="navigation">
 
 								<ul class="primary-menu reset-list-style">
 
@@ -107,7 +107,7 @@
 											'match_menu_classes' => true,
 											'show_sub_menu_icons' => true,
 											'title_li' => false,
-											'walker'   => new swo-wptheme_Walker_Page(),
+											'walker'   => new swowptheme_Walker_Page(),
 										)
 									);
 
@@ -134,9 +134,9 @@
 
 								<button class="toggle nav-toggle desktop-nav-toggle" data-toggle-target=".menu-modal" data-toggle-body-class="showing-menu-modal" aria-expanded="false" data-set-focus=".close-nav-toggle">
 									<span class="toggle-inner">
-										<span class="toggle-text"><?php _e( 'Menu', 'swo-wptheme' ); ?></span>
+										<span class="toggle-text"><?php _e( 'Menu', 'swowptheme' ); ?></span>
 										<span class="toggle-icon">
-											<?php swo-wptheme_the_theme_svg( 'ellipsis' ); ?>
+											<?php swowptheme_the_theme_svg( 'ellipsis' ); ?>
 										</span>
 									</span>
 								</button><!-- .nav-toggle -->
@@ -153,8 +153,8 @@
 
 								<button class="toggle search-toggle desktop-search-toggle" data-toggle-target=".search-modal" data-toggle-body-class="showing-search-modal" data-set-focus=".search-modal .search-field" aria-expanded="false">
 									<span class="toggle-inner">
-										<?php swo-wptheme_the_theme_svg( 'search' ); ?>
-										<span class="toggle-text"><?php _e( 'Search', 'swo-wptheme' ); ?></span>
+										<?php swowptheme_the_theme_svg( 'search' ); ?>
+										<span class="toggle-text"><?php _e( 'Search', 'swowptheme' ); ?></span>
 									</span>
 								</button><!-- .search-toggle -->
 

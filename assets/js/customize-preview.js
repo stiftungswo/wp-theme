@@ -1,4 +1,4 @@
-/* global swo-wpthemeBgColors, swo-wpthemePreviewEls, jQuery, _, wp */
+/* global swowpthemeBgColors, swowpthemePreviewEls, jQuery, _, wp */
 /**
  * Customizer enhancements for a better user experience.
  *
@@ -123,21 +123,21 @@
 			// Generate the styles.
 			// Add a small delay to be sure the accessible colors were generated.
 			setTimeout( function() {
-				Object.keys( swo-wpthemeBgColors ).forEach( function( context ) {
-					swo-wpthemeGenerateColorA11yPreviewStyles( context );
+				Object.keys( swowpthemeBgColors ).forEach( function( context ) {
+					swowpthemeGenerateColorA11yPreviewStyles( context );
 				} );
 			}, 50 );
 		} );
 	} );
 
 	// Add listeners for background-color settings.
-	Object.keys( swo-wpthemeBgColors ).forEach( function( context ) {
-		wp.customize( swo-wpthemeBgColors[ context ].setting, function( value ) {
+	Object.keys( swowpthemeBgColors ).forEach( function( context ) {
+		wp.customize( swowpthemeBgColors[ context ].setting, function( value ) {
 			value.bind( function() {
 				// Generate the styles.
 				// Add a small delay to be sure the accessible colors were generated.
 				setTimeout( function() {
-					swo-wpthemeGenerateColorA11yPreviewStyles( context );
+					swowpthemeGenerateColorA11yPreviewStyles( context );
 				}, 50 );
 			} );
 		} );
@@ -152,21 +152,21 @@
 	 *
 	 * @return {void}
 	 */
-	function swo-wpthemeGenerateColorA11yPreviewStyles( context ) {
+	function swowpthemeGenerateColorA11yPreviewStyles( context ) {
 		// Get the accessible colors option.
 		var a11yColors = window.parent.wp.customize( 'accent_accessible_colors' ).get(),
-			stylesheedID = 'swo-wptheme-customizer-styles-' + context,
+			stylesheedID = 'twentytwenty-customizer-styles-' + context,
 			stylesheet = $( '#' + stylesheedID ),
 			styles = '';
 		// If the stylesheet doesn't exist, create it and append it to <head>.
 		if ( ! stylesheet.length ) {
-			$( '#swo-wptheme-style-inline-css' ).after( '<style id="' + stylesheedID + '"></style>' );
+			$( '#twentytwenty-style-inline-css' ).after( '<style id="' + stylesheedID + '"></style>' );
 			stylesheet = $( '#' + stylesheedID );
 		}
 		if ( ! _.isUndefined( a11yColors[ context ] ) ) {
 			// Check if we have elements defined.
-			if ( swo-wpthemePreviewEls[ context ] ) {
-				_.each( swo-wpthemePreviewEls[ context ], function( items, setting ) {
+			if ( swowpthemePreviewEls[ context ] ) {
+				_.each( swowpthemePreviewEls[ context ], function( items, setting ) {
 					_.each( items, function( elements, property ) {
 						if ( ! _.isUndefined( a11yColors[ context ][ setting ] ) ) {
 							styles += elements.join( ',' ) + '{' + property + ':' + a11yColors[ context ][ setting ] + ';}';
@@ -180,7 +180,7 @@
 	}
 	// Generate styles on load. Handles page-changes on the preview pane.
 	$( document ).ready( function() {
-		swo-wpthemeGenerateColorA11yPreviewStyles( 'content' );
-		swo-wpthemeGenerateColorA11yPreviewStyles( 'header-footer' );
+		swowpthemeGenerateColorA11yPreviewStyles( 'content' );
+		swowpthemeGenerateColorA11yPreviewStyles( 'header-footer' );
 	} );
 }( jQuery, wp.customize, _ ) );

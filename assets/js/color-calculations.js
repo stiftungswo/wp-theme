@@ -10,7 +10,7 @@
  *
  * @return {Object} - this
  */
-function _swo-wpthemeColor( backgroundColor, accentHue ) {
+function _swowpthemeColor( backgroundColor, accentHue ) {
 	// Set the object properties.
 	this.backgroundColor = backgroundColor;
 	this.accentHue = accentHue;
@@ -33,7 +33,7 @@ function _swo-wpthemeColor( backgroundColor, accentHue ) {
  *
  * @return {Object} - this
  */
-_swo-wpthemeColor.prototype.setAccentColorsArray = function() {
+_swowpthemeColor.prototype.setAccentColorsArray = function() {
 	var self = this,
 		minSaturation = 65,
 		maxSaturation = 100,
@@ -116,7 +116,7 @@ _swo-wpthemeColor.prototype.setAccentColorsArray = function() {
  *
  * @return {Color} - Returns a Color object.
  */
-_swo-wpthemeColor.prototype.getTextColor = function() {
+_swowpthemeColor.prototype.getTextColor = function() {
 	return this.textColor;
 };
 
@@ -127,7 +127,7 @@ _swo-wpthemeColor.prototype.getTextColor = function() {
  *
  * @return {Color} - Returns a Color object.
  */
-_swo-wpthemeColor.prototype.getAccentColor = function() {
+_swowpthemeColor.prototype.getAccentColor = function() {
 	var fallback;
 
 	// If we have colors returns the 1st one - it has the highest score.
@@ -141,7 +141,7 @@ _swo-wpthemeColor.prototype.getAccentColor = function() {
 };
 
 /**
- * Return a new instance of the _swo-wpthemeColor object.
+ * Return a new instance of the _swowpthemeColor object.
  *
  * @since Twenty Twenty 1.0
  *
@@ -149,8 +149,8 @@ _swo-wpthemeColor.prototype.getAccentColor = function() {
  * @param {number} accentHue - The hue for our accent color.
  * @return {Object} - this
  */
-function swo-wpthemeColor( backgroundColor, accentHue ) {// jshint ignore:line
-	var color = new _swo-wpthemeColor( backgroundColor, accentHue );
+function swowpthemeColor( backgroundColor, accentHue ) {// jshint ignore:line
+	var color = new _swowpthemeColor( backgroundColor, accentHue );
 	color.setAccentColorsArray();
 	return color;
 }

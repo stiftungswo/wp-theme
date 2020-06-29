@@ -34,7 +34,7 @@ if ( $has_footer_menu || $has_social_menu || $has_sidebar_1 || $has_sidebar_2 ) 
 				<div class="footer-top<?php echo $footer_top_classes; // phpcs:ignore WordPress.Security.EscapeOutput.OutputNotEscaped -- static output ?>">
 					<?php if ( $has_footer_menu ) { ?>
 
-						<nav aria-label="<?php esc_attr_e( 'Footer', 'swo-wptheme' ); ?>" role="navigation" class="footer-menu-wrapper">
+						<nav aria-label="<?php esc_attr_e( 'Footer', 'swowptheme' ); ?>" role="navigation" class="footer-menu-wrapper">
 
 							<ul class="footer-menu reset-list-style">
 								<?php
@@ -54,7 +54,7 @@ if ( $has_footer_menu || $has_social_menu || $has_sidebar_1 || $has_sidebar_2 ) 
 					<?php } ?>
 					<?php if ( $has_social_menu ) { ?>
 
-						<nav aria-label="<?php esc_attr_e( 'Social links', 'swo-wptheme' ); ?>" class="footer-social-wrapper">
+						<nav aria-label="<?php esc_attr_e( 'Social links', 'swowptheme' ); ?>" class="footer-social-wrapper">
 
 							<ul class="social-menu footer-social reset-list-style social-icons fill-children-current-color">
 
