@@ -99,7 +99,7 @@ function swowptheme_site_description( $echo = true ) {
 		return;
 	}
 
-	$wrapper = '<div class="site-description">%s</div><!-- .site-description -->';
+	$wrapper = '<div></div>';
 
 	$html = sprintf( $wrapper, esc_html( $description ) );
 
