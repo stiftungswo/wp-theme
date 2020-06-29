@@ -58,6 +58,8 @@
 
 					<div class="header-titles">
 
+					
+
 						<?php
 							// Site title or logo.
 							swowptheme_site_logo();
