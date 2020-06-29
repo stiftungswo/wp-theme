@@ -2,10 +2,10 @@
 	Namespace
 --------------------------------------------------------------------------------------------------- */
 
-var twentytwenty = twentytwenty || {};
+var swo-wptheme = swo-wptheme || {};
 
 // Set a default value for scrolled.
-twentytwenty.scrolled = 0;
+swo-wptheme.scrolled = 0;
 
 // polyfill closest
 // https://developer.mozilla.org/en-US/docs/Web/API/Element/closest#Polyfill
@@ -41,7 +41,7 @@ if ( window.NodeList && ! NodeList.prototype.forEach ) {
 }
 
 // event "polyfill"
-twentytwenty.createEvent = function( eventName ) {
+swo-wptheme.createEvent = function( eventName ) {
 	var event;
 	if ( typeof window.Event === 'function' ) {
 		event = new Event( eventName );
@@ -71,7 +71,7 @@ if ( ! Element.prototype.matches ) {
 
 // Add a class to the body for when touch is enabled for browsers that don't support media queries
 // for interaction media features. Adapted from <https://codepen.io/Ferie/pen/vQOMmO>.
-twentytwenty.touchEnabled = {
+swo-wptheme.touchEnabled = {
 
 	init: function() {
 		var matchMedia = function() {
@@ -85,13 +85,13 @@ twentytwenty.touchEnabled = {
 			document.body.classList.add( 'touch-enabled' );
 		}
 	}
-}; // twentytwenty.touchEnabled
+}; // swo-wptheme.touchEnabled
 
 /*	-----------------------------------------------------------------------------------------------
 	Cover Modals
 --------------------------------------------------------------------------------------------------- */
 
-twentytwenty.coverModals = {
+swo-wptheme.coverModals = {
 
 	init: function() {
 		if ( document.querySelector( '.cover-modal' ) ) {
@@ -215,7 +215,7 @@ twentytwenty.coverModals = {
 					htmlStyle.setProperty( styleKey, styles[ styleKey ] );
 				} );
 
-				_win.twentytwenty.scrolled = parseInt( styles.top, 10 );
+				_win.swo-wptheme.scrolled = parseInt( styles.top, 10 );
 
 				if ( adminBar ) {
 					_doc.body.style.setProperty( 'padding-top', paddingTop );
@@ -239,7 +239,7 @@ twentytwenty.coverModals = {
 				}
 
 				setTimeout( function() {
-					var clickedEl = twentytwenty.toggles.clickedEl;
+					var clickedEl = swo-wptheme.toggles.clickedEl;
 
 					modal.classList.remove( 'show-modal' );
 
@@ -257,9 +257,9 @@ twentytwenty.coverModals = {
 						clickedEl = false;
 					}
 
-					_win.scrollTo( 0, Math.abs( _win.twentytwenty.scrolled + getAdminBarHeight() ) );
+					_win.scrollTo( 0, Math.abs( _win.swo-wptheme.scrolled + getAdminBarHeight() ) );
 
-					_win.twentytwenty.scrolled = 0;
+					_win.swo-wptheme.scrolled = 0;
 				}, 500 );
 			} );
 		} );
@@ -288,13 +288,13 @@ twentytwenty.coverModals = {
 		}
 	}
 
-}; // twentytwenty.coverModals
+}; // swo-wptheme.coverModals
 
 /*	-----------------------------------------------------------------------------------------------
 	Intrinsic Ratio Embeds
 --------------------------------------------------------------------------------------------------- */
 
-twentytwenty.intrinsicRatioVideos = {
+swo-wptheme.intrinsicRatioVideos = {
 
 	init: function() {
 		this.makeFit();
@@ -331,12 +331,12 @@ twentytwenty.intrinsicRatioVideos = {
 		} );
 	}
 
-}; // twentytwenty.instrinsicRatioVideos
+}; // swo-wptheme.instrinsicRatioVideos
 
 /*	-----------------------------------------------------------------------------------------------
 	Modal Menu
 --------------------------------------------------------------------------------------------------- */
-twentytwenty.modalMenu = {
+swo-wptheme.modalMenu = {
 
 	init: function() {
 		// If the current menu item is in a sub level, expand all the levels higher up on load.
@@ -351,10 +351,10 @@ twentytwenty.modalMenu = {
 			var activeMenuItem = modalMenu.querySelector( '.current-menu-item' );
 
 			if ( activeMenuItem ) {
-				twentytwentyFindParents( activeMenuItem, 'li' ).forEach( function( element ) {
+				swo-wpthemeFindParents( activeMenuItem, 'li' ).forEach( function( element ) {
 					var subMenuToggle = element.querySelector( '.sub-menu-toggle' );
 					if ( subMenuToggle ) {
-						twentytwenty.toggles.performToggle( subMenuToggle, true );
+						swo-wptheme.toggles.performToggle( subMenuToggle, true );
 					}
 				} );
 			}
@@ -366,7 +366,7 @@ twentytwenty.modalMenu = {
 
 		_doc.addEventListener( 'keydown', function( event ) {
 			var toggleTarget, modal, selectors, elements, menuType, bottomMenu, activeEl, lastEl, firstEl, tabKey, shiftKey,
-				clickedEl = twentytwenty.toggles.clickedEl;
+				clickedEl = swo-wptheme.toggles.clickedEl;
 
 			if ( clickedEl && _doc.body.classList.contains( 'showing-modal' ) ) {
 				toggleTarget = clickedEl.dataset.toggleTarget;
@@ -413,13 +413,13 @@ twentytwenty.modalMenu = {
 			}
 		} );
 	}
-}; // twentytwenty.modalMenu
+}; // swo-wptheme.modalMenu
 
 /*	-----------------------------------------------------------------------------------------------
 	Primary Menu
 --------------------------------------------------------------------------------------------------- */
 
-twentytwenty.primaryMenu = {
+swo-wptheme.primaryMenu = {
 
 	init: function() {
 		this.focusMenuWithChildren();
@@ -462,13 +462,13 @@ twentytwenty.primaryMenu = {
 			}
 		}
 	}
-}; // twentytwenty.primaryMenu
+}; // swo-wptheme.primaryMenu
 
 /*	-----------------------------------------------------------------------------------------------
 	Toggles
 --------------------------------------------------------------------------------------------------- */
 
-twentytwenty.toggles = {
+swo-wptheme.toggles = {
 
 	clickedEl: false,
 
@@ -505,9 +505,9 @@ twentytwenty.toggles = {
 
 		// Trigger events on the toggle targets before they are toggled.
 		if ( target.classList.contains( activeClass ) ) {
-			target.dispatchEvent( twentytwenty.createEvent( 'toggle-target-before-active' ) );
+			target.dispatchEvent( swo-wptheme.createEvent( 'toggle-target-before-active' ) );
 		} else {
-			target.dispatchEvent( twentytwenty.createEvent( 'toggle-target-before-inactive' ) );
+			target.dispatchEvent( swo-wptheme.createEvent( 'toggle-target-before-inactive' ) );
 		}
 
 		// Get the class to toggle, if specified.
@@ -528,7 +528,7 @@ twentytwenty.toggles = {
 
 			// Toggle the target of the clicked toggle.
 			if ( toggle.dataset.toggleType === 'slidetoggle' && ! instantly && duration !== '0' ) {
-				twentytwentyMenuToggle( newTarget, duration );
+				swo-wpthemeMenuToggle( newTarget, duration );
 			} else {
 				newTarget.classList.toggle( classToToggle );
 			}
@@ -544,10 +544,10 @@ twentytwenty.toggles = {
 			}
 
 			// Toggle aria-expanded on the toggle.
-			twentytwentyToggleAttribute( toggle, 'aria-expanded', 'true', 'false' );
+			swo-wpthemeToggleAttribute( toggle, 'aria-expanded', 'true', 'false' );
 
 			if ( self.clickedEl && -1 !== toggle.getAttribute( 'class' ).indexOf( 'close-' ) ) {
-				twentytwentyToggleAttribute( self.clickedEl, 'aria-expanded', 'true', 'false' );
+				swo-wpthemeToggleAttribute( self.clickedEl, 'aria-expanded', 'true', 'false' );
 			}
 
 			// Toggle body class.
@@ -569,13 +569,13 @@ twentytwenty.toggles = {
 			}
 
 			// Trigger the toggled event on the toggle target.
-			target.dispatchEvent( twentytwenty.createEvent( 'toggled' ) );
+			target.dispatchEvent( swo-wptheme.createEvent( 'toggled' ) );
 
 			// Trigger events on the toggle targets after they are toggled.
 			if ( target.classList.contains( activeClass ) ) {
-				target.dispatchEvent( twentytwenty.createEvent( 'toggle-target-after-active' ) );
+				target.dispatchEvent( swo-wptheme.createEvent( 'toggle-target-after-active' ) );
 			} else {
-				target.dispatchEvent( twentytwenty.createEvent( 'toggle-target-after-inactive' ) );
+				target.dispatchEvent( swo-wptheme.createEvent( 'toggle-target-after-inactive' ) );
 			}
 		}, timeOutTime );
 	},
@@ -639,7 +639,7 @@ twentytwenty.toggles = {
 		} );
 	}
 
-}; // twentytwenty.toggles
+}; // swo-wptheme.toggles
 
 /**
  * Is the DOM ready?
@@ -648,7 +648,7 @@ twentytwenty.toggles = {
  *
  * @param {Function} fn Callback function to run.
  */
-function twentytwentyDomReady( fn ) {
+function swo-wpthemeDomReady( fn ) {
 	if ( typeof fn !== 'function' ) {
 		return;
 	}
@@ -660,13 +660,13 @@ function twentytwentyDomReady( fn ) {
 	document.addEventListener( 'DOMContentLoaded', fn, false );
 }
 
-twentytwentyDomReady( function() {
-	twentytwenty.toggles.init();              // Handle toggles.
-	twentytwenty.coverModals.init();          // Handle cover modals.
-	twentytwenty.intrinsicRatioVideos.init(); // Retain aspect ratio of videos on window resize.
-	twentytwenty.modalMenu.init();            // Modal Menu.
-	twentytwenty.primaryMenu.init();          // Primary Menu.
-	twentytwenty.touchEnabled.init();         // Add class to body if device is touch-enabled.
+swo-wpthemeDomReady( function() {
+	swo-wptheme.toggles.init();              // Handle toggles.
+	swo-wptheme.coverModals.init();          // Handle cover modals.
+	swo-wptheme.intrinsicRatioVideos.init(); // Retain aspect ratio of videos on window resize.
+	swo-wptheme.modalMenu.init();            // Modal Menu.
+	swo-wptheme.primaryMenu.init();          // Primary Menu.
+	swo-wptheme.touchEnabled.init();         // Add class to body if device is touch-enabled.
 } );
 
 /*	-----------------------------------------------------------------------------------------------
@@ -675,7 +675,7 @@ twentytwentyDomReady( function() {
 
 /* Toggle an attribute ----------------------- */
 
-function twentytwentyToggleAttribute( element, attribute, trueVal, falseVal ) {
+function swo-wpthemeToggleAttribute( element, attribute, trueVal, falseVal ) {
 	if ( trueVal === undefined ) {
 		trueVal = true;
 	}
@@ -695,7 +695,7 @@ function twentytwentyToggleAttribute( element, attribute, trueVal, falseVal ) {
  * @param {HTMLElement} target
  * @param {number} duration
  */
-function twentytwentyMenuToggle( target, duration ) {
+function swo-wpthemeMenuToggle( target, duration ) {
 	var initialParentHeight, finalParentHeight, menu, menuItems, transitionListener,
 		initialPositions = [],
 		finalPositions = [];
@@ -797,7 +797,7 @@ function twentytwentyMenuToggle( target, duration ) {
  * @param {string} query
  * @return {NodeList} parents matching query
  */
-function twentytwentyFindParents( target, query ) {
+function swo-wpthemeFindParents( target, query ) {
 	var parents = [];
 
 	// Recursively go up the DOM adding matches to the parents array.

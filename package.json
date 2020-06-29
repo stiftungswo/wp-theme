@@ -1,5 +1,5 @@
 {
-	"name": "twentytwenty",
+	"name": "swo-wptheme",
 	"version": "1.0.0",
 	"description": "Default WP Theme",
 	"author": "The WordPress Contributors",
@@ -7,15 +7,15 @@
 	"keywords": [
 		"WordPress",
 		"Theme",
-		"TwentyTwenty"
+		"swo-wptheme"
 	],
-	"homepage": "https://github.com/wordpress/twentytwenty#readme",
+	"homepage": "https://github.com/wordpress/swo-wptheme#readme",
 	"repository": {
 		"type": "git",
-		"url": "git+https://github.com/wordpress/twentytwenty.git"
+		"url": "git+https://github.com/wordpress/swo-wptheme.git"
 	},
 	"bugs": {
-		"url": "https://github.com/wordpress/twentytwenty/issues"
+		"url": "https://github.com/wordpress/swo-wptheme/issues"
 	},
 	"devDependencies": {
 		"@wordpress/browserslist-config": "^2.6.0",

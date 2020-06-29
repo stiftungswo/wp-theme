@@ -7,11 +7,11 @@
  * @since Twenty Twenty 1.0
  */
 
-if ( ! class_exists( 'TwentyTwenty_Customize' ) ) {
+if ( ! class_exists( 'swo-wptheme_Customize' ) ) {
 	/**
 	 * CUSTOMIZER SETTINGS
 	 */
-	class TwentyTwenty_Customize {
+	class swo-wptheme_Customize {
 
 		/**
 		 * Register customizer options.
@@ -30,7 +30,7 @@ if ( ! class_exists( 'TwentyTwenty_Customize' ) ) {
 				'blogname',
 				array(
 					'selector'        => '.site-title a',
-					'render_callback' => 'twentytwenty_customize_partial_blogname',
+					'render_callback' => 'swo-wptheme_customize_partial_blogname',
 				)
 			);
 
@@ -38,7 +38,7 @@ if ( ! class_exists( 'TwentyTwenty_Customize' ) ) {
 				'blogdescription',
 				array(
 					'selector'        => '.site-description',
-					'render_callback' => 'twentytwenty_customize_partial_blogdescription',
+					'render_callback' => 'swo-wptheme_customize_partial_blogdescription',
 				)
 			);
 
@@ -46,7 +46,7 @@ if ( ! class_exists( 'TwentyTwenty_Customize' ) ) {
 				'custom_logo',
 				array(
 					'selector'        => '.header-titles [class*=site-]:not(.site-description)',
-					'render_callback' => 'twentytwenty_customize_partial_site_logo',
+					'render_callback' => 'swo-wptheme_customize_partial_site_logo',
 				)
 			);
 
@@ -54,7 +54,7 @@ if ( ! class_exists( 'TwentyTwenty_Customize' ) ) {
 				'retina_logo',
 				array(
 					'selector'        => '.header-titles [class*=site-]:not(.site-description)',
-					'render_callback' => 'twentytwenty_customize_partial_site_logo',
+					'render_callback' => 'swo-wptheme_customize_partial_site_logo',
 				)
 			);
 
@@ -78,8 +78,8 @@ if ( ! class_exists( 'TwentyTwenty_Customize' ) ) {
 					'type'        => 'checkbox',
 					'section'     => 'title_tagline',
 					'priority'    => 10,
-					'label'       => __( 'Retina logo', 'twentytwenty' ),
-					'description' => __( 'Scales the logo to half its uploaded size, making it sharp on high-res screens.', 'twentytwenty' ),
+					'label'       => __( 'Retina logo', 'swo-wptheme' ),
+					'description' => __( 'Scales the logo to half its uploaded size, making it sharp on high-res screens.', 'swo-wptheme' ),
 				)
 			);
 
@@ -98,7 +98,7 @@ if ( ! class_exists( 'TwentyTwenty_Customize' ) ) {
 					$wp_customize,
 					'header_footer_background_color',
 					array(
-						'label'   => __( 'Header &amp; Footer Background Color', 'twentytwenty' ),
+						'label'   => __( 'Header &amp; Footer Background Color', 'swo-wptheme' ),
 						'section' => 'colors',
 					)
 				)
@@ -120,10 +120,10 @@ if ( ! class_exists( 'TwentyTwenty_Customize' ) ) {
 				array(
 					'type'    => 'radio',
 					'section' => 'colors',
-					'label'   => __( 'Primary Color', 'twentytwenty' ),
+					'label'   => __( 'Primary Color', 'swo-wptheme' ),
 					'choices' => array(
-						'default' => __( 'Default', 'twentytwenty' ),
-						'custom'  => __( 'Custom', 'twentytwenty' ),
+						'default' => __( 'Default', 'swo-wptheme' ),
+						'custom'  => __( 'Custom', 'swo-wptheme' ),
 					),
 				)
 			);
@@ -180,7 +180,7 @@ if ( ! class_exists( 'TwentyTwenty_Customize' ) ) {
 					array(
 						'section'         => 'colors',
 						'settings'        => 'accent_hue',
-						'description'     => __( 'Apply a custom color for links, buttons, featured images.', 'twentytwenty' ),
+						'description'     => __( 'Apply a custom color for links, buttons, featured images.', 'swo-wptheme' ),
 						'mode'            => 'hue',
 						'active_callback' => function() use ( $wp_customize ) {
 							return ( 'custom' === $wp_customize->get_setting( 'accent_hue_active' )->value() );
@@ -199,7 +199,7 @@ if ( ! class_exists( 'TwentyTwenty_Customize' ) ) {
 			$wp_customize->add_section(
 				'options',
 				array(
-					'title'      => __( 'Theme Options', 'twentytwenty' ),
+					'title'      => __( 'Theme Options', 'swo-wptheme' ),
 					'priority'   => 40,
 					'capability' => 'edit_theme_options',
 				)
@@ -222,7 +222,7 @@ if ( ! class_exists( 'TwentyTwenty_Customize' ) ) {
 					'type'     => 'checkbox',
 					'section'  => 'options',
 					'priority' => 10,
-					'label'    => __( 'Show search in header', 'twentytwenty' ),
+					'label'    => __( 'Show search in header', 'swo-wptheme' ),
 				)
 			);
 
@@ -243,7 +243,7 @@ if ( ! class_exists( 'TwentyTwenty_Customize' ) ) {
 					'type'     => 'checkbox',
 					'section'  => 'options',
 					'priority' => 10,
-					'label'    => __( 'Show author bio', 'twentytwenty' ),
+					'label'    => __( 'Show author bio', 'swo-wptheme' ),
 				)
 			);
 
@@ -264,10 +264,10 @@ if ( ! class_exists( 'TwentyTwenty_Customize' ) ) {
 					'type'     => 'radio',
 					'section'  => 'options',
 					'priority' => 10,
-					'label'    => __( 'On archive pages, posts show:', 'twentytwenty' ),
+					'label'    => __( 'On archive pages, posts show:', 'swo-wptheme' ),
 					'choices'  => array(
-						'full'    => __( 'Full text', 'twentytwenty' ),
-						'summary' => __( 'Summary', 'twentytwenty' ),
+						'full'    => __( 'Full text', 'swo-wptheme' ),
+						'summary' => __( 'Summary', 'swo-wptheme' ),
 					),
 				)
 			);
@@ -278,9 +278,9 @@ if ( ! class_exists( 'TwentyTwenty_Customize' ) ) {
 			$wp_customize->add_section(
 				'cover_template_options',
 				array(
-					'title'       => __( 'Cover Template', 'twentytwenty' ),
+					'title'       => __( 'Cover Template', 'swo-wptheme' ),
 					'capability'  => 'edit_theme_options',
-					'description' => __( 'Settings for the "Cover Template" page template. Add a featured image to use as background.', 'twentytwenty' ),
+					'description' => __( 'Settings for the "Cover Template" page template. Add a featured image to use as background.', 'swo-wptheme' ),
 					'priority'    => 42,
 				)
 			);
@@ -302,8 +302,8 @@ if ( ! class_exists( 'TwentyTwenty_Customize' ) ) {
 				array(
 					'type'        => 'checkbox',
 					'section'     => 'cover_template_options',
-					'label'       => __( 'Fixed Background Image', 'twentytwenty' ),
-					'description' => __( 'Creates a parallax effect when the visitor scrolls.', 'twentytwenty' ),
+					'label'       => __( 'Fixed Background Image', 'swo-wptheme' ),
+					'description' => __( 'Creates a parallax effect when the visitor scrolls.', 'swo-wptheme' ),
 				)
 			);
 
@@ -325,7 +325,7 @@ if ( ! class_exists( 'TwentyTwenty_Customize' ) ) {
 			);
 
 			$wp_customize->add_control(
-				new TwentyTwenty_Separator_Control(
+				new swo-wptheme_Separator_Control(
 					$wp_customize,
 					'cover_template_separator_1',
 					array(
@@ -339,7 +339,7 @@ if ( ! class_exists( 'TwentyTwenty_Customize' ) ) {
 			$wp_customize->add_setting(
 				'cover_template_overlay_background_color',
 				array(
-					'default'           => twentytwenty_get_color_for_area( 'content', 'accent' ),
+					'default'           => swo-wptheme_get_color_for_area( 'content', 'accent' ),
 					'sanitize_callback' => 'sanitize_hex_color',
 				)
 			);
@@ -349,8 +349,8 @@ if ( ! class_exists( 'TwentyTwenty_Customize' ) ) {
 					$wp_customize,
 					'cover_template_overlay_background_color',
 					array(
-						'label'       => __( 'Overlay Background Color', 'twentytwenty' ),
-						'description' => __( 'The color used for the overlay. Defaults to the accent color.', 'twentytwenty' ),
+						'label'       => __( 'Overlay Background Color', 'swo-wptheme' ),
+						'description' => __( 'The color used for the overlay. Defaults to the accent color.', 'swo-wptheme' ),
 						'section'     => 'cover_template_options',
 					)
 				)
@@ -371,8 +371,8 @@ if ( ! class_exists( 'TwentyTwenty_Customize' ) ) {
 					$wp_customize,
 					'cover_template_overlay_text_color',
 					array(
-						'label'       => __( 'Overlay Text Color', 'twentytwenty' ),
-						'description' => __( 'The color used for the text in the overlay.', 'twentytwenty' ),
+						'label'       => __( 'Overlay Text Color', 'swo-wptheme' ),
+						'description' => __( 'The color used for the text in the overlay.', 'swo-wptheme' ),
 						'section'     => 'cover_template_options',
 					)
 				)
@@ -392,11 +392,11 @@ if ( ! class_exists( 'TwentyTwenty_Customize' ) ) {
 			$wp_customize->add_control(
 				'cover_template_overlay_opacity',
 				array(
-					'label'       => __( 'Overlay Opacity', 'twentytwenty' ),
-					'description' => __( 'Make sure that the contrast is high enough so that the text is readable.', 'twentytwenty' ),
+					'label'       => __( 'Overlay Opacity', 'swo-wptheme' ),
+					'description' => __( 'Make sure that the contrast is high enough so that the text is readable.', 'swo-wptheme' ),
 					'section'     => 'cover_template_options',
 					'type'        => 'range',
-					'input_attrs' => twentytwenty_customize_opacity_range(),
+					'input_attrs' => swo-wptheme_customize_opacity_range(),
 				)
 			);
 
@@ -461,39 +461,39 @@ if ( ! class_exists( 'TwentyTwenty_Customize' ) ) {
 	}
 
 	// Setup the Theme Customizer settings and controls.
-	add_action( 'customize_register', array( 'TwentyTwenty_Customize', 'register' ) );
+	add_action( 'customize_register', array( 'swo-wptheme_Customize', 'register' ) );
 
 }
 
 /**
  * PARTIAL REFRESH FUNCTIONS
  * */
-if ( ! function_exists( 'twentytwenty_customize_partial_blogname' ) ) {
+if ( ! function_exists( 'swo-wptheme_customize_partial_blogname' ) ) {
 	/**
 	 * Render the site title for the selective refresh partial.
 	 */
-	function twentytwenty_customize_partial_blogname() {
+	function swo-wptheme_customize_partial_blogname() {
 		bloginfo( 'name' );
 	}
 }
 
-if ( ! function_exists( 'twentytwenty_customize_partial_blogdescription' ) ) {
+if ( ! function_exists( 'swo-wptheme_customize_partial_blogdescription' ) ) {
 	/**
 	 * Render the site description for the selective refresh partial.
 	 */
-	function twentytwenty_customize_partial_blogdescription() {
+	function swo-wptheme_customize_partial_blogdescription() {
 		bloginfo( 'description' );
 	}
 }
 
-if ( ! function_exists( 'twentytwenty_customize_partial_site_logo' ) ) {
+if ( ! function_exists( 'swo-wptheme_customize_partial_site_logo' ) ) {
 	/**
 	 * Render the site logo for the selective refresh partial.
 	 *
 	 * Doing it this way so we don't have issues with `render_callback`'s arguments.
 	 */
-	function twentytwenty_customize_partial_site_logo() {
-		twentytwenty_site_logo();
+	function swo-wptheme_customize_partial_site_logo() {
+		swo-wptheme_site_logo();
 	}
 }
 
@@ -503,7 +503,7 @@ if ( ! function_exists( 'twentytwenty_customize_partial_site_logo' ) ) {
  *
  * @return array Array containing attribute names and their values.
  */
-function twentytwenty_customize_opacity_range() {
+function swo-wptheme_customize_opacity_range() {
 	/**
 	 * Filter the input attributes for opacity
 	 *
@@ -516,7 +516,7 @@ function twentytwenty_customize_opacity_range() {
 	 * }
 	 */
 	return apply_filters(
-		'twentytwenty_customize_opacity_range',
+		'swo-wptheme_customize_opacity_range',
 		array(
 			'min'  => 0,
 			'max'  => 90,
