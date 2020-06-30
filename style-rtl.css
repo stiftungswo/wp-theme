@@ -1415,7 +1415,7 @@ body:not(.enable-search-modal) .header-titles-wrapper {
 }
 
 .site-logo img {
-	max-height: 6rem;
+	max-height: 3rem;
 	margin: 0 auto;
 	width: auto;
 }
@@ -4843,7 +4843,7 @@ a.to-the-top > * {
 	}
 
 	.site-logo img {
-		max-height: 9rem;
+		max-height: 3rem;
 		transition: height 0.15s linear, width 0.15s linear, max-height 0.15s linear;
 	}
 
