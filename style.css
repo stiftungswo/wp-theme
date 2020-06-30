@@ -53,7 +53,10 @@ with others.
 /* -------------------------------------------------------------------------- */
 
 
-
+.menu-item a {
+	color: #000 !important;
+	text-transform: uppercase;
+}
 
 
 /* -------------------------------------------------------------------------- */
@@ -1653,7 +1656,7 @@ ul.primary-menu {
 
 .primary-menu li.current-menu-item > a,
 .primary-menu li.current-menu-item > .link-icon-wrapper > a {
-	text-decoration: underline;
+	color: #007DC2 !important;
 }
 
 .primary-menu li.current-menu-item > a:hover,
@@ -1927,7 +1930,7 @@ button.close-nav-toggle .toggle-text {
 .modal-menu a:hover,
 .modal-menu li.current-menu-item > .ancestor-wrapper > a,
 .modal-menu li.current_page_ancestor > .ancestor-wrapper > a {
-	text-decoration: underline;
+	color: #007DC2;
 }
 
 button.sub-menu-toggle {
