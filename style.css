@@ -59,6 +59,12 @@ with others.
 	text-transform: uppercase;
 }
 
+/* Change nav toggles hover appearance -------------------------- */
+
+.nav-toggle:hover .svg-icon, .search-toggle:hover .svg-icon{
+	color: #007DC2;
+}
+
 		/* FOOTER*/
 
 /* --------------------------------------------------------------------------------------------UPPER FOOTER-------------------------------------------------------------------------*/
@@ -537,7 +543,7 @@ hr.styled-separator::after {
 }
 
 a {
-	color: #cd2653;
+	color: #007DC2;
 	text-decoration: underline;
 }
 
@@ -620,7 +626,7 @@ dd + dt {
 /* Quotes ------------------------------------ */
 
 blockquote {
-	border-color: #cd2653;
+	border-color: #007DC2;
 	border-style: solid;
 
 	/*rtl:ignore*/
@@ -917,7 +923,7 @@ input[type="reset"],
 input[type="submit"] {
 	-webkit-appearance: none;
 	-moz-appearance: none;
-	background: #cd2653;
+	background: #007DC2;
 	border: none;
 	border-radius: 0;
 	color: #fff;
@@ -1173,7 +1179,7 @@ button.toggle {
 .color-accent,
 .color-accent-hover:focus,
 .color-accent-hover:hover {
-	color: #cd2653;
+	color: #007DC2;
 }
 
 /* BACKGROUND COLOR */
@@ -1181,7 +1187,7 @@ button.toggle {
 .bg-accent,
 .bg-accent-hover:focus,
 .bg-accent-hover:hover {
-	background-color: #cd2653;
+	background-color: #007DC2;
 }
 
 /* BORDER COLOR */
@@ -1189,14 +1195,14 @@ button.toggle {
 .border-color-accent,
 .border-color-accent-hover:focus,
 .border-color-accent-hover:hover {
-	border-color: #cd2653;
+	border-color: #007DC2;
 }
 
 /* FILL COLOR */
 
 .fill-children-accent,
 .fill-children-accent * {
-	fill: #cd2653;
+	fill: #007DC2;
 }
 
 .fill-children-current-color,
@@ -1386,7 +1392,7 @@ ul.social-icons li {
 
 .social-icons a {
 	align-items: center;
-	background: #cd2653;
+	background: #007DC2;
 	border-radius: 50%;
 	color: #fff;
 	display: flex;
@@ -1434,8 +1440,9 @@ ul.social-icons li {
 
 
 #site-header {
-	background: #fff;
-	position: relative;
+	background: rgba(255, 255, 255, 0.6) !important;
+	position: fixed;
+	width: 100%;
 }
 
 .header-inner {
@@ -1727,7 +1734,11 @@ ul.primary-menu {
 
 .primary-menu li.current-menu-item > a,
 .primary-menu li.current-menu-item > .link-icon-wrapper > a {
+<<<<<<< HEAD
 	color: #007DC2;
+=======
+	color: #007DC2 !important;
+>>>>>>> 0f9c2ea620e9c0d262712ff47e17d2922a01285c
 }
 
 .primary-menu li.current-menu-item > a:hover,
@@ -2489,7 +2500,7 @@ body:not(.singular) main > article:first-of-type {
 	-moz-background-size: cover;
 	-o-background-size: cover;
 	background-size: cover;
-	padding: 4rem 0;
+	padding: 14rem 0 8rem;
 }
 
 .entry-categories {
@@ -2833,11 +2844,11 @@ h1.entry-title{
 /* CUSTOM COLORS */
 
 :root .has-accent-color {
-	color: #cd2653;
+	color: #007DC2;
 }
 
 :root .has-accent-background-color {
-	background-color: #cd2653;
+	background-color: #007DC2;
 	color: #fff;
 }
 
@@ -2895,7 +2906,7 @@ h1.entry-title{
 }
 
 .has-drop-cap:not(:focus)::first-letter {
-	color: #cd2653;
+	color: #007DC2;
 	font-family: -apple-system, BlinkMacSystemFont, "Helvetica Neue", Helvetica, sans-serif;
 	font-size: 5.1em;
 	font-weight: 800;
@@ -3114,7 +3125,7 @@ h1.entry-title{
 }
 
 .wp-block-button.is-style-outline {
-	color: #cd2653;
+	color: #007DC2;
 }
 
 .is-style-outline .wp-block-button__link:not(.has-text-color) {
@@ -3300,7 +3311,7 @@ figure.wp-block-gallery.alignfull {
 .wp-block-pullquote::before {
 	background: #fff;
 	border-radius: 50%;
-	color: #cd2653;
+	color: #007DC2;
 	content: "”";
 	display: block;
 	font-size: 6.2rem;
@@ -3924,7 +3935,7 @@ div.comment:first-of-type {
 }
 
 .comment-reply-link {
-	background-color: #cd2653;
+	background-color: #007DC2;
 	color: #fff;
 	display: block;
 	padding: 0.7rem;
@@ -4539,7 +4550,7 @@ ul.footer-social li {
 }
 
 .footer-social a {
-	background-color: #cd2653;
+	background-color: #007DC2;
 	height: 3.6rem;
 	width: 3.6rem;
 }
@@ -5165,7 +5176,7 @@ a.to-the-top > * {
 	/* POST HEADER */
 
 	.singular .entry-header {
-		padding: 8rem 0;
+		padding: 20rem 0 8rem;
 	}
 
 	.entry-categories {
