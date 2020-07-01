@@ -46,8 +46,22 @@
 					</a><!-- .to-the-top -->
 				
 				</div><!-- .section-inner -->
-				<hr/>			
+<!------------------------------------------------------------------------------------------------- Upper Footer --------------------------------------------------------------------->
+				<div class="grid-container">
+					
+					<div class="a"><a href="">Kontakt</a></div>
+  					<div class="b"><a href="">Lern- & Wissensplattform</a></div>
+  					<div class="c"><a href="">Job & Praktika</a></div>
+  					<div class="logo"><img src="/wp-content/uploads/2020/06/SWO_straight-pdf (2).png"/></div>
+  					<div class="d"><a href="">Zivildienst Intern</a></div>
+  					<div class="f"><a href="">AGBs</a></div>
+  					<div class="g"><a href="">Datenschutzerklärung</a></div>
+
+				</div>
 				
+<!------------------------------------------------------------------------------------------------- Lower Footer --------------------------------------------------------------------->
+				<hr style="height:1px; border:none; background-color:#000; width:90%; margin-bottom:3.5em; margin-top:3em; position: center">
+
 				<div class="lt-grid-container">
   					<div class="lt-left">
 					  	Stiftung Wirtschaft und Ökologie<br/>
