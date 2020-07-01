@@ -55,7 +55,7 @@ with others.
 /* Change nav link appearance -------------------------- */
 
 .menu-item a {
-	color: #000;
+	color: #000 !important;
 	text-transform: uppercase;
 }
 
@@ -1676,12 +1676,12 @@ ul.primary-menu {
 .primary-menu a:hover,
 .primary-menu a:focus,
 .primary-menu .current_page_ancestor {
-	color: #007DC2;
+	color: #007DC2 !important;
 }
 
 .primary-menu li.current-menu-item > a,
 .primary-menu li.current-menu-item > .link-icon-wrapper > a {
-	color: #007DC2;
+	color: #007DC2 !important;;
 }
 
 .primary-menu li.current-menu-item > a:hover,
