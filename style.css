@@ -5661,6 +5661,25 @@ a.to-the-top > * {
 		display: none;
 	}
 
+	.contact-information{
+		position: relative;
+		left: 50.82%;
+		right: 38.45%;
+		top: 49.04%;
+		bottom: 34.25%;
+		color: #000000;
+	}
+
+	.address-information{
+		position: relative;
+		left: 38.37%;
+		right: 50.9%;
+		top: 49.04%;
+		bottom: 34.25%;
+
+		color: #000000;
+	}
+
 }
 
 @media (min-width: 782px) {
