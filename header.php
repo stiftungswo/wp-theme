@@ -50,7 +50,6 @@
 								<span class="toggle-icon">
 									<?php swowptheme_the_theme_svg( 'search' ); ?>
 								</span>
-								<span class="toggle-text"><?php _e( 'Search', 'swowptheme' ); ?></span>
 							</span>
 						</button><!-- .search-toggle -->
 
