@@ -74,7 +74,6 @@
 							<span class="toggle-icon">
 								<?php swowptheme_the_theme_svg( 'ellipsis' ); ?>
 							</span>
-							<span class="toggle-text"><?php _e( 'Menu', 'swowptheme' ); ?></span>
 						</span>
 					</button><!-- .nav-toggle -->
 
@@ -135,7 +134,6 @@
 
 								<button class="toggle nav-toggle desktop-nav-toggle" data-toggle-target=".menu-modal" data-toggle-body-class="showing-menu-modal" aria-expanded="false" data-set-focus=".close-nav-toggle">
 									<span class="toggle-inner">
-										<span class="toggle-text"><?php _e( 'Menu', 'swowptheme' ); ?></span>
 										<span class="toggle-icon">
 											<?php swowptheme_the_theme_svg( 'ellipsis' ); ?>
 										</span>
@@ -155,7 +153,6 @@
 								<button class="toggle search-toggle desktop-search-toggle" data-toggle-target=".search-modal" data-toggle-body-class="showing-search-modal" data-set-focus=".search-modal .search-field" aria-expanded="false">
 									<span class="toggle-inner">
 										<?php swowptheme_the_theme_svg( 'search' ); ?>
-										<span class="toggle-text"><?php _e( 'Search', 'swowptheme' ); ?></span>
 									</span>
 								</button><!-- .search-toggle -->
 
