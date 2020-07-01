@@ -141,7 +141,7 @@ if ( ! class_exists( 'swowptheme_Customize' ) ) {
 			$wp_customize->add_setting(
 				'accent_hue',
 				array(
-					'default'           => 'default',
+					'default'           => 344,
 					'type'              => 'theme_mod',
 					'sanitize_callback' => 'absint',
 					'transport'         => 'postMessage',
@@ -155,15 +155,15 @@ if ( ! class_exists( 'swowptheme_Customize' ) ) {
 					'default'           => array(
 						'content'       => array(
 							'text'      => '#000000',
-							'accent'    => '#007DC2',
-							'secondary' => '#77787B',
-							'borders'   => '#007DC2',
+							'accent'    => '#cd2653',
+							'secondary' => '#6d6d6d',
+							'borders'   => '#dcd7ca',
 						),
 						'header-footer' => array(
 							'text'      => '#000000',
-							'accent'    => '#007DC2',
-							'secondary' => '#77787B',
-							'borders'   => '#007DC2',
+							'accent'    => '#cd2653',
+							'secondary' => '#6d6d6d',
+							'borders'   => '#dcd7ca',
 						),
 					),
 					'type'              => 'theme_mod',
