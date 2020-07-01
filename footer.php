@@ -46,16 +46,19 @@
 					</a><!-- .to-the-top -->
 				
 				</div><!-- .section-inner -->
-				<hr/>
-				<div class="contact-information">
-					Phone: +41 43 355 58 44<br/>
-					Email: swo@stiftungswo.ch<br/>
-					Web: www.stiftungswo.ch<br/>
-				</div>
-				<div class="address-information">
-					Stiftung Wirtschaft und Ökologie<br/>
-					Bahnstrasse 18b<br/>
-					8603 Schwerzenbach<br/>
+				<hr/>			
+				
+				<div class="lt-grid-container">
+  					<div class="lt-left">
+					  	Stiftung Wirtschaft und Ökologie<br/>
+						Bahnstrasse 18b<br/>
+						8603 Schwerzenbach<br/>
+					  </div>
+					  <div class="lt-right">
+					  	Phone: +41 43 355 58 44<br/>
+						Email: swo@stiftungswo.ch<br/>
+						Web: www.stiftungswo.ch<br/>
+					  </div>
 				</div>
 
 			</footer><!-- #site-footer -->
