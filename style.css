@@ -5661,6 +5661,18 @@ a.to-the-top > * {
 		display: none;
 	}
 
+	.lt-grid-container {
+		display: grid;
+		grid-template-columns: 1fr 1fr 1fr 1fr;
+		grid-template-rows: 1fr 3fr 1fr;
+		gap: 1px 4px;
+	   	grid-template-areas: ". . . ." ". lt-left lt-right ." ". . . ."
+	  }
+	  
+	.lt-left { grid-area: lt-left; }
+	  
+	.lt-right { grid-area: lt-right; }
+
 }
 
 @media (min-width: 782px) {
