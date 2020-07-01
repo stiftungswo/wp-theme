@@ -59,6 +59,12 @@ with others.
 	text-transform: uppercase;
 }
 
+/* Change nav toggles hover appearance -------------------------- */
+
+.nav-toggle:hover .svg-icon, .search-toggle:hover .svg-icon{
+	color: #007DC2;
+}
+
 		/* FOOTER*/
 
 .lt-grid-container {
