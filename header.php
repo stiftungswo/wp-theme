@@ -51,7 +51,7 @@
 									<?php swowptheme_the_theme_svg( 'search' ); ?>
 								</span>
 							</span>
-						</button><!-- .search-toggle -->
+						</button><!-- .search-toggle ON MOBILE -->
 
 					<?php } ?>
 
@@ -154,13 +154,21 @@
 									<span class="toggle-inner">
 										<?php swowptheme_the_theme_svg( 'search' ); ?>
 									</span>
-								</button><!-- .search-toggle -->
+								</button><!-- .search-toggle ON DESKTOP -->
 
 							</div>
 
 							<?php
 						}
 						?>
+
+								<button class="toggle nav-toggle desktop-nav-toggle" data-toggle-target=".menu-modal" data-toggle-body-class="showing-menu-modal" aria-expanded="false" data-set-focus=".close-nav-toggle">
+									<span class="toggle-inner">
+										<span class="toggle-icon">
+											<?php swowptheme_the_theme_svg( 'ellipsis' ); ?>
+										</span>
+									</span>
+								</button><!-- .nav-toggle -->
 
 						</div><!-- .header-toggles -->
 						<?php
