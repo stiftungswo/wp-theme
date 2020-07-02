@@ -5934,7 +5934,7 @@ a.to-the-top > * {
 		padding: 0;
 		transform: translateX(20rem);
 		transition: transform 0.2s ease-in, opacity 0.2s ease-in;
-		width: 50rem;
+		width: 100%;
 	}
 
 	.menu-modal.active .menu-modal-inner {
