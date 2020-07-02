@@ -16,14 +16,19 @@
 		<div class="menu-wrapper section-inner">
 
 			<div class="menu-top">
+				<div class="swo_logo_menu">
+					<img src="/wp-content/uploads/2020/06/SWO_straight-pdf (2).png"/>
+				</div>
 
 				<button class="toggle close-nav-toggle fill-children-current-color" data-toggle-target=".menu-modal" data-toggle-body-class="showing-menu-modal" aria-expanded="false" data-set-focus=".menu-modal">
 					<span class="toggle-text"><?php _e( 'Close Menu', 'swowptheme' ); ?></span>
 					<?php swowptheme_the_theme_svg( 'cross' ); ?>
 				</button><!-- .nav-toggle -->
 
-				<?php
 
+
+				<?php
+				
 				$mobile_menu_location = '';
 
 				// If the mobile menu location is not set, use the primary and expanded locations as fallbacks, in that order.

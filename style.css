@@ -5959,6 +5959,12 @@ a.to-the-top > * {
 		justify-content: flex-start;
 	}
 
+	.swo_logo_menu{
+		width: 4em;
+		position: fixed;
+		margin-left:2em;
+	}
+
 	/* Sub Page ------------------------------ */
 
 	/* FEATURED MEDIA */
