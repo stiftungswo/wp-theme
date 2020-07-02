@@ -5452,13 +5452,18 @@ a.to-the-top > * {
 		font-size: 2.1rem;
 	}
 
-	.entry-content p,
+	.entry-content p{
+		text-align: center;
+		
+	}
 	.entry-content li {
 		line-height: 1.476;
 	}
 
 	.entry-content h1,
-	.entry-content h2,
+	.entry-content h2{
+		font-size: 20px;
+	}
 	.entry-content h3 {
 		margin: 6rem auto 3rem;
 	}
