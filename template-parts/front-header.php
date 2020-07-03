@@ -9,5 +9,5 @@
 
 ?>
 
-<img src="http://localhost:8080/wp-content/themes/swo_twentytwenty_child/screenshot.png" alt="IMAGE NOT AVAILABLE">
+<img src="http://localhost:8080/wp-content/uploads/2020/06/844198.jpg" alt="IMAGE NOT AVAILABLE">
 
