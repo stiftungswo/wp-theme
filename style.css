@@ -52,11 +52,16 @@ with others.
 /*	-1. Custom SWO CSS
 /* -------------------------------------------------------------------------- */
 
-/* Change nav link appearance -------------------------- */
+/* Change ALL link appearances -------------------------- */
 
-.menu-item a {
-	color: #000;
-	text-transform: uppercase;
+* a {
+	color: #000 !important;
+	text-transform: uppercase !important;
+	text-decoration: none !important;
+}
+
+* a:hover {
+	color: #007DC2 !important;
 }
 
 /* Change nav toggles hover appearance -------------------------- */
@@ -1827,11 +1832,7 @@ ul.primary-menu {
 
 .primary-menu li.current-menu-item > a,
 .primary-menu li.current-menu-item > .link-icon-wrapper > a {
-<<<<<<< HEAD
 	color: #007DC2;
-=======
-	color: #007DC2 !important;
->>>>>>> 0f9c2ea620e9c0d262712ff47e17d2922a01285c
 }
 
 .primary-menu li.current-menu-item > a:hover,
