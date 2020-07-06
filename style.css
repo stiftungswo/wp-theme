@@ -75,7 +75,9 @@ with others.
 }
 
 /* Hide the images by default */
-
+.mySlides{
+	height: auto;
+}
 
 /* Next & previous buttons */
 .prev, .next {
@@ -106,13 +108,28 @@ with others.
 
 /* Caption text */
 .text {
-  color: #f2f2f2;
-  font-size: 15px;
-  padding: 8px 12px;
+  color: #ffffff;
+  background-color: rgba(0,0,0,0.6);
+  border-radius: 5px;
+  padding: 0px 10px;
+  margin-left: 100px;
   position: absolute;
-  bottom: 8px;
-  width: 100%;
-  text-align: center;
+  bottom: 20%;
+  width: 30%;
+  text-align: left;
+}
+
+.text h1{
+	font-style: normal;
+	font-weight: bold;
+	font-size: 30px;
+	line-height: 10px;
+}
+.text p{
+	font-style: normal;
+	font-weight: normal;
+	font-size: 15px;
+	line-height: 20px;
 }
 
 /* Number text (1/3 etc) */
@@ -6674,4 +6691,57 @@ a.to-the-top > * {
 	.wp-block-pullquote.is-style-solid-color.alignright::before {
 		top: 0;
 	}
+}
+
+
+/*------------------------------------------ENTRY CONTENT FULLWIDTH STARTSEITE TEMPLATE---------------------------------------------------------------------------*/
+
+body.template-full-width-startseite .entry-content > *:not(.alignwide):not(.alignfull):not(.alignleft):not(.alignright):not(.is-style-wide),
+body.template-full-width-startseite [class*="__inner-container"] > *:not(.alignwide):not(.alignfull):not(.alignleft):not(.alignright):not(.is-style-wide) {
+	max-width: 120rem;
+}
+
+body.template-full-width-startseite .entry-content .alignleft,
+body.template-full-width-startseite .entry-content .alignright {
+	position: static;
+}
+
+body.template-full-width-startseite .entry-content .alignleft,
+body.template-full-width-startseite [class*="wp-block"].alignwide [class*="__inner-container"] > .alignleft,
+body.template-full-width-startseite [class*="wp-block"].alignwide [class*="__inner-container"] > p .alignleft,
+body.template-full-width-startseite [class*="wp-block"].alignwide [class*="__inner-container"] > .wp-block-image .alignleft {
+
+	/*rtl:ignore*/
+	margin-left: 0;
+	position: static;
+}
+
+body.template-full-width-startseite .entry-content > .alignleft,
+body.template-full-width-startseite [class*="wp-block"].alignfull:not(.has-background) [class*="__inner-container"] > .alignleft,
+body.template-full-width-startseite [class*="wp-block"].alignfull:not(.has-background) [class*="__inner-container"] > p .alignleft,
+body.template-full-width-startseite [class*="wp-block"].alignfull:not(.has-background) [class*="__inner-container"] > .wp-block-image .alignleft {
+
+	/*rtl:ignore*/
+	margin-left: 2rem;
+	position: static;
+}
+
+body.template-full-width-startseite .entry-content .alignright,
+body.template-full-width-startseite [class*="wp-block"].alignwide [class*="__inner-container"] > .alignright,
+body.template-full-width-startseite [class*="wp-block"].alignwide [class*="__inner-container"] > p .alignright,
+body.template-full-width-startseite [class*="wp-block"].alignwide [class*="__inner-container"] > .wp-block-image .alignright {
+
+	/*rtl:ignore*/
+	margin-right: 0;
+	position: static;
+}
+
+body.template-full-width-startseite .entry-content > .alignright,
+body.template-full-width-startseite [class*="wp-block"].alignfull:not(.has-background) [class*="__inner-container"] > .alignright,
+body.template-full-width-startseite [class*="wp-block"].alignfull:not(.has-background) [class*="__inner-container"] > p .alignright,
+body.template-full-width-startseite [class*="wp-block"].alignfull:not(.has-background) [class*="__inner-container"] > .wp-block-image .alignright {
+
+	/*rtl:ignore*/
+	margin-right: 2rem;
+	position: static;
 }

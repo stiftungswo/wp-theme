@@ -15,19 +15,31 @@
 
 <!-- Full-width images with number and caption text -->
 <div class="mySlides fade">
-  <img src="http://localhost:8080/wp-content/uploads/2020/06/844198.jpg" style="width:100%">
-  <div class="text">Was ist die SWO?</div>
+  <img src="http://localhost:8080/wp-content/uploads/2020/06/Start-Test.jpg" style="width:100%">
+  <div class="text">
+    <h1>Was ist die SWO?<h1/>
+    <p>Lorem ipsum dolor sit amet consectetur adipisicing elit. Sint est, in similique labore exercitationem sequi, quisquam hic, 
+      accusantium fugiat officia assumenda quia et a! Cupiditate doloribus consequuntur excepturi iusto a?<p/>
+  </div>
 </div>
 
 
 <div class="mySlides fade">
   <img src="http://localhost:8080/wp-content/uploads/2020/06/slemenova-spica-triglav-national-park.jpg" style="width:100%">
-  <div class="text">Caption Two</div>
+  <div class="text">
+  <h1>Titel 2<h1/>
+    <p>Lorem ipsum dolor sit amet consectetur adipisicing elit. Sint est, in similique labore exercitationem sequi, quisquam hic, 
+      accusantium fugiat officia assumenda quia et a! Cupiditate doloribus consequuntur excepturi iusto a?<p/>
+  </div>
 </div>
 
 <div class="mySlides fade">
     <img src="http://localhost:8080/wp-content/uploads/2020/06/slid2.jpg" style="width:100%">
-    <div class="text">Caption Three</div>
+    <div class="text">
+    <h1>Titel 3?<h1/>
+    <p>Lorem ipsum dolor sit amet consectetur adipisicing elit. Sint est, in similique labore exercitationem sequi, quisquam hic, 
+      accusantium fugiat officia assumenda quia et a! Cupiditate doloribus consequuntur excepturi iusto a?<p/>
+    </div>
 </div>
 
 <!-- Next and previous buttons -->
