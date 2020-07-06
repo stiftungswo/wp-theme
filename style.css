@@ -54,13 +54,13 @@ with others.
 
 /* Change ALL link appearances -------------------------- */
 
-* a {
+* a:not(.ab-item):not(.slideshow-slide) {
 	color: #000 !important;
 	text-transform: uppercase !important;
 	text-decoration: none !important;
 }
 
-* a:hover {
+* a:not(.ab-item):hover {
 	color: #007DC2 !important;
 }
 
@@ -70,7 +70,9 @@ with others.
 	color: #007DC2;
 }
 /* ----------------------------------------------------------SLIDE SHOW-------------------------------------------------------------------------*/
-* {box-sizing:border-box}
+
+.grow { transition: all .2s ease-in-out; }
+.grow:hover { transform: scale(1.2); }
 
 /* Slideshow container */
 .slideshow-container {
@@ -79,45 +81,60 @@ with others.
   margin: auto;
 }
 
-/* Hide the images by default */
-
+.frontslides {
+  height: 96vh;
+  background: url('http://localhost:8080/wp-content/uploads/2020/06/844198.jpg') no-repeat center center fixed; 
+  -webkit-background-size: cover;
+  -moz-background-size: cover;
+  -o-background-size: cover;
+  background-size: cover;
+}
 
 /* Next & previous buttons */
-.prev, .next {
+.prev-slide, .next-slide {
   cursor: pointer;
   position: absolute;
   top: 50%;
   width: auto;
   margin-top: -22px;
-  padding: 16px;
-  color: white;
+  padding: 26px;
+  color: white !important;
+  text-decoration: none;
   font-weight: bold;
-  font-size: 18px;
+  font-size: 38px;
   transition: 0.6s ease;
   border-radius: 0 3px 3px 0;
   user-select: none;
 }
 
 /* Position the "next button" to the right */
-.next {
+.next-slide {
   right: 0;
   border-radius: 3px 0 0 3px;
 }
 
 /* On hover, add a black background color with a little bit see-through */
-.prev:hover, .next:hover {
-  background-color: rgba(0,0,0,0.8);
+.prev-slide:hover, .next-slide:hover {
+  background-color: rgba(255,255,255,0.6);
 }
 
-/* Caption text */
-.text {
+/* Slider Box */
+.slider-box {
   color: #f2f2f2;
   font-size: 15px;
-  padding: 8px 12px;
-  position: absolute;
-  bottom: 8px;
-  width: 100%;
+  padding: 8px 42px;
   text-align: center;
+  background: rgba(0, 0, 0, 0.51);
+  border-radius: 10px;
+  max-width: 60%;
+  position: absolute;
+  bottom: 0;
+  margin: 0 0 100px 200px;
+}
+
+.box-right {
+	right: 0;
+	margin: 0 200px 100px 0;
 }
 
 /* Number text (1/3 etc) */
@@ -154,12 +171,12 @@ with others.
 }
 
 @-webkit-keyframes fade {
-  from {opacity: .4}
+  from {opacity: .6}
   to {opacity: 1}
 }
 
 @keyframes fade {
-  from {opacity: .4}
+  from {opacity: .6}
   to {opacity: 1}
 }
 
@@ -5947,25 +5964,6 @@ a.to-the-top > * {
 
 	.header-inner .toggle-wrapper {
 		position: relative;
-	}
-
-	.header-inner .toggle-wrapper::before {
-		background: #dedfdf;
-		content: "";
-		display: block;
-		height: 2.7rem;
-		position: absolute;
-		left: 0;
-		top: calc(50% - 1.35rem);
-		width: 0.1rem;
-	}
-
-	.header-inner .toggle-wrapper:first-child::before {
-		content: none;
-	}
-
-	.header-inner .primary-menu-wrapper + .header-toggles .toggle-wrapper:first-child::before {
-		content: "";
 	}
 
 	.nav-toggle-wrapper:not(.has-expanded-menu) {

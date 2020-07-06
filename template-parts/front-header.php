@@ -14,25 +14,31 @@
 <div class="slideshow-container">
 
 <!-- Full-width images with number and caption text -->
-<div class="mySlides fade">
-  <img src="http://localhost:8080/wp-content/uploads/2020/06/844198.jpg" style="width:100%">
-  <div class="text">Was ist die SWO?</div>
+<div class="frontslides fade" style="background-image: url('http://localhost:8080/wp-content/uploads/2020/06/844198.jpg');">
+  <div class="slider-box">
+    <h3>Was ist die SWO?</h3>
+    <p>Mehr text</p>
+  </div>
 </div>
 
 
-<div class="mySlides fade">
-  <img src="http://localhost:8080/wp-content/uploads/2020/06/slemenova-spica-triglav-national-park.jpg" style="width:100%">
-  <div class="text">Caption Two</div>
+<div class="frontslides fade" style="background-image: url('http://localhost:8080/wp-content/uploads/2020/06/slemenova-spica-triglav-national-park.jpg');">
+  <div class="slider-box box-right">
+    <h3>Was ist die SWO?</h3>
+    <p>Mehr text</p>
+  </div>
 </div>
 
-<div class="mySlides fade">
-    <img src="http://localhost:8080/wp-content/uploads/2020/06/slid2.jpg" style="width:100%">
-    <div class="text">Caption Three</div>
+<div class="frontslides fade" style="background-image: url('http://localhost:8080/wp-content/uploads/2020/06/slid2.jpg');">
+  <div class="slider-box">
+    <h3>Was ist die SWO?</h3>
+    <p>Mehr text</p>
+  </div>
 </div>
 
 <!-- Next and previous buttons -->
-<a class="prev" onclick="plusSlides(-1)">&#10094;</a>
-<a class="next" onclick="plusSlides(1)">&#10095;</a>
+<a class="slideshow-slide prev-slide grow" onclick="plusSlides(-1)">&#10094;</a>
+<a class="slideshow-slide next-slide grow" onclick="plusSlides(1)">&#10095;</a>
 </div>
 <br>
 
@@ -57,7 +63,7 @@ function currentSlide(n) {
 
 function showSlides(n) {
   var i;
-  var slides = document.getElementsByClassName("mySlides");
+  var slides = document.getElementsByClassName("frontslides");
   var dots = document.getElementsByClassName("dot");
   if (n > slides.length) {slideIndex = 1}    
   if (n < 1) {slideIndex = slides.length}
