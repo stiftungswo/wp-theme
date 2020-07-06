@@ -208,8 +208,21 @@ function swowptheme_register_scripts() {
 		wp_enqueue_script( 'comment-reply' );
 	}
 
-	wp_enqueue_script( 'twentytwenty-js', get_template_directory_uri() . '/assets/js/index.js', array(), $theme_version, false );
+	wp_enqueue_script(
+		'twentytwenty-js',
+		get_template_directory_uri() . '/assets/js/index.js',
+		array(),
+		$theme_version,
+		false
+	);
+
 	wp_script_add_data( 'twentytwenty-js', 'async', true );
+
+	wp_enqueue_script(
+        'swo-scripts',
+        get_template_directory_uri() . '/assets/js/swo-scripts.js',
+        array('jquery')
+    );
 
 }
 
