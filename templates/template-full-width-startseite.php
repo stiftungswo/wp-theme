@@ -37,18 +37,26 @@ get_template_part('template-parts/front-header');
     </div>
     <div class="Bau">
                 
-        <a href="url">Bau</a>
+        <a href="url">
+           
+            <div class="onpicture">Bau</div>
+        </a>
 
     </div>
     <div class="Zivildienst">
                 
-        <a href="url">Zivildienst</a>
+        <a href="url">
+           
+            <div class="onpicture">Zivildienst</div>
+        </a>
 
     </div>
     <div class="Integration">
                 
-        <a href="url">Integration</a>
-
+        <a href="url">
+           
+           <div class="onpicture">Integration</div>
+       </a>
     </div>
   </div>
   <div class="Front-page-top-left"></div>
