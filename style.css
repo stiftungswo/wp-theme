@@ -197,6 +197,133 @@ button {
   to {opacity: 1}
 }
 
+/* --------------------------------------------------------------------------------------------UPPER FRONT PAGE-------------------------------------------------------------------------*/
+
+.front-page-title-text{
+	margin: 0% 20%
+}
+
+.front-page-title-text h1{
+	font-size: 25px;
+	margin-top: 25px;
+	margin-bottom: 20px;
+	
+}
+
+.front-page-title-text hr{
+	width: 9%;
+	margin: 10px 0px;
+	color: cornflowerblue;
+	border-color: cornflowerblue;
+	border-width: 2px;
+	border-radius: 1px ;
+	
+}
+
+.front-page-title-text p{
+	font-size: 15px;
+	font-weight: 300;
+}
+
+
+.grid-container-fp1 {
+	display: grid;
+	grid-template-columns: 1fr 1fr;
+	grid-template-rows: 1fr;
+	gap: 1px 1px;
+	grid-template-areas: "Front-page-top-left Front-page-top-right";
+  }
+  
+.Front-page-top-right {
+	display: grid;
+	grid-template-columns: 1fr 1fr;
+	grid-template-rows: 1fr 1fr;
+	gap: 1px 1px;
+	grid-template-areas: "Bildung-forschung-entwicklung Bau" "Zivildienst Integration";
+	grid-area: Front-page-top-right;
+	margin-left: 20px;
+	margin-right: 30%;
+
+  }
+  
+.Bildung-forschung-entwicklung { 
+	  grid-area: Bildung-forschung-entwicklung;
+	  border: 8px solid #FCD757;
+	  border-width: 4px;
+	  border-radius: 9px;
+	  position: relative;
+	  text-align: center;
+	  width: 150px;
+	  height: 150px;
+	  background:rgba(0, 0, 0, .35)  url("http://localhost:8080/wp-content/uploads/2020/06/classroom_training-780x520.jpg");
+	  background-size: 150px 142px;
+	  background-blend-mode: darken;
+	 }
+
+.Bildung-forschung-entwicklung img{
+	width:150px;
+	height:142px;
+
+}
+
+.onpicture {
+	position: absolute;
+	bottom: 8px;
+	left: 16px;
+	color: white;
+	font-family: Times, Times New Roman, serif;
+	text-transform: none;
+	font-weight: 600;
+	
+}
+  
+.Bau { 
+	  grid-area: Bau;
+	  border: 8px solid #87A878;
+	  border-width: 4px;
+	  border-radius: 9px;
+	  position: relative;
+	  text-align: center;
+	  width: 150px;
+	  height: 150px;
+	  background:rgba(0, 0, 0, .35)  url("http://localhost:8080/wp-content/uploads/2020/06/77ca35f2345b2dfc128cbd91c415209f.jpg");
+	  background-size: 150px 142px;
+	  background-blend-mode: darken;
+}
+  
+.Zivildienst { 
+	  grid-area: Zivildienst;
+	  border: 8px solid #61330E;
+	  border-width: 4px;
+	  border-radius: 9px;
+	  position: relative;
+	  text-align: center;
+	  width: 150px;
+	  height: 150px;
+	  background:rgba(0, 0, 0, .35)  url("http://localhost:8080/wp-content/uploads/2020/06/ezgif.com-webp-to-jpg.jpg");
+	  background-size: 150px 142px;
+	  background-blend-mode: darken;
+}
+  
+.Integration { 
+	  grid-area: Integration;
+	  border: 8px solid #FC7A57;
+	  border-width: 4px;
+	  border-radius: 9px;
+	  position: relative;
+	  text-align: center;
+	  width: 150px;
+	  height: 150px;
+	  background:rgba(0, 0, 0, .35)  url("http://localhost:8080/wp-content/uploads/2020/06/gvi_dawasamu_flickr_cc0_45360392434_d1dff9ef7d_o.png");
+	  background-size: 150px 142px;
+	  background-blend-mode: darken;
+	}
+  
+.Front-page-top-left { 
+	  grid-area: Front-page-top-left; }
+
+
+
 		/* FOOTER*/
 
 /* --------------------------------------------------------------------------------------------UPPER FOOTER-------------------------------------------------------------------------*/
@@ -4729,6 +4856,7 @@ ul.footer-social li {
 
 a.to-the-top > * {
 	pointer-events: none;
+	text-align: center;
 }
 
 .footer-copyright {
