@@ -16,7 +16,10 @@ get_header();
 
 <main id="site-content" role="main">
 
-    
+<div class="limit-content-width">
+
+
+</div>
 
 </main><!-- #site-content -->
 

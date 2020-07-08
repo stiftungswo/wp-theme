@@ -10,12 +10,19 @@
 
 get_header();
 
+get_template_part( 'template-parts/entry-header' );
+
+if ( ! is_search() ) {
+    get_template_part( 'template-parts/featured-image' );
+}
+
 /** IN THE FUTURE: while statements for as many menu boxes as needed: */
 
 ?>
 
 <main id="site-content" role="main">
     
+<div class="limit-content-width">
 
         <section class="breweries" id="breweries">
         <ul>
@@ -33,6 +40,8 @@ get_header();
 
     </ul>
     </section>
+
+</div>
 
 </main><!-- #site-content -->
 

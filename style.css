@@ -52,6 +52,12 @@ with others.
 /*	-1. Custom SWO CSS
 /* -------------------------------------------------------------------------- */
 
+.limit-content-width {
+	width: 80%;
+	max-width: 920px;
+	margin: 0 auto;
+}
+
 .img-background {
   background: url('http://localhost:8080/wp-content/uploads/2020/06/844198.jpg') no-repeat center center; 
   -webkit-background-size: cover;
@@ -206,10 +212,6 @@ button {
 }
 
 /* --------------------------------------------------------------------------------------------UPPER FRONT PAGE-------------------------------------------------------------------------*/
-
-.front-page-title-text{
-	margin: 0% 20%
-}
 
 .front-page-title-text h1{
 	font-size: 25px;
