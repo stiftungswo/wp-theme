@@ -52,9 +52,19 @@ with others.
 /*	-1. Custom SWO CSS
 /* -------------------------------------------------------------------------- */
 
+.classic-text h1 {
+	font-size: 22px;
+	margin: 14px 0;
+}
+
+.classic-text p {
+	font-size: 15px;
+    font-weight: 300;
+}
+
 .limit-content-width {
 	width: 80%;
-	max-width: 920px;
+	max-width: 820px;
 	margin: 0 auto;
 }
 
@@ -214,7 +224,6 @@ button {
 /* --------------------------------------------------------------------------------------------UPPER FRONT PAGE-------------------------------------------------------------------------*/
 
 .front-page-title-text h1{
-	font-size: 25px;
 	margin-top: 25px;
 	margin-bottom: 20px;
 	
@@ -229,12 +238,6 @@ button {
 	border-radius: 1px ;
 	
 }
-
-.front-page-title-text p{
-	font-size: 15px;
-	font-weight: 300;
-}
-
 
 .grid-container-fp1 {
 	display: grid;

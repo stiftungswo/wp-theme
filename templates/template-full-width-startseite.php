@@ -15,7 +15,7 @@ get_template_part('template-parts/front-header');
 
 <div class="limit-content-width">
 
-    <div class="front-page-title-text">
+    <div class="front-page-title-text classic-text">
         <h1>Unsere Bereiche</h1>
         <hr/>
         <p>
