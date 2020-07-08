@@ -13,7 +13,7 @@
 
 .breweries > ul {
   display: grid;
-  grid-template-columns: repeat(auto-fit, minmax(400px, 1fr));
+  grid-template-columns: repeat(auto-fit, minmax(290px, 1fr));
   grid-gap: 1rem;
   list-style-type: none;
   margin: 0;
@@ -54,6 +54,6 @@
     <div class="imageDiv bottomDiv classic-text">
         <h1>Menu Punkt Titel</h1>
         <p>Erfahren Sie mehr über unsere Zielsetzungen. Das Leitbild unserer Stiftung ist in den Statuten festgeschrieben und dient uns als Kompass für unser tägliches Handeln.</p>
-        <a href="#">Visit Website</a>
+        <a class="svg-button" href="#">Visit Website</a>
     </div>
 </li>

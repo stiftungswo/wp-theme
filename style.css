@@ -52,14 +52,26 @@ with others.
 /*	-1. Custom SWO CSS
 /* -------------------------------------------------------------------------- */
 
+.svg-button:after {
+	display: inline-block;
+	content: ' ';
+	background: url('http://localhost:8080/wp-content/uploads/2020/06/small-arw.png') no-repeat;
+	background-size: 22px 22px;
+	height: 22px;
+	width: 22px;
+	position: absolute;
+	margin: 2px 0 0 4px;
+	transform: rotate(180deg);
+  }
+
 .classic-text h1 {
 	font-size: 22px;
 	margin: 14px 0;
 }
 
 .classic-text p {
-	font-size: 15px;
-    font-weight: 300;
+	font-size: 14px;
+    font-weight: normal;
 }
 
 .limit-content-width {
@@ -88,6 +100,7 @@ button {
 	color: #000 !important;
 	text-transform: uppercase !important;
 	text-decoration: none !important;
+	font-weight: 640;
 }
 
 * a:not(.ab-item):hover {
@@ -663,7 +676,7 @@ h6,
 .faux-heading {
 	font-feature-settings: "lnum";
 	font-variant-numeric: lining-nums;
-	font-weight: 700;
+	font-weight: 800;
 	letter-spacing: -0.0415625em;
 	line-height: 1.25;
 	margin: 3.5rem 0 2rem;
@@ -3906,23 +3919,23 @@ figure.wp-block-table.is-style-stripes {
 /* Font Families ----------------------------- */
 
 .entry-content {
-	font-family: NonBreakingSpaceOverride, "Hoefler Text", Garamond, "Times New Roman", serif;
+	font-family: "PT Serif", NonBreakingSpaceOverride, "Hoefler Text", Garamond, "Times New Roman", serif;
 	letter-spacing: normal;
 }
 
-.entry-content h1,
-.entry-content h2,
-.entry-content h3,
-.entry-content h4,
-.entry-content h5,
-.entry-content h6,
+h1,
+h2,
+h3,
+h4,
+h5,
+h6,
 .entry-content cite,
 .entry-content figcaption,
 .entry-content table,
 .entry-content address,
 .entry-content .wp-caption-text,
 .entry-content .wp-block-file {
-	font-family: -apple-system, BlinkMacSystemFont, "Helvetica Neue", Helvetica, sans-serif;
+	font-family: "PT Serif", -apple-system, BlinkMacSystemFont, "Helvetica Neue", Helvetica, sans-serif;
 }
 
 @supports ( font-variation-settings: normal ) {
