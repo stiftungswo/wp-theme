@@ -65,7 +65,7 @@ with others.
   }
 
 .classic-text h1 {
-	font-size: 22px;
+	font-size: 23px;
 	margin: 14px 0;
 }
 
@@ -258,13 +258,14 @@ button {
 	grid-template-rows: 1fr;
 	gap: 1px 1px;
 	grid-template-areas: "Front-page-top-left Front-page-top-right";
+	margin-bottom: 100px;
   }
   
 .Front-page-top-right {
 	display: grid;
 	grid-template-columns: 1fr 1fr;
 	grid-template-rows: 1fr 1fr;
-	gap: 1px 1px;
+	gap: 10px 10px;
 	grid-template-areas: "Bildung-forschung-entwicklung Bau" "Zivildienst Integration";
 	grid-area: Front-page-top-right;
 	margin-left: 20px;
@@ -346,7 +347,11 @@ button {
 	}
   
 .Front-page-top-left { 
-	  grid-area: Front-page-top-left; }
+	grid-area: Front-page-top-left;
+	background: url("https://www.computer-coach.ch/wp-content/uploads/2018/04/it_betreiben.gif");
+	width: 350px ;
+	background-size: 350px 310px;
+	 }
 
 
 

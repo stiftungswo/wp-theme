@@ -65,10 +65,26 @@ get_template_part('template-parts/front-header');
     </div>
 
 
-    <div class="front-page-title-text">
+    <div class="front-page-title-text classic-text">
         <h1>Unsere Projekte</h1>
         <hr/>
     </div>
+
+
+    <section class="breweries" id="breweries">
+        <ul>
+
+        <?php
+
+        get_template_part( 'template-parts/menu-box' );
+        get_template_part( 'template-parts/menu-box' );
+        get_template_part( 'template-parts/menu-box' );
+        get_template_part( 'template-parts/menu-box' );
+
+        ?>
+
+        </ul>
+    </section>
 
 </div>
 
