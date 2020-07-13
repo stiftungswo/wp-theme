@@ -76,10 +76,10 @@ get_template_part('template-parts/front-header');
 
         <?php
 
-        get_template_part( 'template-parts/menu-box' );
-        get_template_part( 'template-parts/menu-box' );
-        get_template_part( 'template-parts/menu-box' );
-        get_template_part( 'template-parts/menu-box' );
+        get_template_part( 'template-parts/project-box' );
+        get_template_part( 'template-parts/project-box' );
+        get_template_part( 'template-parts/project-box' );
+        get_template_part( 'template-parts/project-box' );
 
         ?>
 
