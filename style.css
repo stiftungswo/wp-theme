@@ -52,7 +52,9 @@ with others.
 /*	-1. Custom SWO CSS
 /* -------------------------------------------------------------------------- */
 
-
+.svg-button {
+	transition: unset;
+}
 
 .svg-button:after {
 	display: inline-block;
@@ -64,6 +66,10 @@ with others.
 	position: absolute;
 	margin: 2px 0 0 4px;
 	transform: rotate(180deg);
+  }
+
+.svg-button:hover:after {
+	filter: invert(33%) sepia(91%) saturate(3527%) hue-rotate(182deg) brightness(92%) contrast(101%);
   }
 
 .classic-text h1 {
