@@ -272,26 +272,6 @@ button {
 	margin-right: 30%;
 
   }
-  
-.Bildung-forschung-entwicklung { 
-	  grid-area: Bildung-forschung-entwicklung;
-	  border: 8px solid #FCD757;
-	  border-width: 4px;
-	  border-radius: 9px;
-	  position: relative;
-	  text-align: center;
-	  width: 150px;
-	  height: 150px;
-	  background:rgba(0, 0, 0, .35)  url("http://localhost:8080/wp-content/uploads/2020/06/classroom_training-780x520.jpg");
-	  background-size: 150px 142px;
-	  background-blend-mode: darken;
-	 }
-
-.Bildung-forschung-entwicklung img{
-	width:150px;
-	height:142px;
-
-}
 
 .onpicture {
 	position: absolute;
@@ -303,7 +283,25 @@ button {
 	font-weight: 600;
 	
 }
-  
+
+.Bildung-forschung-entwicklung { 
+	grid-area: Bildung-forschung-entwicklung;
+	border: 8px solid #FCD757;
+	border-width: 4px;
+	border-radius: 9px;
+	position: relative;
+	text-align: center;
+	width: 150px;
+	height: 150px;
+	background: #FCD757;
+	background:rgba(0, 0, 0, .35)  url("http://localhost:8080/wp-content/uploads/2020/06/classroom_training-780x520.jpg")no-repeat center center; 
+	-webkit-background-size: cover;
+	-moz-background-size: cover;
+	-o-background-size: cover;
+	background-size: cover;
+	background-blend-mode: darken;
+}
+
 .Bau { 
 	  grid-area: Bau;
 	  border: 8px solid #87A878;
@@ -313,8 +311,12 @@ button {
 	  text-align: center;
 	  width: 150px;
 	  height: 150px;
-	  background:rgba(0, 0, 0, .35)  url("http://localhost:8080/wp-content/uploads/2020/06/77ca35f2345b2dfc128cbd91c415209f.jpg");
-	  background-size: 150px 142px;
+	  background: #87A878;
+	  background:rgba(0, 0, 0, .35)  url("http://localhost:8080/wp-content/uploads/2020/06/77ca35f2345b2dfc128cbd91c415209f.jpg")no-repeat center center; 
+	  -webkit-background-size: cover;
+	  -moz-background-size: cover;
+	  -o-background-size: cover;
+	  background-size: cover;
 	  background-blend-mode: darken;
 }
   
@@ -327,8 +329,12 @@ button {
 	  text-align: center;
 	  width: 150px;
 	  height: 150px;
-	  background:rgba(0, 0, 0, .35)  url("http://localhost:8080/wp-content/uploads/2020/06/ezgif.com-webp-to-jpg.jpg");
-	  background-size: 150px 142px;
+	  background: #61330E;
+	  background:rgba(0, 0, 0, .35)  url("http://localhost:8080/wp-content/uploads/2020/06/ezgif.com-webp-to-jpg.jpg")no-repeat center center; 
+	  -webkit-background-size: cover;
+	  -moz-background-size: cover;
+	  -o-background-size: cover;
+	  background-size: cover;
 	  background-blend-mode: darken;
 }
   
@@ -341,10 +347,17 @@ button {
 	  text-align: center;
 	  width: 150px;
 	  height: 150px;
-	  background:rgba(0, 0, 0, .35)  url("http://localhost:8080/wp-content/uploads/2020/06/gvi_dawasamu_flickr_cc0_45360392434_d1dff9ef7d_o.png");
-	  background-size: 150px 142px;
+	  background: #FC7A57;
+	  background:rgba(0, 0, 0, .35)  url("http://localhost:8080/wp-content/uploads/2020/06/1975431114-2020-feb-06-13-03-57-000000-gvi_dawasamu_flickr_cc0_45360392434_d1dff9ef7d_o.png")no-repeat center center; 
+	  -webkit-background-size: cover;
+	  -moz-background-size: cover;
+	  -o-background-size: cover;
+	  background-size: cover;
 	  background-blend-mode: darken;
 	}
+
+.picture-link :hover{
+}
   
 .Front-page-top-left { 
 	grid-area: Front-page-top-left;

@@ -30,36 +30,31 @@ get_template_part('template-parts/front-header');
     <div class="grid-container-fp1">
 
     <div class="Front-page-top-right">
-        <div class="Bildung-forschung-entwicklung">
-            <a href="url">
-            
+
+        <a class=picture-link href="url">
+            <div class="Bildung-forschung-entwicklung">
                 <div class="onpicture">Bildung, Forschung, Entwicklung</div>
-            </a>
-
-        </div>
-        <div class="Bau">
-                    
-            <a href="url">
-            
-                <div class="onpicture">Bau</div>
-            </a>
-
-        </div>
-        <div class="Zivildienst">
-                    
-            <a href="url">
-            
-                <div class="onpicture">Zivildienst</div>
-            </a>
-
-        </div>
-        <div class="Integration">
-                    
-            <a href="url">
-            
-            <div class="onpicture">Integration</div>
+            </div>
         </a>
-        </div>
+
+        <a class=picture-link href="url">
+            <div class="Bau">
+                <div class="onpicture">Bau</div>
+            </div>
+        </a>
+
+        <a class=picture-link href="url">
+            <div class="Zivildienst">         
+                <div class="onpicture">Zivildienst</div>
+            </div>
+        </a>
+
+        <a class=picture-link href="url">
+            <div class="Integration">
+                <div class="onpicture">Integration</div>
+            </div>
+        </a>
+
     </div>
     <div class="Front-page-top-left"></div>
     </div>
