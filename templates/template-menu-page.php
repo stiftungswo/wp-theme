@@ -24,7 +24,7 @@ if ( ! is_search() ) {
     
 <div class="limit-content-width">
 
-        <section class="breweries" id="breweries">
+        <section class="boxes-container-menu">
         <ul>
 
         <?php

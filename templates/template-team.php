@@ -1,6 +1,6 @@
 <?php
 /**
- * Template Name: Menu Seite Template
+ * Template Name: Team Seite Template
  * Template Post Type: post, page
  *
  * @package WordPress
@@ -10,14 +10,36 @@
 
 get_header();
 
+get_template_part( 'template-parts/entry-header' );
+
+if ( ! is_search() ) {
+    get_template_part( 'template-parts/featured-image' );
+}
+
 /** IN THE FUTURE: while statements for as many menu boxes for team members as needed: */
 
 ?>
 
 <main id="site-content" role="main">
-
+    
 <div class="limit-content-width">
 
+        <section class="boxes-container-team">
+        <ul>
+
+        <?php
+
+        get_template_part( 'template-parts/team-box' );
+        get_template_part( 'template-parts/team-box' );
+        get_template_part( 'template-parts/team-box' );
+        get_template_part( 'template-parts/team-box' );
+        get_template_part( 'template-parts/team-box' );
+        get_template_part( 'template-parts/team-box' );
+
+        ?>
+
+    </ul>
+    </section>
 
 </div>
 
