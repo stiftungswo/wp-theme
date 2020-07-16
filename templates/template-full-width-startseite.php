@@ -29,34 +29,34 @@ get_template_part('template-parts/front-header');
 
     <div class="grid-container-fp1">
 
-    <div class="Front-page-top-right">
+        <div class="Front-page-top-right">
 
-        <a class=picture-link href="url">
-            <div class="Bildung-forschung-entwicklung">
-                <div class="onpicture">Bildung, Forschung, Entwicklung</div>
-            </div>
-        </a>
+            <a class=picture-link href="url">
+                <div class="Bildung-forschung-entwicklung">
+                    <div class="onpicture">Bildung, Forschung, Entwicklung</div>
+                </div>
+            </a>
 
-        <a class=picture-link href="url">
-            <div class="Bau">
-                <div class="onpicture">Bau</div>
-            </div>
-        </a>
+            <a class=picture-link href="url">
+                <div class="Bau">
+                    <div class="onpicture">Bau</div>
+                </div>
+            </a>
 
-        <a class=picture-link href="url">
-            <div class="Zivildienst">         
-                <div class="onpicture">Zivildienst</div>
-            </div>
-        </a>
+            <a class=picture-link href="url">
+                <div class="Zivildienst">         
+                    <div class="onpicture">Zivildienst</div>
+                </div>
+            </a>
 
-        <a class=picture-link href="url">
-            <div class="Integration">
-                <div class="onpicture">Integration</div>
-            </div>
-        </a>
+            <a class=picture-link href="url">
+                <div class="Integration">
+                    <div class="onpicture">Integration</div>
+                </div>
+            </a>
 
-    </div>
-    <div class="Front-page-top-left"></div>
+        </div>
+        <div class="Front-page-top-left"></div>
     </div>
 
 
@@ -65,22 +65,20 @@ get_template_part('template-parts/front-header');
         <hr/>
     </div>
 
-
-    <section class="breweries" id="breweries">
+    <section class="boxes-container-menu">
         <ul>
 
-        <?php
+            <?php
 
-        get_template_part( 'template-parts/project-box' );
-        get_template_part( 'template-parts/project-box' );
-        get_template_part( 'template-parts/project-box' );
-        get_template_part( 'template-parts/project-box' );
+            get_template_part( 'template-parts/project-box' );
+            get_template_part( 'template-parts/project-box' );
+            get_template_part( 'template-parts/project-box' );
+            get_template_part( 'template-parts/project-box' );
 
-        ?>
+            ?>
 
         </ul>
     </section>
-
 </div>
 
 <?php
