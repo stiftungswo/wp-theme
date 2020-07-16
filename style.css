@@ -518,12 +518,52 @@ button {
 
 /* ------------------------------------Inhalt Seite-------------------------------------- */
 
-.content-container h3{
-	color: red;
-	
+
+
+.content-container {
+	display: grid;
+	grid-template-columns: 2fr 1fr;
+	grid-template-rows: 1fr;
+	gap: 1px 1px;
+	grid-template-areas: "main-inhalt side-inhalt";
+	padding: 0px;
+  }
+  
+.main-inhalt { grid-area: main-inhalt;
+	hyphens: auto; 
+	text-align: left;
+	font-family: sans-serif;
+	font-style: normal;
+	font-size: 14px;
+			 }
+
+.main-inhalt hr{
+	width: 9%;
+	margin: 10px 0px;
+	color: cornflowerblue;
+	border-color: cornflowerblue;
+	border-width: 2px;
+	border-radius: 1px ;
 }
 
+.side-inhalt { grid-area: side-inhalt;
+	margin-top: 35px;
+	border: 3px solid #77787B;
+	box-sizing: border-box;
+	border-radius: 8px;
+	height: max-content;
+	
+		}
 
+.side-inhalt hr{ 
+	margin: 5px;
+}
+.side-inhalt h5{ 
+	margin: 5px;
+}
+.side-inhalt p{ 
+	padding-left: 5px;
+}
 
 /* -------------------------------------------------------------------------- */
 
@@ -570,8 +610,6 @@ caption,
 tr,
 th,
 td {
-	border: none;
-	font-size: inherit;
 	line-height: inherit;
 	margin: 0;
 	padding: 0;
@@ -4024,8 +4062,6 @@ figure.wp-block-table.is-style-stripes {
 /* Font Families ----------------------------- */
 
 .entry-content {
-	font-family: "PT Serif", NonBreakingSpaceOverride, "Hoefler Text", Garamond, "Times New Roman", serif;
-	letter-spacing: normal;
 }
 
 h1,
@@ -5834,88 +5870,7 @@ a.to-the-top > * {
 
 	/* Entry Content ------------------------- */
 
-	.entry-content {
-		font-size: 2.1rem;
-	}
-
-	.entry-content p{
-		text-align: center;
-		
-	}
-	.entry-content li {
-		line-height: 1.476;
-	}
-
-	.entry-content h1,
-	.entry-content h2{
-		font-size: 20px;
-	}
-	.entry-content h3 {
-		margin: 6rem auto 3rem;
-	}
-
-	.entry-content h4,
-	.entry-content h5,
-	.entry-content h6 {
-		margin: 4.5rem auto 2.5rem;
-	}
-
-	.alignnone,
-	.aligncenter {
-		margin-bottom: 4rem;
-		margin-top: 4rem;
-	}
-
-	.alignleft {
-
-		/*rtl:ignore*/
-		margin: 0.3rem 2rem 2rem 0;
-	}
-
-	.alignright {
-
-		/*rtl:ignore*/
-		margin: 0.3rem 0 2rem 2rem;
-	}
-
-	.entry-content > .alignwide:not(.wp-block-group.has-background),
-	.entry-content > .alignfull:not(.wp-block-group.has-background) {
-		margin-bottom: 6rem;
-		margin-top: 6rem;
-	}
-
-	.entry-content > .alignwide {
-		max-width: calc(100vw - 8rem);
-		width: calc(100vw - 8rem);
-	}
-
-	[class*="wp-block"].alignfull:not(.has-background) [class*="__inner-container"] > .alignleft,
-	[class*="wp-block"].alignfull:not(.has-background) [class*="__inner-container"] > p .alignleft,
-	[class*="wp-block"].alignfull:not(.has-background) [class*="__inner-container"] > .wp-block-image .alignleft {
-
-		/*rtl:ignore*/
-		margin-left: 4rem;
-	}
-
-	[class*="wp-block"].alignfull:not(.has-background) [class*="__inner-container"] > .alignright,
-	[class*="wp-block"].alignfull:not(.has-background) [class*="__inner-container"] > p .alignright,
-	[class*="wp-block"].alignfull:not(.has-background) [class*="__inner-container"] > .wp-block-image .alignright {
-
-		/*rtl:ignore*/
-		margin-right: 4rem;
-	}
-
-	.entry-content > .alignwide:first-child,
-	.entry-content > .alignfull:first-child {
-		margin-bottom: 8rem;
-	}
-
-	/* ENTRY MEDIA */
-
-	.alignfull > figcaption,
-	.alignfull > .wp-caption-text {
-		width: calc(100% - 8rem);
-	}
+	
 
 	/* Comments ------------------------------ */
 
