@@ -52,6 +52,16 @@ with others.
 /*	-1. Custom SWO CSS
 /* -------------------------------------------------------------------------- */
 
+
+.bereich-title {
+	color: #61330E;
+	font-size: 46px;
+	background: #fff;
+	width: 60%;
+	margin: 0 auto;
+	border: 4px solid #61330E;
+}
+
 .svg-button {
 	transition: unset;
 }
@@ -434,9 +444,6 @@ button {
 	  background-size: cover;
 	  background-blend-mode: darken;
 	}
-
-.picture-link :hover{
-}
   
 .Front-page-top-left { 
 	grid-area: Front-page-top-left;
@@ -2936,7 +2943,7 @@ body:not(.singular) main > article:first-of-type {
 	-moz-background-size: cover;
 	-o-background-size: cover;
 	background-size: cover;
-	padding: 14rem 0 8rem;
+	padding: 14rem 0 1rem;
 }
 
 .entry-categories {
@@ -2973,6 +2980,9 @@ h2.entry-title {
 
 h1.entry-title{
 	color: #fff;
+	font-size: 46px;
+	padding-left: 18rem;
+	text-align: left;
 }
 
 .entry-title a {
@@ -4074,9 +4084,6 @@ figure.wp-block-table.is-style-stripes {
 
 /* Font Families ----------------------------- */
 
-.entry-content {
-}
-
 h1,
 h2,
 h3,
@@ -5059,6 +5066,12 @@ a.to-the-top > * {
 /*	17. Media Queries
 /* -------------------------------------------------------------------------- */
 
+@media ( max-width: 879px ) {
+	h1.entry-title{
+		padding-left: 8rem;
+	}
+}
+
 @media ( max-width: 479px ) {
 
 	/* Blocks -------------------------------- */
@@ -5611,7 +5624,7 @@ a.to-the-top > * {
 	/* POST HEADER */
 
 	.singular .entry-header {
-		padding: 20rem 0 8rem;
+		padding: 16rem 0 1rem;
 	}
 
 	.entry-categories {

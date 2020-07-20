@@ -1,6 +1,6 @@
 <?php
 /**
- * Template Name: Inhalt
+ * Template Name: Inhaltsseite Template
  * Template Post Type: post, page
  *
  * @package WordPress

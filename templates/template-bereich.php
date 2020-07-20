@@ -1,6 +1,6 @@
 <?php
 /**
- * Template Name: Menu Seite Template
+ * Template Name: Bereich Inhaltsseite Template
  * Template Post Type: post, page
  *
  * @package WordPress
@@ -9,6 +9,8 @@
  */
 
 get_header();
+
+get_template_part( 'template-parts/bereich-header' );
 
 ?>
 
