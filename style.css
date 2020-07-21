@@ -54,6 +54,36 @@ with others.
 
 /* General styling -------------------------- */
 
+button {
+	outline: none;
+}
+
+.swo-button {
+	font-size: 14px;
+	background: #fff;
+	border: 2px solid #000;
+	border-radius: 4px;
+	text-transform: uppercase;
+	font-weight: bold !important;
+	padding: 4px 32px 4px 8px;
+}
+
+.swo-button:after {
+	display: inline-block;
+	content: ' ';
+	background: url('http://localhost:8080/wp-content/uploads/2020/06/small-arw.png') no-repeat;
+	background-size: 22px 22px;
+	height: 22px;
+	width: 22px;
+	position: absolute;
+	margin: 2px 0 0 4px;
+	transform: rotate(180deg);
+}
+
+.swo-button:hover {
+	border: 2px solid #007DC2;
+}
+
 .classic-text h1 {
 	font-size: 23px;
 	margin: 14px 0;
@@ -78,8 +108,6 @@ with others.
   background-size: cover;
 }
 
-/* Bereiche styling -------------------------- */
-
 .left-right {
 	display: grid;
 	grid-template-columns: 1fr 1fr;
@@ -88,6 +116,64 @@ with others.
 	grid-template-areas: ". .";
 }
 
+.no-serif-heading {
+	font-family: 'Open Sans', sans-serif;
+	font-weight: bold;
+	text-transform: uppercase;
+}
+
+/* Bereiche styling -------------------------- */
+
+
+.bereich-header {
+	background: url(./assets/images/bereich_temp.jpg)  no-repeat center center !important; 
+	-webkit-background-size: cover;
+	-moz-background-size: cover;
+	-o-background-size: cover;
+	background-size: cover;
+	padding: 18rem 0 1rem !important;
+}
+
+.bereich-left {
+	background: url(./assets/images/bereich_temp.jpg)  no-repeat center center; 
+	-webkit-background-size: cover;
+	-moz-background-size: cover;
+	-o-background-size: cover;
+	background-size: cover;
+	border-radius: 12px;
+	margin-right: 10px;
+}
+
+.bereich-right {
+	margin-left: 10px;
+	padding: 10px 0;
+}
+
+.bereich-right h5 {
+	margin: 0 0 1em;
+}
+
+.feature-list {
+	list-style: none;
+	margin: 0;
+}
+
+.feature-list li {
+	margin: 0;
+	font-size: 14px;
+	font-weight: 600;
+	font-style: italic;
+}
+
+.feature-list li span{
+	color: #61330E;
+	font-weight: 1000;
+	text-decoration: none;
+}
+
+.feature-list li:not(:last-child){
+	margin-bottom: 10px;
+}
 
 .bereich-title{
 	text-align: left;
@@ -105,13 +191,8 @@ with others.
 	margin: 0 0 8px;
 }
 
-.bereich-title p{
-	font-size: 12px;
-	margin: 0;
-}
-
 .bereich-container {
-	padding-top: 80px;
+	padding-top: 120px;
 }
 
 /* Menu & Team Box styling -------------------------- */
@@ -203,12 +284,6 @@ with others.
 
 .bottomDivteam p {
 	font-size: 12px;
-}
-
-/* Change a few general appearances -------------------------- */
-
-button {
-	outline: none;
 }
 
 /* Change ALL link appearances -------------------------- */
@@ -5653,6 +5728,10 @@ a.to-the-top > * {
 
 	.singular .entry-header {
 		padding: 16rem 0 1rem;
+	}
+
+	.bereich-header {
+		padding: 24rem 0 1rem !important;
 	}
 
 	.entry-categories {

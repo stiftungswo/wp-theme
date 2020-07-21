@@ -7,15 +7,9 @@
  * @since Twenty Twenty 1.0
  */
 
-$entry_header_classes = '';
-
-if ( is_singular() ) {
-	$entry_header_classes .= ' header-footer-group';
-}
-
 ?>
 
-<header class="entry-header has-text-align-center<?php echo esc_attr( $entry_header_classes ); ?>">
+<header class="entry-header has-text-align-center bereich-header">
 
 	<div class="entry-header-inner section-inner medium">
 
@@ -29,7 +23,7 @@ if ( is_singular() ) {
 			 */
 		$show_categories = apply_filters( 'swowptheme_show_categories_in_entry_header', true );
 
-        ?><div class="bereich-title"><?php
+        ?><div class="bereich-title classic-text"><?php
         
         the_title( '<h1>', '</h1>' );
 
