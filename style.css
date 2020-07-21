@@ -72,16 +72,13 @@ button {
 	display: inline-block;
 	content: ' ';
 	background: url('http://localhost:8080/wp-content/uploads/2020/06/small-arw.png') no-repeat;
-	background-size: 22px 22px;
-	height: 22px;
-	width: 22px;
+	background-size: 18px 18px;
+	height: 18px;
+	width: 18px;
 	position: absolute;
-	margin: 2px 0 0 4px;
+	margin: 5px 0 0 6px;
 	transform: rotate(180deg);
-}
-
-.swo-button:hover {
-	border: 2px solid #007DC2;
+	filter: invert(20%) sepia(38%) saturate(1469%) hue-rotate(351deg) brightness(93%) contrast(93%);
 }
 
 .classic-text h1 {
