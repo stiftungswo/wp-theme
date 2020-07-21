@@ -29,8 +29,14 @@ if ( is_singular() ) {
 			 */
 		$show_categories = apply_filters( 'swowptheme_show_categories_in_entry_header', true );
 
+        ?><div class="bereich-title"><?php
         
-		the_title( '<h1 class="bereich-title">', '</h1>' );
+        the_title( '<h1>', '</h1>' );
+
+        ?>
+    
+        <p>In laoreet ut pretium nunc ac aliquam aliquam turpis. Lectus libero eget erat quis. Amet aliquam augue sit eget montes, nibh integer neque. Duis pretium leo risus volutpat nulla sollicitudin.
+Enim, pellentesque a integer pharetra. Ultricies vel sit cras consequat a neque, suspendisse. Platea condimentum ut sapien interdum ac vitae orci.</p></div><?php
 
 
 		if ( has_excerpt() && is_singular() ) {
