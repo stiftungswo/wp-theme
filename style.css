@@ -111,6 +111,7 @@ button {
 	grid-template-rows: ;
 	gap: 1px 1px;
 	grid-template-areas: ". .";
+	margin-bottom: 60px;
 }
 
 .no-serif-heading {
@@ -131,7 +132,7 @@ button {
 	padding: 18rem 0 1rem !important;
 }
 
-.bereich-left {
+.bereich-image {
 	background: url(./assets/images/bereich_temp.jpg)  no-repeat center center; 
 	-webkit-background-size: cover;
 	-moz-background-size: cover;
@@ -141,12 +142,12 @@ button {
 	margin-right: 10px;
 }
 
-.bereich-right {
+.bereich-text {
 	margin-left: 10px;
 	padding: 10px 0;
 }
 
-.bereich-right h5 {
+.bereich-text h5 {
 	margin: 0 0 1em;
 }
 
