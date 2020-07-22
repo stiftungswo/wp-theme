@@ -635,7 +635,7 @@ button {
 
 }
 
-.wp-block-column.Seiten-Info{
+.wp-block-column.side-info{
 	border: 3px solid #77787B;
 	box-sizing: border-box;
 	border-radius: 8px;
@@ -643,7 +643,7 @@ button {
 	margin-top: 35px;
 }
 
-.wp-block-column.Seiten-Info h6{ 
+.wp-block-column.side-info h6{ 
 	font-size: 19px;
 	margin: 0px 5px 0px 5px;
 	text-transform: uppercase;
@@ -652,7 +652,7 @@ button {
 	padding-left: 5px;
 }
 
-.wp-block-column.Seiten-Info p{ 
+.wp-block-column.side-info p{ 
 	padding-left: 5px;
 	font-size: 12px;
 	font-weight: 500;
