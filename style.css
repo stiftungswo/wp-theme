@@ -628,55 +628,31 @@ button {
 
 
 
-.content-container {
-	display: grid;
-	grid-template-columns: 2fr 1fr;
-	grid-template-rows: 1fr;
-	gap: 1px 1px;
-	grid-template-areas: "main-inhalt side-inhalt";
-	padding: 0px;
-  }
-  
-.main-inhalt { grid-area: main-inhalt;
-	hyphens: auto; 
-	text-align: left;
-	font-family: sans-serif;
-	font-style: normal;
-	font-size: 14px;
-			 }
 
-.main-inhalt hr{
-	width: 9%;
-	margin: 10px 0px;
-	color: cornflowerblue;
-	border-color: cornflowerblue;
-	border-width: 2px;
-	border-radius: 1px ;
+.wp-block-columns.alignfull{
+	margin-top: 0px
+	padding-top: 0px;
+
 }
 
-.side-inhalt { grid-area: side-inhalt;
-	margin-top: 35px;
+.wp-block-column.Seiten-Info{
 	border: 3px solid #77787B;
 	box-sizing: border-box;
 	border-radius: 8px;
 	height: max-content;
-	
-		}
-
-.side-inhalt hr{ 
-	margin: 10px 5px;
-	border: solid #77787B 1px;
-	border-radius: 4px;
-	width: 95%;
+	margin-top: 35px;
 }
-.side-inhalt h5{ 
+
+.wp-block-column.Seiten-Info h6{ 
 	font-size: 19px;
-	margin: 15px 5px 0px 5px;
+	margin: 0px 5px 0px 5px;
 	text-transform: uppercase;
 	font-weight: 600;
 	letter-spacing: 0.6px;
+	padding-left: 5px;
 }
-.side-inhalt p{ 
+
+.wp-block-column.Seiten-Info p{ 
 	padding-left: 5px;
 	font-size: 12px;
 	font-weight: 500;
@@ -684,6 +660,13 @@ button {
 	text-transform: uppercase;
 	margin-top: 0px;
 	margin-bottom: 15px;
+}
+
+.wp-block-separator{
+	width: 90%;
+	border-width: 1px;
+	border-radius: 1px ;
+	color: solid black;
 }
 
 /* -------------------------------------------------------------------------- */
@@ -943,7 +926,6 @@ h6,
 	font-weight: 800;
 	letter-spacing: -0.0415625em;
 	line-height: 1.25;
-	margin: 3.5rem 0 2rem;
 }
 
 h1,
@@ -1055,7 +1037,6 @@ hr {
 hr.styled-separator {
 	background: linear-gradient(to left, currentColor calc(50% - 16px), transparent calc(50% - 16px), transparent calc(50% + 16px), currentColor calc(50% + 16px));
 	background-color: transparent !important;
-	border: none;
 	height: 0.1rem;
 	overflow: visible;
 	position: relative;
@@ -1071,7 +1052,6 @@ hr.styled-separator {
 hr.styled-separator::before,
 hr.styled-separator::after {
 	background: currentColor;
-	content: "";
 	display: block;
 	height: 1.6rem;
 	position: absolute;
@@ -3685,11 +3665,6 @@ h1.entry-title{
 
 /* Block: Columns ---------------------------- */
 
-.wp-block-columns.alignfull,
-.alignfull:not(.has-background) .wp-block-columns {
-	padding-left: 2rem;
-	padding-right: 2rem;
-}
 
 .wp-block-column {
 	margin-bottom: 3.2rem;
@@ -4175,7 +4150,7 @@ figure.wp-block-table.is-style-stripes {
 }
 
 .entry-content hr {
-	margin: 4rem auto;
+	margin:  1rem auto;
 }
 
 .post-inner .entry-content > .wp-block-cover.alignwide:first-child,
@@ -5874,12 +5849,6 @@ a.to-the-top > * {
 		margin-top: 4rem;
 	}
 
-	/* BLOCK: COLUMNS */
-
-	.wp-block-columns.alignwide + .wp-block-columns.alignwide,
-	.wp-block-columns.alignfull + .wp-block-columns.alignfull {
-		margin-top: -6rem;
-	}
 
 	.entry-content .wp-block-columns h1,
 	.entry-content .wp-block-columns h2,
@@ -5887,7 +5856,6 @@ a.to-the-top > * {
 	.entry-content .wp-block-columns h4,
 	.entry-content .wp-block-columns h5,
 	.entry-content .wp-block-columns h6 {
-		margin: 3.5rem 0 2rem;
 	}
 
 	/* BLOCK: COVER */
@@ -5992,7 +5960,7 @@ a.to-the-top > * {
 	/* BLOCK: SEPARATOR */
 
 	hr.wp-block-separator {
-		margin: 6rem auto;
+		margin: 1rem auto;
 	}
 
 	.wp-block-separator.is-style-wide {
@@ -6455,12 +6423,6 @@ a.to-the-top > * {
 
 	/* Blocks -------------------------------- */
 
-	/* BLOCK: COLUMNS */
-
-	.wp-block-columns.alignwide + .wp-block-columns.alignwide,
-	.wp-block-columns.alignfull + .wp-block-columns.alignfull {
-		margin-top: -4.8rem;
-	}
 
 	/* BLOCK: GALLERY */
 
@@ -6500,7 +6462,7 @@ a.to-the-top > * {
 	/* BLOCK: SEPARATOR */
 
 	hr.wp-block-separator {
-		margin: 8rem auto;
+		margin: 1rem auto;
 	}
 
 	/* Entry Content ------------------------- */
@@ -6743,9 +6705,6 @@ a.to-the-top > * {
 
 	/* BLOCK: COLUMNS */
 
-	.wp-block-columns.alignfull + .wp-block-columns.alignfull {
-		margin-top: -6rem;
-	}
 
 	/* BLOCK: GALLERY */
 
@@ -6780,8 +6739,6 @@ a.to-the-top > * {
 	/* ALIGNMENT CLASSES */
 
 	.entry-content > .alignfull {
-		margin-bottom: 10rem;
-		margin-top: 10rem;
 	}
 
 	[class*="wp-block"].alignwide.has-background [class*="__inner-container"] > .alignleft,
