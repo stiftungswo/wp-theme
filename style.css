@@ -640,17 +640,19 @@ button {
 	box-sizing: border-box;
 	border-radius: 8px;
 	height: max-content;
-	margin-top: 35px;
+	margin-top: 40px;
+	padding-right: 5px;
 }
 
 .wp-block-column.side-info h6{ 
 	font-size: 19px;
-	margin: 0px 5px 0px 5px;
+	margin: 10px 5px 0px 5px;
 	text-transform: uppercase;
-	font-weight: 600;
+	font-weight: bold;
 	letter-spacing: 0.6px;
 	padding-left: 5px;
 }
+
 
 .wp-block-column.side-info p{ 
 	padding-left: 5px;
@@ -660,6 +662,7 @@ button {
 	text-transform: uppercase;
 	margin-top: 0px;
 	margin-bottom: 15px;
+	margin-left: 5px;
 }
 
 .wp-block-separator{
@@ -667,6 +670,23 @@ button {
 	border-width: 1px;
 	border-radius: 1px ;
 	color: solid black;
+}
+
+.Hashtags{
+	background: cornflowerblue;
+	border-radius: 8px;
+	color: white !important;
+	font-weight: bold !important;
+}
+
+.Kontakt-Titel{
+	font-size: 15px !important;
+}
+.wp-block-image img{
+	border-radius: 2% !important;
+}
+.wp-block-image{
+	
 }
 
 /* -------------------------------------------------------------------------- */
