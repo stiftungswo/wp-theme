@@ -9,11 +9,44 @@
 
 ?>
 
+<?php
+    //gets the name, description and image-post of the project by meta data
+    $projectName = get_post_meta( $postNr, 'projektname' ); 
+    $projectDescription = get_post_meta( $postNr, 'projektbeschreibung' );
+    $projectImagePostNr = get_post_meta( $postNr, 'projektbild' );
+    //gets permanentLink to the img url from the Post
+    $projectImagePermalink = get_the_guid( $projectImagePostNr[0] );
+?>
+
 <li class="wrap-boxes">
-    <div class="imageDiv img-background" style="background-image: url('http://localhost:8080/wp-content/uploads/2020/06/slemenova-spica-triglav-national-park.jpg');" alt="Several hands holding beer glasses"></div>
+    <?php 
+    echo '<div class="imageDiv img-background" style="background-image: url(' . $projectImagePermalink . ')" alt="Several hands holding beer glasses"></div>';
+    ?>
     <div class="imageDiv bottomDiv classic-text">
-        <h1>Projekt Name</h1>
-        <p>Erfahren Sie mehr über unsere Zielsetzungen. Das Leitbild unserer Stiftung ist in den Statuten festgeschrieben und dient uns als Kompass für unser tägliches Handeln.</p>
-        <a class="svg-button" href="#">Visit Website</a>
+        <h1>
+            <?php 
+            //display if not empty
+            if(empty($projectName[0])) {
+                echo "Projekt";
+            }else {
+                echo $projectName[0];
+            }
+            ?>
+        </h1>
+        <p>
+            <?php 
+            //display if not empty
+            if(empty($projectDescription[0])) {
+                echo "Projekt";
+            } else {
+                echo $projectDescription[0];
+            }
+            ?>
+        </p>
+        <?php
+            //permalink to foward to the specific project page
+            $postPermalink = get_permalink( $post = $postNr, $leavename = false );
+            echo '<a class="svg-button" href="' . $postPermalink . '">Weiterlesen</a>';
+        ?>
     </div>
 </li>
