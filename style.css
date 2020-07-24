@@ -690,9 +690,11 @@ button {
 .wp-block-image img{
 	border-radius: 2% !important;
 }
-.wp-block-image{
-	
+.wp-block-column.side-info img{	
+	width: 60%;
+	margin: 0 auto;
 }
+
 
 .Text{
 	text-align:justify;
