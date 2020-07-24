@@ -79,12 +79,12 @@ get_template_part('template-parts/front-header');
             
                 include get_template_directory() . '/template-parts/project-box.php';
                 
-                if($i==3) break;
                 $i++;
                 endforeach; 
             ?>
 
         </ul>
+
     </section>
 </div>
 

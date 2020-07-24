@@ -16,9 +16,16 @@
     $projectImagePostNr = get_post_meta( $postNr, 'projektbild' );
     //gets permanentLink to the img url from the Post
     $projectImagePermalink = get_the_guid( $projectImagePostNr[0] );
+
+
+    $specialclass = "";
+    if($i >= 4) {
+        $specialclass = "wrap-boxes-hidden";
+    }
+
 ?>
 
-<li class="wrap-boxes">
+<li class="wrap-boxes <?php echo $specialclass; ?>">
     <?php 
     echo '<div class="imageDiv img-background" style="background-image: url(' . $projectImagePermalink . ')" alt="Several hands holding beer glasses"></div>';
     ?>
