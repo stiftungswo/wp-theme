@@ -26,21 +26,7 @@ if ( is_singular() ) {
 			 * @since Twenty Twenty 1.0
 			 *
 			 * @param bool   Whether to show the categories in header, Default true.
-			 */
-		$show_categories = apply_filters( 'swowptheme_show_categories_in_entry_header', true );
-
-		if ( true === $show_categories && has_category() ) {
-			?>
-
-			<div class="entry-categories">
-				<span class="screen-reader-text"><?php _e( 'Categories', 'swowptheme' ); ?></span>
-				<div class="entry-categories-inner">
-					<?php the_category( ' ' ); ?>
-				</div><!-- .entry-categories-inner -->
-			</div><!-- .entry-categories -->
-
-			<?php
-		}
+			 */		
 
 		if ( is_singular() ) {
 			the_title( '<h1 class="entry-title">', '</h1>' );
@@ -67,7 +53,7 @@ if ( is_singular() ) {
 		}
 
 		// Default to displaying the post meta.
-		swowptheme_the_post_meta( get_the_ID(), 'single-top' );
+		
 		?>
 
 	</div><!-- .entry-header-inner -->
