@@ -642,6 +642,7 @@ button {
 	height: max-content;
 	margin-top: 40px;
 	padding-right: 5px;
+	padding-left: 5px;
 }
 
 .wp-block-column.side-info h6{ 
@@ -663,10 +664,10 @@ button {
 	margin-top: 0px;
 	margin-bottom: 15px;
 	margin-left: 5px;
+	margin-right: 5px;
 }
 
 .wp-block-separator{
-	width: 90%;
 	border-width: 1px;
 	border-radius: 1px ;
 	color: solid black;
@@ -674,9 +675,13 @@ button {
 
 .Hashtags{
 	background: cornflowerblue;
-	border-radius: 8px;
+	border-radius: 5px;
 	color: white !important;
 	font-weight: bold !important;
+	font-size: 13px !important;
+	display: inline;
+	line-height: 15px !important;
+	padding-right: 5px;
 }
 
 .Kontakt-Titel{
