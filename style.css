@@ -630,7 +630,7 @@ button {
 
 
 .wp-block-columns.alignfull{
-	margin-top: 0px
+	margin-top: 0px;
 	padding-top: 0px;
 
 }
@@ -684,17 +684,14 @@ button {
 	padding-right: 5px;
 }
 
-.Kontakt-Titel{
-	font-size: 15px !important;
-}
 .wp-block-image img{
-	border-radius: 2% !important;
+	border-radius: 1.5% !important;
 }
+
 .wp-block-column.side-info img{	
 	width: 60%;
 	margin: 0 auto;
 }
-
 
 .Text{
 	text-align:justify;
@@ -5878,15 +5875,6 @@ a.to-the-top > * {
 	.wp-block-video:not(.alignwide):not(.alignfull) {
 		margin-bottom: 4rem;
 		margin-top: 4rem;
-	}
-
-
-	.entry-content .wp-block-columns h1,
-	.entry-content .wp-block-columns h2,
-	.entry-content .wp-block-columns h3,
-	.entry-content .wp-block-columns h4,
-	.entry-content .wp-block-columns h5,
-	.entry-content .wp-block-columns h6 {
 	}
 
 	/* BLOCK: COVER */
