@@ -241,6 +241,10 @@ button {
 .wrap-boxes {
 	width: 300px;
 }
+
+.wrap-boxes-hidden {
+	display: none;
+}
   
 .imageDiv {
 	width: 100%;
