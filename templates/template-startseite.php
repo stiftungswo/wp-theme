@@ -73,19 +73,22 @@ get_template_part('template-parts/front-header');
             );
             //gets all posts with "Project" as parent
             $children = get_children($args, $output = OBJECT ); 
+            
             $i=0;
-            ?>
-            <?php foreach($children as $postNr => $postObjectByNr) : 
+            
+            foreach($children as $postNr => $postObjectByNr) : 
             
                 include get_template_directory() . '/template-parts/project-box.php';
                 
                 $i++;
-                endforeach; 
+            endforeach; 
+            
+            
+
             ?>
-
         </ul>
-
     </section>
+
 </div>
 
 <?php
