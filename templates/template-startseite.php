@@ -90,6 +90,9 @@ Sed nisl facilisis non lectus imperdiet. Integer pretium varius vulputate est ma
 
             ?>
         </ul>
+        
+        <div style="width=100%;text-align:center;"><button class="swo-button" onclick="extendBoxes()" id="showAllBoxesButton">Alle Projekte Anzeigen</button></div>
+
     </section>
 
 </div>

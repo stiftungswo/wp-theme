@@ -78,9 +78,13 @@ button {
 	height: 18px;
 	width: 18px;
 	position: absolute;
-	margin: 5px 0 0 6px;
 	transform: rotate(180deg);
+	margin-left:5px;
+}
+
+.zivi-braun:after {
 	filter: invert(20%) sepia(38%) saturate(1469%) hue-rotate(351deg) brightness(93%) contrast(93%);
+	margin: 5px 0 0 6px;
 }
 
 .classic-text h1 {
