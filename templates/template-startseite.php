@@ -19,11 +19,11 @@ get_template_part('template-parts/front-header');
         <h1>Unsere Bereiche</h1>
         <hr/>
         <p>
-        Lorem ipsum dolor sit amet consectetur, adipisicing elit. Nobis qui iste, cupiditate rerum dolorum quo tempore cumque excepturi deleniti tenetur, 
-        culpa ut ducimus ex molestias ipsa sint voluptas laboriosam dolores?
-        Lorem ipsum dolor sit amet consectetur, adipisicing elit. Nobis qui iste, cupiditate rerum dolorum quo tempore cumque excepturi deleniti tenetur, 
-        culpa ut ducimus ex molestias ipsa sint voluptas laboriosam dolores?
-        <p/>
+            Lorem ipsum dolor sit amet consectetur, adipisicing elit. Nobis qui iste, cupiditate rerum dolorum quo tempore cumque excepturi deleniti tenetur, 
+            culpa ut ducimus ex molestias ipsa sint voluptas laboriosam dolores?
+            Lorem ipsum dolor sit amet consectetur, adipisicing elit. Nobis qui iste, cupiditate rerum dolorum quo tempore cumque excepturi deleniti tenetur, 
+            culpa ut ducimus ex molestias ipsa sint voluptas laboriosam dolores?
+        </p>
 
     </div>
 
@@ -56,7 +56,10 @@ get_template_part('template-parts/front-header');
             </a>
 
         </div>
-        <div class="Front-page-top-left"></div>
+        <div class="Front-page-top-left classic-text">
+            <p>Ullamcorper in eget a diam, neque. Et sagittis cursus arcu blandit faucibus. Convallis tristique purus sit nunc. Pretium nulla condimentum iaculis nisi.
+Sed nisl facilisis non lectus imperdiet. Integer pretium varius vulputate est magna nunc.</p>
+        </div>
     </div>
 
 
@@ -85,8 +88,28 @@ get_template_part('template-parts/front-header');
 
         </ul>
 
+        <div style="width=100%;text-align:center;"><button class="swo-button" onclick="extendBoxes()" id="showAllBoxesButton">Alle Projekte Anzeigen</button></div>
+
     </section>
 </div>
+
+<script type="text/javascript">
+    function extendBoxes() {
+        var moreBoxes = document.getElementsByClassName("wrap-boxes-hidden");
+        var btnText = document.getElementById("showAllBoxesButton");
+        if (moreBoxes[1].style.display !== 'block') {
+            btnText.innerHTML = "Weniger Projekte Anzeigen";
+            for (var i = 0; i < moreBoxes.length; i++) {
+                moreBoxes[i].style.display = 'block';
+            }
+        } else {
+            btnText.innerHTML = "Alle Projekte Anzeigen";
+            for (var i = 0; i < moreBoxes.length; i++) {
+                moreBoxes[i].style.display = 'none';
+            }
+        }
+    }
+</script>
 
 <?php
 

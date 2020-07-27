@@ -62,10 +62,12 @@ button {
 	font-size: 14px;
 	background: #fff;
 	border: 2px solid #000;
+	color: #000;
 	border-radius: 4px;
 	text-transform: uppercase;
 	font-weight: bold !important;
 	padding: 4px 32px 4px 8px;
+	text-decoration: none !important;
 }
 
 .swo-button:after {
@@ -241,6 +243,8 @@ button {
 .wrap-boxes {
 	width: 300px;
 }
+
+/* Hide boxes more than 4 on startpage */
 
 .wrap-boxes-hidden {
 	display: none;
@@ -430,10 +434,13 @@ button {
 
 /* --------------------------------------------------------------------------------------------UPPER FRONT PAGE-------------------------------------------------------------------------*/
 
+.front-page-title-text {
+	margin-bottom: 40px;
+}
+
 .front-page-title-text h1{
 	margin-top: 25px;
 	margin-bottom: 20px;
-	
 }
 
 .front-page-title-text hr{
@@ -552,10 +559,26 @@ button {
   
 .Front-page-top-left { 
 	grid-area: Front-page-top-left;
-	background: url("https://www.computer-coach.ch/wp-content/uploads/2018/04/it_betreiben.gif");
-	width: 350px ;
-	background-size: 350px 310px;
-	 }
+	text-align: center;
+	line-height: 220px;
+	width: 300px;
+	width: 300px;
+	padding: 40px;
+	background:  url(./assets/images/philo_container.png)no-repeat center center; 
+	  -webkit-background-size: cover;
+	  -moz-background-size: cover;
+	  -o-background-size: cover;
+	  background-size: cover;
+	}
+
+.Front-page-top-left p {
+	margin: 0;
+	font-weight: 600;
+	font-style: italic;
+	display: inline-block;
+	vertical-align: middle;
+	line-height: normal;
+}
 
 
 
@@ -776,7 +799,7 @@ html {
 }
 
 body {
-	background: #f5efe0;
+	background: #fff;
 	box-sizing: border-box;
 	color: #000;
 	font-family: "Open Sans", -apple-system, BlinkMacSystemFont, "Helvetica Neue", Helvetica, sans-serif;
