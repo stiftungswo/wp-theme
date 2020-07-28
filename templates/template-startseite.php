@@ -27,41 +27,44 @@ get_template_part('template-parts/front-header');
 
     </div>
 
-    <div class="grid-container-fp1">
+    <section>
 
-        <div class="Front-page-top-right">
+        <div class="grid-container-fp1">
 
-            <a class=picture-link href="url">
-                <div class="Bildung-forschung-entwicklung">
-                    <div class="onpicture">Bildung, Forschung, Entwicklung</div>
-                </div>
-            </a>
+            <div class="Front-page-top-right">
 
-            <a class=picture-link href="url">
-                <div class="Bau">
-                    <div class="onpicture">Bau</div>
-                </div>
-            </a>
+                <a class=picture-link href="url">
+                    <div class="Bildung-forschung-entwicklung">
+                        <div class="onpicture">Bildung, Forschung, Entwicklung</div>
+                    </div>
+                </a>
 
-            <a class=picture-link href="url">
-                <div class="Zivildienst">         
-                    <div class="onpicture">Zivildienst</div>
-                </div>
-            </a>
+                <a class=picture-link href="url">
+                    <div class="Bau">
+                        <div class="onpicture">Bau</div>
+                    </div>
+                </a>
 
-            <a class=picture-link href="url">
-                <div class="Integration">
-                    <div class="onpicture">Integration</div>
-                </div>
-            </a>
+                <a class=picture-link href="url">
+                    <div class="Zivildienst">         
+                        <div class="onpicture">Zivildienst</div>
+                    </div>
+                </a>
 
+                <a class=picture-link href="url">
+                    <div class="Integration">
+                        <div class="onpicture">Integration</div>
+                    </div>
+                </a>
+
+            </div>
+            <div class="Front-page-top-left classic-text">
+                <p>Ullamcorper in eget a diam, neque. Et sagittis cursus arcu blandit faucibus. Convallis tristique purus sit nunc. Pretium nulla condimentum iaculis nisi.
+    Sed nisl facilisis non lectus imperdiet. Integer pretium varius vulputate est magna nunc.</p>
+            </div>
         </div>
-        <div class="Front-page-top-left classic-text">
-            <p>Ullamcorper in eget a diam, neque. Et sagittis cursus arcu blandit faucibus. Convallis tristique purus sit nunc. Pretium nulla condimentum iaculis nisi.
-Sed nisl facilisis non lectus imperdiet. Integer pretium varius vulputate est magna nunc.</p>
-        </div>
-    </div>
-
+        
+    </section>
 
     <div class="front-page-title-text classic-text">
         <h1>Unsere Projekte</h1>
