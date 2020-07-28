@@ -15,7 +15,7 @@
 
 <!-- Full-width images with number and caption text -->
 <div class="frontslides fade" style="background-image: url('http://localhost:8080/wp-content/uploads/2020/06/844198.jpg');">
-  <div class="slider-box">
+  <div class="slider-box classic-text">
     <h3>Was ist die SWO?</h3>
     <p><?php echo get_post_meta( get_the_ID(), 'main-heading-1', true ); ?></p>
   </div>
@@ -23,14 +23,14 @@
 
 
 <div class="frontslides fade" style="background-image: url('http://localhost:8080/wp-content/uploads/2020/06/slemenova-spica-triglav-national-park.jpg');">
-  <div class="slider-box box-right">
+  <div class="slider-box box-right classic-text">
     <h3>Was ist die SWO?</h3>
     <p>Sociis mi, quis dictumst ac pellentesque. Enim, sed orci nullam sed integer eget aliquam lectus. Mauris neque ullamcorper pulvinar sit faucibus praesent parturient iaculis. Morbi scelerisque nec lectus non ut in. </p>
   </div>
 </div>
 
 <div class="frontslides fade" style="background-image: url('http://localhost:8080/wp-content/uploads/2020/06/slid2.jpg');">
-  <div class="slider-box">
+  <div class="slider-box classic-text">
     <h3>Was ist die SWO?</h3>
     <p>Sociis mi, quis dictumst ac pellentesque. Enim, sed orci nullam sed integer eget aliquam lectus. Mauris neque ullamcorper pulvinar sit faucibus praesent parturient iaculis. Morbi scelerisque nec lectus non ut in. </p>
   </div>
