@@ -25,6 +25,13 @@ if ( ! is_search() ) {
 <div class="limit-content-width">
 
         <section class="boxes-container-team">
+
+        <?php 
+        
+            the_post();
+
+            the_content( __( 'Continue reading', 'swowptheme' ) ); ?>
+
         <ul>
 
         <?php
