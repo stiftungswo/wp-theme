@@ -83,7 +83,6 @@ Sed nisl facilisis non lectus imperdiet. Integer pretium varius vulputate est ma
             
                 include get_template_directory() . '/template-parts/project-box.php';
                 
-                $i++;
             endforeach; 
             
             
