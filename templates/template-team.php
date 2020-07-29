@@ -34,18 +34,18 @@ if ( ! is_search() ) {
 
         <ul>
 
-        <?php
+            <?php
 
-        get_template_part( 'template-parts/team-box' );
-        get_template_part( 'template-parts/team-box' );
-        get_template_part( 'template-parts/team-box' );
-        get_template_part( 'template-parts/team-box' );
-        get_template_part( 'template-parts/team-box' );
-        get_template_part( 'template-parts/team-box' );
+            get_template_part( 'template-parts/team-box' );
+            get_template_part( 'template-parts/team-box' );
+            get_template_part( 'template-parts/team-box' );
+            get_template_part( 'template-parts/team-box' );
+            get_template_part( 'template-parts/team-box' );
+            get_template_part( 'template-parts/team-box' );
 
-        ?>
+            ?>
 
-    </ul>
+        </ul>
     </section>
 
 </div>
