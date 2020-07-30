@@ -274,7 +274,7 @@ button {
 .imageDivteam img {
 	position: absolute;
 	z-index: 1;
-	border-radius: 12px;
+	border-radius: 8px;
 	height: 260px;
 	width: 100%;
 	object-fit: cover;
