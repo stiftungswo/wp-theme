@@ -168,6 +168,9 @@ require get_template_directory() . '/classes/class-twentytwenty-walker-comment.p
 // Custom page walker.
 require get_template_directory() . '/classes/class-twentytwenty-walker-page.php';
 
+// Custom navigation walker.
+require get_template_directory() . '/inc/custom-expanded-navigation-walker.php';
+
 // Custom script loader class.
 require get_template_directory() . '/classes/class-twentytwenty-script-loader.php';
 
