@@ -24,28 +24,16 @@ if ( ! is_search() ) {
     
 <div class="limit-content-width">
 
-        <section class="boxes-container-team">
+    <section class="boxes-container-team">
 
-        <?php 
-        
-            the_post();
+            <?php 
+            
+                the_post();
 
-            the_content( __( 'Continue reading', 'swowptheme' ) ); ?>
-
-        <ul>
-
-            <?php
-
-            get_template_part( 'template-parts/team-box' );
-            get_template_part( 'template-parts/team-box' );
-            get_template_part( 'template-parts/team-box' );
-            get_template_part( 'template-parts/team-box' );
-            get_template_part( 'template-parts/team-box' );
-            get_template_part( 'template-parts/team-box' );
-
+                the_content( __( 'Continue reading', 'swowptheme' ) );
+                
             ?>
 
-        </ul>
     </section>
 
 </div>
