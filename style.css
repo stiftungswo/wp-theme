@@ -6819,9 +6819,6 @@ a.to-the-top > * {
 
 	/* ALIGNMENT CLASSES */
 
-	.entry-content > .alignfull {
-	}
-
 	[class*="wp-block"].alignwide.has-background [class*="__inner-container"] > .alignleft,
 	[class*="wp-block"].alignwide.has-background [class*="__inner-container"] > p .alignleft,
 	[class*="wp-block"].alignwide.has-background [class*="__inner-container"] > .wp-block-image .alignleft {
