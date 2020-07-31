@@ -252,6 +252,10 @@ button {
 	width: 300px;
 }
 
+.wrap-employee {
+	max-width: 340px !important;
+}
+
 /* Hide boxes more than 4 on startpage */
 
 .wrap-boxes-hidden {
