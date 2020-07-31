@@ -750,6 +750,10 @@ button {
 	text-align: center;
 }
 
+.main-content-p{
+	text-align: justify;
+}
+
 /* -------------------------------------------------------------------------- */
 
 /*	0. CSS Reset
