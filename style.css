@@ -675,12 +675,14 @@ button {
 /* ------------------------------------Inhalt Seite-------------------------------------- */
 
 
-
-
 .wp-block-columns.alignfull{
 	margin-top: 0px;
 	padding-top: 0px;
+}
 
+.wp-block-column.main-info{
+	flex-basis:66.66%;
+	flex-grow: 0;
 }
 
 .wp-block-column.side-info{
@@ -691,9 +693,11 @@ button {
 	margin-top: 40px;
 	padding-right: 5px;
 	padding-left: 5px;
+	flex-basis:33.33%;
+	flex-grow: 0;
 }
 
-.wp-block-column.side-info h6{ 
+.wp-block-column.side-info h1, .wp-block-column.side-info h2, .wp-block-column.side-info h3, .wp-block-column.side-info h4, .wp-block-column.side-info h5, .wp-block-column.side-info h6 { 
 	font-size: 19px;
 	margin: 10px 5px 0px 5px;
 	text-transform: uppercase;
@@ -721,7 +725,7 @@ button {
 	color: solid black;
 }
 
-.Hashtags{
+.hashtags p{
 	background: cornflowerblue;
 	border-radius: 5px;
 	color: white !important;
@@ -739,10 +743,6 @@ button {
 .wp-block-column.side-info img{	
 	width: 60%;
 	margin: 0 auto;
-}
-
-.Text{
-	text-align:justify;
 }
 
 /* -------------------------------------------------------------------------- */
