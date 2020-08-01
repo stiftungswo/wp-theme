@@ -743,8 +743,17 @@ button {
 }
 
 .wp-block-column.side-info img{	
-	width: 60%;
+	max-height: 200px;
 	margin: 0 auto;
+}
+
+.side-info figcaption{
+	width: 100%;
+	text-align: center;
+}
+
+.main-content-p{
+	text-align: justify;
 }
 
 /* -------------------------------------------------------------------------- */
