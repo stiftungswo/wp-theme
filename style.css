@@ -173,10 +173,12 @@ button {
 	font-style: italic;
 }
 
-.feature-list li span{
+.feature-list li:before{
 	color: #61330E;
 	font-weight: 1000;
 	text-decoration: none;
+	content: "\2713";
+	margin-right: .5em;
 }
 
 .feature-list li:not(:last-child){
