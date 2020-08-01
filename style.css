@@ -142,14 +142,11 @@ button {
 	padding: 18rem 0 1rem !important;
 }
 
-.bereich-image {
-	background: url(./assets/images/bereich_temp.jpg)  no-repeat center center; 
-	-webkit-background-size: cover;
-	-moz-background-size: cover;
-	-o-background-size: cover;
-	background-size: cover;
+.bereich-image img {
 	border-radius: 12px;
 	margin-right: 10px;
+	object-fit: cover;
+	min-height: 250px;
 }
 
 .bereich-text {
