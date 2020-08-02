@@ -118,16 +118,16 @@ button {
 .left-right {
 	display: grid;
 	grid-template-columns: 1fr 1fr;
-	grid-template-rows: ;
 	gap: 1px 1px;
 	grid-template-areas: ". .";
-	margin-bottom: 60px;
+	margin: 60px 0;
 }
 
 .no-serif-heading {
 	font-family: 'Open Sans', sans-serif;
 	font-weight: bold;
 	text-transform: uppercase;
+	margin: 4px auto 10px !important;
 }
 
 /* Bereiche styling -------------------------- */
@@ -144,7 +144,7 @@ button {
 
 .bereich-image img {
 	border-radius: 12px;
-	margin-right: 10px;
+	margin: 0 auto;
 	object-fit: cover;
 	min-height: 250px;
 }
@@ -3018,11 +3018,6 @@ body.template-cover .entry-header {
 /* -------------------------------------------------------------------------- */
 
 
-body.template-full-width .entry-content > *:not(.alignwide):not(.alignfull):not(.alignleft):not(.alignright):not(.is-style-wide),
-body.template-full-width [class*="__inner-container"] > *:not(.alignwide):not(.alignfull):not(.alignleft):not(.alignright):not(.is-style-wide) {
-	max-width: 120rem;
-}
-
 body.template-full-width .entry-content .alignleft,
 body.template-full-width .entry-content .alignright {
 	position: static;
@@ -4298,10 +4293,6 @@ h6,
 
 /* Alignment Classes ------------------------- */
 
-.entry-content > *:not(.alignwide):not(.alignfull):not(.alignleft):not(.alignright):not(.is-style-wide) {
-	max-width: 58rem;
-	width: calc(100% - 4rem);
-}
 
 [class*="__inner-container"] > *:not(.alignwide):not(.alignfull):not(.alignleft):not(.alignright):not(.is-style-wide) {
 	max-width: 58rem;
