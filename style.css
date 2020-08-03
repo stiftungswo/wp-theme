@@ -2575,30 +2575,31 @@ button.close-nav-toggle .toggle-text {
 
 /* Main Menu --------------------------------- */
 
-
-.menu-item:hover ul.menu-depth-1 {
-    display: block;
-}
-
 .modal-menu {
 	position: fixed!important;
 	top: 0!important;
-	padding: 200px 100px 100px 200px;
+	padding: 100px 100px 100px 200px;
 	left: 0!important;
 	width: 50%!important;
 }
 
 .menu-depth-1 {
 	position: fixed!important;
-	right: 0!important;
-	top:0!important;
-	width: 50vw!important;
-	padding: 200px 0;
+	right: 200px!important;
+	top:100px!important;
+	width: 35%!important;
 }
 
-.menu-item-has-children {
-    cursor: pointer;
+.menu-item-depth-0 {
+	/*border-right: 1px solid black!important;*/
+	border-bottom: 1px solid black!important;
 }
+
+.menu-item-depth-1 {
+	/*border-right: 1px solid black!important;*/
+	border-bottom: 1px solid black!important;
+}
+
 
 .modal-menu li {
 	border: none;

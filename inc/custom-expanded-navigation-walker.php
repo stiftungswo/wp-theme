@@ -18,8 +18,6 @@ class Custom_Expanded_Navigation_Walker extends Walker_Nav_Menu{
         $display_depth = ( $depth + 1); // because it counts the first submenu as 0
         $classes = array(
             'sub-menu',
-            ( $display_depth % 2  ? 'menu-odd' : 'menu-even' ),
-            ( $display_depth >=2 ? 'sub-sub-menu' : '' ),
             'menu-depth-' . $display_depth
         );
         $class_names = implode( ' ', $classes );
@@ -54,15 +52,17 @@ class Custom_Expanded_Navigation_Walker extends Walker_Nav_Menu{
         // Passed classes.
         $classes = empty( $item->classes ) ? array() : (array) $item->classes;
         $class_names = esc_attr( implode( ' ', apply_filters( 'nav_menu_css_class', array_filter( $classes ), $item ) ) );
- 
+
         // Build HTML.
         $output .= $indent . '<li id="nav-menu-item-'. $item->ID . '" class="' . $depth_class_names . ' ' . $class_names . '">';
- 
-        // Link attributes.
-        $attributes  = ! empty( $item->attr_title ) ? ' title="'  . esc_attr( $item->attr_title ) .'"' : '';
-        $attributes .= ! empty( $item->target )     ? ' target="' . esc_attr( $item->target     ) .'"' : '';
-        $attributes .= ! empty( $item->xfn )        ? ' rel="'    . esc_attr( $item->xfn        ) .'"' : '';
-        $attributes .= ! empty( $item->url )        ? ' href="'   . esc_attr( $item->url        ) .'"' : '';
+        
+        // 
+        // If list element has no children, link to the page. if not, link to nowhere...
+        if($args->walker->has_children){
+            $attributes = ' href="#"';
+        }else{
+            $attributes = ! empty( $item->url )        ? ' href="'   . esc_attr( $item->url        ) .'"' : '';
+        }
         $attributes .= ' class="menu-link ' . ( $depth > 0 ? 'sub-menu-link' : 'main-menu-link' ) . '"';
  
         // Build HTML output and pass through the proper filter.

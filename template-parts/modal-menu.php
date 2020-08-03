@@ -41,14 +41,15 @@
 				}
 
 				if ( has_nav_menu( 'expanded' ) ) {
-
+					
 					$expanded_nav_classes = '';
-
+					
 					if ( 'expanded' === $mobile_menu_location ) {
 						$expanded_nav_classes .= ' mobile-menu';
 					}
-
+					
 					?>
+					
 
 					<nav class="expanded-menu<?php echo esc_attr( $expanded_nav_classes ); ?>" aria-label="<?php esc_attr_e( 'Expanded', 'swowptheme' ); ?>" role="navigation">
 
@@ -66,12 +67,31 @@
 									'items_wrap'     => '%3$s', //How the list items should be wrapped
 									'show_toggles'   => true, //shows the toggle to expand an item
 									'walker'		 => new Custom_Expanded_Navigation_Walker(),
-								]);
-							}
-							?>
+									]);
+								}
+								?>
 						</ul>
 
 					</nav>
+					
+					<!-- TODO: Remove $-Signs & jQuery-Include -->
+
+					<script src="https://ajax.googleapis.com/ajax/libs/jquery/3.2.1/jquery.min.js"></script>
+					<script  type="text/javascript"> 
+					
+						$(document).ready(function(){
+							
+  							$('.menu-item-has-children > a').click(function(e){
+								var _this = $(this);
+								$('.menu-item-has-children > a').not(_this).next('.sub-menu').slideUp(function(){
+									setTimeout(function(){
+										_this.next('.sub-menu').slideDown();
+									}, 300); 
+ 								});
+							});
+						});
+					</script> 
+					
 
 					<?php
 				}

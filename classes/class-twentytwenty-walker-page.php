@@ -118,7 +118,7 @@ if ( ! class_exists( 'swowptheme_Walker_Page' ) ) {
 					$args['list_item_after'] = '<span class="icon"></span>';
 				}
 			}
-
+			
 			$output .= $indent . sprintf(
 				'<li%s>%s<a%s>%s%s%s</a>%s',
 				$css_classes,
