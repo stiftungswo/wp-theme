@@ -58,7 +58,7 @@ class Custom_Expanded_Navigation_Walker extends Walker_Nav_Menu{
         
         // 
         // If list element has no children, link to the page. if not, link to nowhere...
-        if($args->walker->has_children){
+        if($args->walker->has_children && $depth == 0){
             $attributes = ' href="#"';
         }else{
             $attributes = ! empty( $item->url )        ? ' href="'   . esc_attr( $item->url        ) .'"' : '';
