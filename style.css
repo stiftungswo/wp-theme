@@ -724,6 +724,12 @@ button {
 	color: solid black;
 }
 
+.hashtags {
+	padding: 10px 0 12px;
+	border-bottom: .8px solid #77787B;
+	border-top: .8px solid #77787B
+}
+
 .hashtags p{
 	background: cornflowerblue;
 	border-radius: 5px;
