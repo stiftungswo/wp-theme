@@ -74,23 +74,7 @@
 
 					</nav>
 					
-					<!-- TODO: Remove $-Signs & jQuery-Include -->
-
-					<script src="https://ajax.googleapis.com/ajax/libs/jquery/3.2.1/jquery.min.js"></script>
-					<script  type="text/javascript"> 
 					
-						$(document).ready(function(){
-							
-  							$('.menu-item-has-children > a').click(function(e){
-								var _this = $(this);
-								$('.menu-item-has-children > a').not(_this).next('.sub-menu').slideUp(function(){
-									setTimeout(function(){
-										_this.next('.sub-menu').slideDown();
-									}, 300); 
- 								});
-							});
-						});
-					</script> 
 					
 
 					<?php
