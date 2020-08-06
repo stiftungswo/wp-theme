@@ -84,7 +84,7 @@ button {
 
 .zivi-braun:after {
 	filter: invert(20%) sepia(38%) saturate(1469%) hue-rotate(351deg) brightness(93%) contrast(93%);
-	margin: 5px 0 0 6px;
+	margin: 6px 0 0 6px;
 }
 
 .classic-text h1 {
