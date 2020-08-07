@@ -3332,10 +3332,6 @@ h1.entry-title{
 	width: calc(100% - 5rem);
 }
 
-.post-inner {
-	padding-top: 5rem;
-}
-
 .reduced-spacing.missing-post-thumbnail .post-inner {
 	padding-top: 0;
 }
@@ -5853,10 +5849,6 @@ a.to-the-top > * {
 
 	.featured-media {
 		margin-top: 6rem;
-	}
-
-	.post-inner {
-		padding-top: 8rem;
 	}
 
 	/* POST FOOTER */

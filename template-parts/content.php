@@ -15,22 +15,6 @@
 
 <article <?php post_class(); ?> id="post-<?php the_ID(); ?>">
 
-	<?php
-	if(is_front_page()){
-		get_template_part('template-parts/front-header');
-	}else{
-		get_template_part( 'template-parts/entry-header' );
-	}
-	
-	
-
-	if ( ! is_search() ) {
-		get_template_part( 'template-parts/featured-image' );
-	}
-
-	?>
-
-	<div class="limit-content-width">
 
 		<div class="post-inner <?php echo is_page_template( 'templates/template-full-width.php' ) ? '' : 'thin'; ?> ">
 
@@ -97,5 +81,4 @@
 			<?php
 		}
 		?>
-	</div>
 </article><!-- .post -->
