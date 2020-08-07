@@ -106,7 +106,7 @@ button {
 
 .zivi-braun:after {
 	filter: invert(20%) sepia(38%) saturate(1469%) hue-rotate(351deg) brightness(93%) contrast(93%);
-	margin: 5px 0 0 6px;
+	margin: 6px 0 0 6px;
 }
 
 .classic-text h1 {
@@ -156,7 +156,7 @@ button {
 
 
 .bereich-header {
-	background: url(./assets/images/bereich_temp.jpg)  no-repeat center center !important; 
+	background: url(./assets/images/bereich_temp.jpg)  no-repeat center center; 
 	-webkit-background-size: cover;
 	-moz-background-size: cover;
 	-o-background-size: cover;
@@ -3354,10 +3354,6 @@ h1.entry-title{
 	width: calc(100% - 5rem);
 }
 
-.post-inner {
-	padding-top: 5rem;
-}
-
 .reduced-spacing.missing-post-thumbnail .post-inner {
 	padding-top: 0;
 }
@@ -5875,10 +5871,6 @@ a.to-the-top > * {
 
 	.featured-media {
 		margin-top: 6rem;
-	}
-
-	.post-inner {
-		padding-top: 8rem;
 	}
 
 	/* POST FOOTER */
