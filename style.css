@@ -478,21 +478,10 @@ button {
 	grid-template-columns: 1fr 1fr;
 	grid-template-rows: 1fr;
 	gap: 1px 1px;
-	grid-template-areas: "Front-page-top-left Front-page-top-right";
+	grid-template-areas: "front-page-top-left Front-page-top-right";
 	margin-bottom: 100px;
   }
   
-.Front-page-top-right {
-	display: grid;
-	grid-template-columns: 1fr 1fr;
-	grid-template-rows: 1fr 1fr;
-	gap: 10px 10px;
-	grid-template-areas: "Bildung-forschung-entwicklung Bau" "Zivildienst Integration";
-	grid-area: Front-page-top-right;
-	margin-left: 20px;
-	margin-right: 30%;
-
-  }
 
 .onpicture {
 	position: absolute;
@@ -505,8 +494,8 @@ button {
 	
 }
 
-.Bildung-forschung-entwicklung { 
-	grid-area: Bildung-forschung-entwicklung;
+.box1 { 
+	grid-area: box1;
 	border: 8px solid #FCD757;
 	border-width: 4px;
 	border-radius: 9px;
@@ -515,7 +504,7 @@ button {
 	width: 150px;
 	height: 150px;
 	background: #FCD757;
-	background:rgba(0, 0, 0, .35)  url("http://localhost:8080/wp-content/uploads/2020/06/classroom_training-780x520.jpg")no-repeat center center; 
+	background:rgba(0, 0, 0, .35) no-repeat center center; 
 	-webkit-background-size: cover;
 	-moz-background-size: cover;
 	-o-background-size: cover;
@@ -523,8 +512,8 @@ button {
 	background-blend-mode: darken;
 }
 
-.Bau { 
-	  grid-area: Bau;
+.box2 { 
+	  grid-area: box2;
 	  border: 8px solid #87A878;
 	  border-width: 4px;
 	  border-radius: 9px;
@@ -533,7 +522,7 @@ button {
 	  width: 150px;
 	  height: 150px;
 	  background: #87A878;
-	  background:rgba(0, 0, 0, .35)  url("http://localhost:8080/wp-content/uploads/2020/06/77ca35f2345b2dfc128cbd91c415209f.jpg")no-repeat center center; 
+	  background:rgba(0, 0, 0, .35) no-repeat center center; 
 	  -webkit-background-size: cover;
 	  -moz-background-size: cover;
 	  -o-background-size: cover;
@@ -541,8 +530,8 @@ button {
 	  background-blend-mode: darken;
 }
   
-.Zivildienst { 
-	  grid-area: Zivildienst;
+.box3 { 
+	  grid-area: box3;
 	  border: 8px solid #61330E;
 	  border-width: 4px;
 	  border-radius: 9px;
@@ -551,7 +540,7 @@ button {
 	  width: 150px;
 	  height: 150px;
 	  background: #61330E;
-	  background:rgba(0, 0, 0, .35)  url("http://localhost:8080/wp-content/uploads/2020/06/ezgif.com-webp-to-jpg.jpg")no-repeat center center; 
+	  background:rgba(0, 0, 0, .35) no-repeat center center; 
 	  -webkit-background-size: cover;
 	  -moz-background-size: cover;
 	  -o-background-size: cover;
@@ -559,8 +548,8 @@ button {
 	  background-blend-mode: darken;
 }
   
-.Integration { 
-	  grid-area: Integration;
+.box4 { 
+	  grid-area: box4;
 	  border: 8px solid #FC7A57;
 	  border-width: 4px;
 	  border-radius: 9px;
@@ -569,7 +558,7 @@ button {
 	  width: 150px;
 	  height: 150px;
 	  background: #FC7A57;
-	  background:rgba(0, 0, 0, .35)  url("http://localhost:8080/wp-content/uploads/2020/06/1975431114-2020-feb-06-13-03-57-000000-gvi_dawasamu_flickr_cc0_45360392434_d1dff9ef7d_o.png")no-repeat center center; 
+	  background:rgba(0, 0, 0, .35) no-repeat center center; 
 	  -webkit-background-size: cover;
 	  -moz-background-size: cover;
 	  -o-background-size: cover;
@@ -577,12 +566,13 @@ button {
 	  background-blend-mode: darken;
 	}
   
-.Front-page-top-left { 
-	grid-area: Front-page-top-left;
+.front-page-top-left { 
+	grid-area: front-page-top-left;
 	text-align: center;
 	line-height: 220px;
-	width: 300px;
-	width: 300px;
+	width: 310px;
+	height: 310px;
+	margin: 0 20px 0 0;
 	padding: 40px;
 	background:  url(./assets/images/philo_container.png)no-repeat center center; 
 	  -webkit-background-size: cover;
@@ -591,7 +581,7 @@ button {
 	  background-size: cover;
 	}
 
-.Front-page-top-left p {
+.front-page-top-left p {
 	margin: 0;
 	font-weight: 600;
 	font-style: italic;
