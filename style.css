@@ -255,26 +255,22 @@ button {
 	padding: 0;
   }
 
-.boxes-container-team > ul {
-	display: grid;
-	grid-template-columns: repeat(auto-fit, minmax(200px, 1fr));
-	grid-gap: 1rem;
-	list-style-type: none;
-	margin: 0;
-	padding: 0;
-  }
-  
-.boxes-container-menu > ul > li, .boxes-container-team > ul > li {
-	margin: 0 auto -10px;
-	width: 100%;
-}
-
 .wrap-boxes {
 	width: 300px;
 }
 
 .wrap-employee {
-	max-width: 340px !important;
+	width: 240px !important;
+	display: inline-block;
+	margin-right: 45px;
+}
+
+.wrap-employee:nth-child(3n + 1) {
+	margin-right: 0;
+}
+
+.wp-block.block-editor-block-list__block {
+	display: inline-block;
 }
 
 /* Hide boxes more than 4 on startpage */
@@ -480,19 +476,34 @@ button {
 
 /* --------------------------------------------------------------------------------------------UPPER FRONT PAGE-------------------------------------------------------------------------*/
 
-.front-page-title-text h1{
-	margin-top: 25px;
-	margin-bottom: 20px;
+.front-page-title-text {
+	margin: 10px 0 60px;
 }
 
-.front-page-title-text hr{
-	width: 9%;
-	margin: 10px 0px;
-	color: cornflowerblue;
-	border-color: cornflowerblue;
-	border-width: 2px;
-	border-radius: 1px ;
-	
+.front-page-title-text h1 {
+	position: relative;
+	display: inline-block;
+}
+
+.front-page-title-text h1:after {
+	position: absolute;
+	content: '';
+	height: 3px;
+	bottom: -10px; 
+	left: 0;
+	width: 80px;
+	background: #007DC2;
+	-o-transition:.5s;
+	-ms-transition:.5s;
+	-moz-transition:.5s;
+	-webkit-transition:.5s;
+	transition:.5s;
+}
+
+ /* optional hover classes used with anmiation */
+  .front-page-title-text h1:hover:after {
+	  width: 100%;
+	  background: #77787B;
 }
 
 .grid-container-fp1 {
@@ -4293,24 +4304,6 @@ h6,
 .entry-content .wp-caption-text,
 .entry-content .wp-block-file {
 	font-family: "PT Serif", -apple-system, BlinkMacSystemFont, "Helvetica Neue", Helvetica, sans-serif;
-}
-
-@supports ( font-variation-settings: normal ) {
-
-	.entry-content h1,
-	.entry-content h2,
-	.entry-content h3,
-	.entry-content h4,
-	.entry-content h5,
-	.entry-content h6,
-	.entry-content cite,
-	.entry-content figcaption,
-	.entry-content table,
-	.entry-content address,
-	.entry-content .wp-caption-text,
-	.entry-content .wp-block-file {
-		font-family: "Inter var", -apple-system, BlinkMacSystemFont, "Helvetica Neue", Helvetica, sans-serif;
-	}
 }
 
 
