@@ -262,11 +262,7 @@ button {
 .wrap-employee {
 	width: 240px !important;
 	display: inline-block;
-	margin-right: 45px;
-}
-
-.wrap-employee:nth-child(3n + 1) {
-	margin-right: 0;
+	margin: 60px 10px 0;
 }
 
 .wp-block.block-editor-block-list__block {
@@ -321,7 +317,7 @@ button {
 }
 
 .bottomDivteam h1 {
-	margin: 0;
+	margin: 1.5rem auto 0 !important;
 }
 
 .bottomDivteam h7 {
@@ -477,7 +473,7 @@ button {
 /* --------------------------------------------------------------------------------------------UPPER FRONT PAGE-------------------------------------------------------------------------*/
 
 .front-page-title-text {
-	margin: 10px 0 60px;
+	margin: 10px 0 0;
 }
 
 .front-page-title-text h1 {
