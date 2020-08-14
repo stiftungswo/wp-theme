@@ -307,6 +307,10 @@ button {
 	height: unset;
 }
 
+.bottomDiv h1 {
+	margin: 1.5rem auto !important;
+}
+
 .bottomDivteam {
 	bottom: 2%;
 	margin-bottom: 40px;
