@@ -34,8 +34,8 @@
 						</div>
 						<div class="footer-logo"><img src="/wp-content/uploads/2020/06/SWO_straight-pdf (2).png"/></div>
 						<div class="footer-right">
-							Phone: +41 43 355 58 44<br/>
-							Email: swo@stiftungswo.ch<br/>
+							Telefon: +41 43 355 58 44<br/>
+							E-Mail: swo@stiftungswo.ch<br/>
 							Web: www.stiftungswo.ch
 						</div>
 					</div>
