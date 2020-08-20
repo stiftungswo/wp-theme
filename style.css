@@ -685,7 +685,6 @@ button {
   	gap: 1px 1px;
   	grid-template-areas: "column-1 column-2 column-3";
 	bottom: 0;
-	position: absolute;
 	width: 100%;
 	padding-bottom: 20px;
 	height: 200px;
@@ -722,7 +721,6 @@ button {
 	gap: 1px 1px;
 	grid-template-areas: ". . .";
 	bottom: 0;
-	position: absolute;
 	width: 100%;
 	padding-bottom: 10px;
 }
