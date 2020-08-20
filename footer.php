@@ -25,53 +25,39 @@
 					
 				
 				</div><!-- .section-inner -->
-<!------------------------------------------------------------------------------------------------- Upper Footer --------------------------------------------------------------------->
-				<div class="grid-container">
-					
-					<div class="a"><a href="">Kontakt</a></div>
-  					<div class="b"><a href="">Lern- & Wissensplattform</a></div>
-  					<div class="c"><a href="">Job & Praktika</a></div>
-  					<div class="logo"><img src="/wp-content/uploads/2020/06/SWO_straight-pdf (2).png"/></div>
-  					<div class="d"><a href="">Zivildienst Intern</a></div>
-  					<div class="f"><a href="">AGBs</a></div>
-  					<div class="g"><a href="">Datenschutzerklärung</a></div>
-
-				</div>
-				
-<!------------------------------------------------------------------------------------------------- Lower Footer --------------------------------------------------------------------->
-				<hr style="height:1px; border:none; background-color:#000; width:90%; margin-bottom:3.5em; margin-top:3em; position: center">
-
-				<div class="lt-grid-container">
-  					<div class="lt-left">
-					  	Stiftung Wirtschaft und Ökologie<br/>
-						Bahnstrasse 18b<br/>
-						8603 Schwerzenbach<br/>
-						<br/>
-						<br/>
-						<br/>
-						<br/>
-						© 2010 -
-						<?php
-							echo date_i18n(
-								/* translators: Copyright date format, see https://www.php.net/date */
-								_x( 'Y', 'copyright date format', 'swowptheme' )
-							);
-							?>
+				<div class="swo-footer-wrap">
+					<div class="swo-footer">
+						<div class="footer-left">
+							Stiftung Wirtschaft und Ökologie<br/>
+							Bahnstrasse 18b<br/>
+							8603 Schwerzenbach
+						</div>
+						<div class="footer-logo"><img src="/wp-content/uploads/2020/06/SWO_straight-pdf (2).png"/></div>
+						<div class="footer-right">
+							Phone: +41 43 355 58 44<br/>
+							Email: swo@stiftungswo.ch<br/>
+							Web: www.stiftungswo.ch
+						</div>
+					</div>
+					<div class="footer-copyright">
+						<div class="footer-copyright-left">
+							© 2010 -
+							<?php
+								echo date_i18n(
+									/* translators: Copyright date format, see https://www.php.net/date */
+									_x( 'Y', 'copyright date format', 'swowptheme' )
+								);
+								?>
 							<a href="<?php echo esc_url( home_url( '/' ) ); ?>"><?php bloginfo( 'name' ); ?></a>
-					  </div>
-					  <div class="lt-right">
-					  	Phone: +41 43 355 58 44<br/>
-						Email: swo@stiftungswo.ch<br/>
-						Web: www.stiftungswo.ch<br/>
-						<br/>
-						<br/>
-						<br/>
-						<br/>
-						<a href="/datenschutzerklaerung/">Unsere AGBs</a>
+						</div>
+						
+						<div class="vert-line-footer">&#124;</div>
 
-					  </div>
+						<div>
+							<a href="/datenschutzerklaerung/">Unsere AGBs</a>
+						</div>
+					</div>
 				</div>
-
 			</footer><!-- #site-footer -->
 
 		<?php wp_footer(); ?>

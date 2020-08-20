@@ -676,74 +676,101 @@ button {
 }
 
 
+/* --------------------------------------------------------------------------------------------SWO FOOTER-------------------------------------------------------------------------*/
 
-		/* FOOTER*/
-
-/* --------------------------------------------------------------------------------------------UPPER FOOTER-------------------------------------------------------------------------*/
-
-.grid-container {
-	position: fixed center;
-	font-size: 14px;
-	font-weight: 600;
-	text-align: center; 
-	padding:1em 5em;
+.swo-footer {
 	display: grid;
-	grid-template-columns: 0.5fr 0.5fr 0.5fr 0.5fr 0.5fr 0.5fr 0.5fr;
-	grid-template-rows: 1fr;
-	gap: 0px 0px;
-	grid-template-areas: "a b c logo d f g";
-	}
-		  
-.a { grid-area: a;
-	padding-top: 7em; }
-		  
-.b { grid-area: b;
-	padding-top: 7em; }
-		  
-.c { grid-area: c;
-	padding-top: 7em; }
-		  
-.logo { grid-area: logo;
-	width: 150px;
-	height: 100px;
-	margin-right: 1em;
-	margin-left: 1em;
- 	}
-		  
-.d { grid-area: d;
-	padding-top: 7em;}
-		  
-.f { grid-area: f;
-	
-	padding-top: 7em;}
-		  
-.g { grid-area: g;
-	text-align: left; 
-	padding-top: 7em;}
+  	grid-template-columns: 1.3fr 0.4fr 1.3fr;
+  	grid-template-rows: 1fr;
+  	gap: 1px 1px;
+  	grid-template-areas: "column-1 column-2 column-3";
+	bottom: 0;
+	position: absolute;
+	width: 100%;
+	padding-bottom: 20px;
+	height: 200px;
+  }
 
 
-
-
-/* --------------------------------------------------------------------------------------------LOWER FOOTER-------------------------------------------------------------------------*/
-.lt-grid-container {
-		display: grid;
-		grid-template-columns: 1fr 1fr;
-		grid-template-rows: 3fr;
-		gap: 1px 0px;
-	   	grid-template-areas: ". ." "lt-left lt-right" ". ."
-	  }
-
-
-.lt-left { grid-area: lt-left;
+.footer-left {
 		text-align: right;
-		padding-right: 50px;
-		border-right-width: 1em;
-		border-right-color: black;
-		border-right: solid;
+		margin-top: 60px;
+		padding: 0 10px;
+		grid-area: column-1;
 	}
-	  
-.lt-right { grid-area: lt-right;
-		padding-left: 50px;
+
+.footer-logo {
+	grid-area: column-2;
+}
+
+.footer-right {
+	margin-top: 60px;
+	padding: 0 10px;
+	grid-area: column-3;
+}
+
+.footer-logo img{
+		margin: 0 auto;
+		height: 200px;
+		width: auto;
+	}
+
+.footer-copyright {
+	display: grid;
+	grid-template-columns: 1.5fr 0.1fr 1.5fr;
+	grid-template-rows: 1fr;
+	gap: 1px 1px;
+	grid-template-areas: ". . .";
+	bottom: 0;
+	position: absolute;
+	width: 100%;
+	padding-bottom: 10px;
+}
+
+.footer-copyright-left {
+	text-align: right;
+}
+
+.vert-line-footer {
+	text-align: center;
+}
+
+@media only screen and (max-width: 1000px) {
+	.swo-footer {
+		display: grid;
+		  grid-template-columns: 1.2fr 0.6fr 1.2fr;
+		  grid-template-rows: 1fr;
+		  gap: 1px 1px;
+		  grid-template-areas: "column-1 column-2 column-3";
+	  }
+}
+
+@media only screen and (max-width: 700px) {
+	.swo-footer {
+		display: grid;
+		grid-template-columns: 1.5fr;
+  		grid-template-rows: 1fr 0.4fr 0.4fr;
+		gap: 1px 1px;
+		grid-template-areas: "column-2" "column-1" "column-3";
+		text-align: center;
+		height: unset;
+		float: right;
+		position: unset;
+	  }
+	.footer-left {
+		text-align: center;
+		margin-bottom: 20px;
+	}
+	.footer-left, .footer-right {
+		margin-top: 0;
+		padding: 0;
+	}
+	.footer-copyright {
+		position: unset;
+	}
+	.footer-logo img{
+		height: 180px;
+	}
 }
 
 /* ------------------------------------Inhalt Seite-------------------------------------- */
@@ -3504,6 +3531,7 @@ h1.entry-title{
 .pagination-single {
 	font-size: 1.8rem;
 	margin-top: 5rem;
+	display: none;
 }
 
 .pagination-single-inner {
