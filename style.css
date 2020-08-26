@@ -155,7 +155,7 @@ button {
 /* Bereiche styling -------------------------- */
 
 .area-banner {
-	background: #61330E;
+	background: red;
 	width: 100vw;
 	position: relative;
 	margin-left: -50vw;
@@ -163,7 +163,7 @@ button {
 }
 
 .area-banner-button {
-	background:#61330E;
+	background: red;
 	color: #fff !important;
 	border: 2px solid #fff;
 }
@@ -238,7 +238,7 @@ button {
 }
 
 .feature-list li:before{
-	color: #61330E;
+	color: red;
 	font-weight: 1000;
 	text-decoration: none;
 	content: "\2713";
@@ -254,13 +254,13 @@ button {
 	background: #fff;
 	width: 60%;
 	margin: 0 auto -104px;
-	border: 4px solid #61330E;
+	border: 4px solid red;
 	padding: 2rem 4rem;
 	border-radius: 12px;
 }
 
 .bereich-title h1{
-	color: #61330E;
+	color: red;
 	font-size: 40px;
 	margin: 0 0 8px;
 }
@@ -388,14 +388,14 @@ button {
 
 /* Change ALL link appearances -------------------------- */
 
-* a:not(.ab-item):not(.slideshow-slide) {
+header a, nav a, footer a {
 	color: #000 !important;
 	text-transform: uppercase !important;
 	text-decoration: none !important;
 	font-weight: 640;
 }
 
-* a:not(.ab-item):hover {
+header a:hover, nav a:hover, footer a:hover {
 	color: #007DC2 !important;
 }
 
