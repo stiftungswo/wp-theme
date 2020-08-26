@@ -54,6 +54,10 @@ with others.
 
 /* General styling -------------------------- */
 
+html #wpadminbar {
+	position: fixed;
+}
+
 button {
 	outline: none;
 }
@@ -170,7 +174,7 @@ button {
 
 .area-banner-button::after {
 	margin-top: 5px;
-	filter: invert(100%) sepia(1%) saturate(7500%) hue-rotate(343deg) brightness(115%) contrast(101%);
+	filter: invert(100%) sepia(1%) saturate(7500%) hue-rotate(343deg) brightness(115%) contrast(101%) !important;
 }
 
 .area-banner .limit-content-width {
