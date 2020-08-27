@@ -2165,6 +2165,7 @@ ul.social-icons li {
 	background: rgba(255, 255, 255, 0.6) !important;
 	position: fixed;
 	width: 100%;
+	z-index: 10;
 }
 
 .header-inner {
@@ -6401,6 +6402,9 @@ a.to-the-top > * {
 	}
 }
 
+#site-header {
+	z-index: 1000;
+}
 @media ( min-width: 1000px ) {
 
 
@@ -6410,9 +6414,6 @@ a.to-the-top > * {
 
 	/* Site Header --------------------------- */
 
-	#site-header {
-		z-index: 2;
-	}
 
 	.header-inner {
 		align-items: center;
