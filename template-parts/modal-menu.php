@@ -39,7 +39,7 @@
 				} elseif ( has_nav_menu( 'expanded' ) ) {
 					$mobile_menu_location = 'expanded';
 				}
-
+				
 				if ( has_nav_menu( 'expanded' ) ) {
 					
 					$expanded_nav_classes = '';
@@ -88,29 +88,22 @@
 						<ul class="modal-menu reset-list-style">
 
 						<?php
-						if ( $mobile_menu_location ) {
-
-							wp_nav_menu(
-								array(
-									'container'      => '',
-									'items_wrap'     => '%3$s',
-									'show_toggles'   => true,
-									'theme_location' => $mobile_menu_location,
-								)
-							);
-
-						} else {
-
-							wp_list_pages(
-								array(
-									'match_menu_classes' => true,
-									'show_toggles'       => true,
-									'title_li'           => false,
-									'walker'             => new swowptheme_Walker_Page(),
-								)
-							);
-
-						}
+							
+							if ( has_nav_menu( 'mobile' ) ) {
+								
+								wp_nav_menu([
+									'theme_location' => 'mobile', //location from WP-Admin Menu-Settings
+									'container'		 => false, //surround the "List" of Navigation with a Container
+									'container_class'=> 'mobile-menu-container', //adds CSS-class to the container
+									'menu_class'     => 'mobile-menu-item', //adds CSS-class to the <ul> tags
+									'fallback_cb'    => false, //If the menu doesn't exist, a callback function will fire
+									'depht'			 => 2, //How many levels of the hierarchy are to be included
+									'items_wrap'     => '%3$s', //How the list items should be wrapped
+									'show_toggles'   => false, //shows the toggle to expand an item
+									'walker'		 => new Custom_Mobile_Navigation_Walker(),
+									]);
+								}
+						
 						?>
 
 						</ul>
