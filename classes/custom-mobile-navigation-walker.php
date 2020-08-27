@@ -1,6 +1,6 @@
 <?php
 
-class Custom_Expanded_Navigation_Walker extends Walker_Nav_Menu{
+class Custom_Mobile_Navigation_Walker extends Walker_Nav_Menu{
 
 
     /**
@@ -17,8 +17,8 @@ class Custom_Expanded_Navigation_Walker extends Walker_Nav_Menu{
         $indent = ( $depth > 0  ? str_repeat( "\t", $depth ) : '' ); // code indent
         $display_depth = ( $depth + 1); // because it counts the first submenu as 0
         $classes = array(
-            'sub-menu',
-            'menu-depth-' . $display_depth
+            'mobile-sub-menu',
+            'mobile-menu-depth-' . $display_depth
         );
         $class_names = implode( ' ', $classes );
  
@@ -43,9 +43,9 @@ class Custom_Expanded_Navigation_Walker extends Walker_Nav_Menu{
  
         // Depth-dependent classes.
         $depth_classes = array(
-            ( $depth == 0 ? 'main-menu-item' : 'sub-menu-item' ),
-            ( $depth % 2 ? 'menu-item-odd' : 'menu-item-even' ),
-            'menu-item-depth-' . $depth
+            ( $depth == 0 ? 'mobile-main-menu-item' : 'mobile-sub-menu-item' ),
+            ( $depth % 2 ? 'mobile-menu-item-odd' : 'mobile-menu-item-even' ),
+            'mobile-menu-item-depth-' . $depth
         );
         $depth_class_names = esc_attr( implode( ' ', $depth_classes ) );
  
@@ -54,7 +54,7 @@ class Custom_Expanded_Navigation_Walker extends Walker_Nav_Menu{
         $class_names = esc_attr( implode( ' ', apply_filters( 'nav_menu_css_class', array_filter( $classes ), $item ) ) );
 
         // Build HTML.
-        $output .= $indent . '<li id="nav-menu-item-'. $item->ID . '" class="' . $depth_class_names . ' ' . $class_names . '">';
+        $output .= $indent . '<li id="mobile-nav-menu-item-'. $item->ID . '" class="' . $depth_class_names . ' ' . $class_names . '">';
         
         // 
         // If list element has no children, link to the page. if not, link to nowhere...
@@ -63,7 +63,7 @@ class Custom_Expanded_Navigation_Walker extends Walker_Nav_Menu{
         }else{
             $attributes = ! empty( $item->url )        ? ' href="'   . esc_attr( $item->url        ) .'"' : '';
         }
-        $attributes .= ' class="menu-link ' . ( $depth > 0 ? 'sub-menu-link' : 'main-menu-link' ) . '"';
+        $attributes .= ' class="mobile-menu-link ' . ( $depth > 0 ? 'mobile-sub-menu-link' : 'mobile-main-menu-link' ) . '"';
  
         // Build HTML output and pass through the proper filter.
         $item_output = sprintf( '%1$s<a%2$s>%3$s%4$s%5$s</a>%6$s',
@@ -75,35 +75,6 @@ class Custom_Expanded_Navigation_Walker extends Walker_Nav_Menu{
             $args->after
         );
         $output .= apply_filters( 'walker_nav_menu_start_el', $item_output, $item, $depth, $args );
-    }
-
-
-
-
-
-
- /*   
-    public function start_lvl( &$output, $depth = 0, $args = [] ){
-        $output         .= '<ul class="expanded-navigation-menu">';
-    }
-
-    public function start_el( &$output, $item, $depth = 0, $args = [], $id = 0 ){
-        $output         .= '<li class="expanded-navigation-submenu">';
-        $output         .= $args->before;
-        $output         .= '<a href=' . $item->url . '">';
-        $output         .= $args->link_before . $item->title . $args->link_after;
-        $output         .= '</a>';
-        $output         .= $args->after;
-    }
-
-    public function end_el( &$output, $item, $depth = 0, $args = [], $id = 0 ){
-        $output         .= '</li>';
-    }
-    
-    public function end_lvl( &$output, $depth = 0, $args = [] ){
-        $output         .= '</ul>';
-    }
-*/
+	}
 }
-
 ?>
