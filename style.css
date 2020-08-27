@@ -159,7 +159,7 @@ button {
 /* Bereiche styling -------------------------- */
 
 .area-banner {
-	background: red;
+	background: #007DC2;
 	width: 100vw;
 	position: relative;
 	margin-left: -50vw;
@@ -167,7 +167,7 @@ button {
 }
 
 .area-banner-button {
-	background: red;
+	background: #007DC2;
 	color: #fff !important;
 	border: 2px solid #fff;
 }
@@ -242,8 +242,7 @@ button {
 }
 
 .feature-list li:before{
-	color: red;
-	font-weight: 1000;
+	color: #007DC2;
 	text-decoration: none;
 	content: "\2713";
 	margin-right: .5em;
@@ -258,13 +257,13 @@ button {
 	background: #fff;
 	width: 60%;
 	margin: 0 auto -104px;
-	border: 4px solid red;
+	border: 4px solid #007DC2;
 	padding: 2rem 4rem;
 	border-radius: 12px;
 }
 
 .bereich-title h1{
-	color: red;
+	color: #007DC2;
 	font-size: 40px;
 	margin: 0 0 8px;
 }
