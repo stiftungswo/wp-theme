@@ -131,7 +131,6 @@ button {
 	width: 80%;
 	max-width: 820px;
 	margin: 0 auto;
-	overflow: auto;
 }
 
 .img-background {
@@ -148,6 +147,23 @@ button {
 	gap: 1px 1px;
 	grid-template-areas: ". .";
 	margin: 60px 0;
+}
+
+@media only screen and (max-width: 600px) {
+	.left-right {
+		display: grid;
+		grid-template-columns: 1fr;
+		grid-template-rows: 1fr 1fr;
+		gap: 1px 1px;
+		grid-template-areas: "." ".";
+		margin: 60px 0;
+	}
+	.wp-block-swo-blocks-area-rl-block.left-right .bereich-text{
+		order: 2;
+	}
+	.wp-block-swo-blocks-area-rl-block.left-right .bereich-image{
+		order: 1;
+	}
 }
 
 .no-serif-heading {
@@ -562,6 +578,14 @@ header a:hover, nav a:hover, footer a:hover {
 	  background: #77787B;
 }
 
+.Front-page-top-right {
+	margin: 0 auto;
+}
+
+.front-page-top-left {
+	margin: 0 auto !important;
+}
+
 .grid-container-fp1 {
 	display: grid;
 	grid-template-columns: 1fr 1fr;
@@ -571,6 +595,14 @@ header a:hover, nav a:hover, footer a:hover {
 	margin-bottom: 100px;
   }
   
+  @media only screen and (max-width: 752px) {
+	.grid-container-fp1 {
+		grid-template-columns: 1fr;
+		grid-template-rows: 1fr 1fr;
+		gap: 40px 1px;
+		grid-template-areas: "front-page-top-left" "Front-page-top-right";
+	  }
+}
 
 .onpicture {
 	position: absolute;
@@ -777,9 +809,7 @@ header a:hover, nav a:hover, footer a:hover {
 
 /* ------------------------------------Inhalt Seite-------------------------------------- */
 
-.wp-block-columns {
-	overflow: auto;
-}
+
 @media only screen and (max-width: 600px) {
 	.wp-block-columns {
 		flex-direction: column-reverse;
@@ -789,7 +819,6 @@ header a:hover, nav a:hover, footer a:hover {
 .wp-block-columns.alignfull{
 	margin-top: 0px;
 	padding-top: 0px;
-	overflow: auto;
 }
 
 .left-column {
@@ -977,10 +1006,6 @@ body {
 	-webkit-font-smoothing: antialiased;
 	word-break: break-word;
 	word-wrap: break-word;
-}
-
-#site-content {
-	overflow: auto;
 }
 
 
