@@ -131,6 +131,7 @@ button {
 	width: 80%;
 	max-width: 820px;
 	margin: 0 auto;
+	overflow: auto;
 }
 
 .img-background {
@@ -776,30 +777,46 @@ header a:hover, nav a:hover, footer a:hover {
 
 /* ------------------------------------Inhalt Seite-------------------------------------- */
 
+.wp-block-columns {
+	overflow: auto;
+}
+@media only screen and (max-width: 600px) {
+	.wp-block-columns {
+		flex-direction: column-reverse;
+	}
+}
 
 .wp-block-columns.alignfull{
 	margin-top: 0px;
 	padding-top: 0px;
+	overflow: auto;
 }
 
-.wp-block-column.main-info{
+.left-column {
 	flex-basis:66.66%;
 	flex-grow: 0;
 }
 
-.wp-block-column.side-info{
-	border: 3px solid #77787B;
-	box-sizing: border-box;
-	border-radius: 8px;
-	height: max-content;
-	margin-top: 40px;
-	padding-right: 5px;
-	padding-left: 5px;
+.right-column {
 	flex-basis:33.33%;
 	flex-grow: 0;
 }
 
-.wp-block-column.side-info h1, .wp-block-column.side-info h2, .wp-block-column.side-info h3, .wp-block-column.side-info h4, .wp-block-column.side-info h5, .wp-block-column.side-info h6 { 
+.side-info{
+	border: 3px solid #77787B;
+	box-sizing: border-box;
+	border-radius: 8px;
+	height: max-content;
+	margin-top: 40px !important;
+	padding-right: 5px;
+	padding-left: 5px;
+	position: -webkit-sticky; /* Safari */
+	position: sticky;
+	top: 0;
+	align-self: flex-start;
+}
+
+.side-info h1, .side-info h2, .side-info h3, .side-info h4, .side-info h5, .side-info h6 { 
 	font-size: 19px;
 	margin: 10px 5px 0px 5px;
 	text-transform: uppercase;
@@ -809,7 +826,7 @@ header a:hover, nav a:hover, footer a:hover {
 }
 
 
-.wp-block-column.side-info p{ 
+.side-info p{ 
 	padding-left: 5px;
 	font-size: 12px;
 	font-weight: 500;
@@ -963,7 +980,7 @@ body {
 }
 
 #site-content {
-	overflow: hidden;
+	overflow: auto;
 }
 
 
