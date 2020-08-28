@@ -54,8 +54,8 @@ with others.
 
 /* General styling -------------------------- */
 
-html #wpadminbar {
-	position: fixed;
+.admin-bar #site-header {
+	top: 32px;
 }
 
 button {
@@ -2223,7 +2223,7 @@ ul.social-icons li {
 	position: fixed;
 	width: 100%;
 	z-index: 999;
-	top: 32px;
+	top: 0;
 }
 
 .header-inner {
@@ -6482,9 +6482,7 @@ a.to-the-top > * {
 	}
 }
 
-#site-header {
-	z-index: 1000;
-}
+
 @media ( min-width: 1000px ) {
 
 
