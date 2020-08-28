@@ -2223,6 +2223,7 @@ ul.social-icons li {
 	position: fixed;
 	width: 100%;
 	z-index: 999;
+	top: 32px;
 }
 
 .header-inner {
