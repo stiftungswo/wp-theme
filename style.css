@@ -221,7 +221,7 @@ button {
 }
 
 .bereich-header {
-	background: url(./assets/images/bereich_temp.jpg)  no-repeat center center; 
+	background: no-repeat center center; 
 	-webkit-background-size: cover;
 	-moz-background-size: cover;
 	-o-background-size: cover;
@@ -3332,7 +3332,7 @@ body:not(.singular) main > article:first-of-type {
 /* Post Header ------------------------------- */
 
 .singular .entry-header {
-	background: url(./assets/images/ONLY_TEMPORARY_1.jpg) no-repeat center center fixed; 
+	background: no-repeat center center fixed; 
 	-webkit-background-size: cover;
 	-moz-background-size: cover;
 	-o-background-size: cover;
