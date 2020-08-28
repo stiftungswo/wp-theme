@@ -1,3 +1,7 @@
-See the documentation: https://github.com/stiftungswo/wiki/wiki/SWO-WP-Website-(Dokumentation)
+# Dokumentation zur Administration & Anwendung des neuen WP-Themes (Dokumentation & Manual)
 
-See the user manual: https://github.com/stiftungswo/wiki/wiki/SWO-WP-Website-(Manual)
+Doku ist hier:
+https://github.com/stiftungswo/wiki/wiki/SWO-WP-Website-(Dokumentation)
+
+Manual hier:
+https://github.com/stiftungswo/wiki/wiki/SWO-WP-Website-(Manual)
