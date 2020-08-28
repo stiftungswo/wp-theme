@@ -279,6 +279,18 @@ button {
 	border-radius: 12px;
 }
 
+@media only screen and (max-width: 600px) {
+	.bereich-title{
+		text-align: left;
+		background: #fff;
+		width: 100%;
+		margin: 0 auto -104px;
+		border: 4px solid #007DC2;
+		padding: 2rem 4rem;
+		border-radius: 12px;
+	}
+}
+
 .bereich-title h1{
 	color: #007DC2;
 	font-size: 40px;
@@ -810,11 +822,15 @@ header a:hover, nav a:hover, footer a:hover {
 /* ------------------------------------Inhalt Seite-------------------------------------- */
 
 
+/* IF SIDE INFO SHOULD BE OVER THE MAIN CONTENT ADD THIS
+
 @media only screen and (max-width: 600px) {
 	.wp-block-columns {
 		flex-direction: column-reverse;
 	}
 }
+
+*/
 
 .wp-block-columns.alignfull{
 	margin-top: 0px;
