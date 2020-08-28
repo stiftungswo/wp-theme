@@ -1,10 +1,7 @@
-# SWO-childtheme
+# Dokumentation zur Administration & Anwendung des neuen WP-Themes (Dokumentation & Manual)
 
-This will be the new custom theme for the SWO. It is based on the wordpress native twenty-twenty theme. READ TODOS for what needs to be done next!
+Doku ist hier:
+https://github.com/stiftungswo/wiki/wiki/SWO-WP-Website-(Dokumentation)
 
-
-# Dokumentation zur Administration & Anwendung des neuen WP-Themes
-
-### 1. Beiträge erstellen:
-* Blabla Text
-* Mehr text und nächster Schritt
+Manual hier:
+https://github.com/stiftungswo/wiki/wiki/SWO-WP-Website-(Manual)

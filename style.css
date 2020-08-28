@@ -6481,6 +6481,9 @@ a.to-the-top > * {
 	}
 }
 
+#site-header {
+	z-index: 1000;
+}
 @media ( min-width: 1000px ) {
 
 
@@ -6490,6 +6493,10 @@ a.to-the-top > * {
 
 	/* Site Header --------------------------- */
 
+<<<<<<< HEAD
+
+=======
+>>>>>>> d4be4fbb4a9cbe8c2af8a61dadc8b6be7fb9f244
 	.header-inner {
 		align-items: center;
 		display: flex;
