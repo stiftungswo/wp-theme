@@ -763,18 +763,12 @@ header a:hover, nav a:hover, footer a:hover {
 	}
 
 .footer-copyright {
-	display: grid;
-	grid-template-columns: 1.5fr 0.1fr 1.5fr;
-	grid-template-rows: 1fr;
-	gap: 1px 1px;
-	grid-template-areas: ". . .";
 	bottom: 0;
 	width: 100%;
 	padding-bottom: 10px;
-}
-
-.footer-copyright-left {
-	text-align: right;
+	text-align: center;
+	font-size: 12px;
+	font-weight: 400;
 }
 
 .vert-line-footer {

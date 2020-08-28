@@ -40,22 +40,17 @@
 						</div>
 					</div>
 					<div class="footer-copyright">
-						<div class="footer-copyright-left">
-							© 2010 -
-							<?php
-								echo date_i18n(
-									/* translators: Copyright date format, see https://www.php.net/date */
-									_x( 'Y', 'copyright date format', 'swowptheme' )
-								);
-								?>
-							<a href="<?php echo esc_url( home_url( '/' ) ); ?>"><?php bloginfo( 'name' ); ?></a>
-						</div>
-						
-						<div class="vert-line-footer">&#124;</div>
-
-						<div>
-							<a href="/datenschutzerklaerung/">Unsere AGBs</a>
-						</div>
+						© 2010 -
+						<?php
+							echo date_i18n(
+								/* translators: Copyright date format, see https://www.php.net/date */
+								_x( 'Y', 'copyright date format', 'swowptheme' )
+							);
+							?>
+						<a href="<?php echo esc_url( home_url( '/' ) ); ?>"><?php bloginfo( 'name' ); ?></a>
+						&#124;<a href="/datenschutzerklaerung/">Unsere AGBs</a>
+						<!-- Credits NICHT entfernen, dies wurde so abgesprochen. Danke. Sie können mich hier konntaktieren: me@davidkessler.ch oder 076 308 42 22 -->
+						&#124;<a target="_blank" href="https://davidkessler.ch">Entwicklung: davidkessler.ch</a>
 					</div>
 				</div>
 			</footer><!-- #site-footer -->
